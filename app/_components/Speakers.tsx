@@ -1,4 +1,5 @@
 import ChromaGrid from "@/components/ChromaGrid";
+import ShinyText from "@/components/ShinyText";
 
 const items = [
   {
@@ -132,7 +133,7 @@ const items = [
 export default function Speakers() {
   return (
     <section className="flex flex-col items-center justify-center gap-10">
-      <h2 className="text-xl md:text-2xl lg:text-3xl font-bold pointer-events-none text-accent">
+      <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold pointer-events-none text-accent">
         Speakers
       </h2>
       <ChromaGrid
@@ -141,8 +142,9 @@ export default function Speakers() {
         damping={0.45}
         fadeOut={0.6}
         ease="power3.out"
-        className="gap-14"
+        className="md:gap-14"
       />
+      <ShinyText text="More speakers on the way!" className="text-2xl" />
     </section>
   );
 }
