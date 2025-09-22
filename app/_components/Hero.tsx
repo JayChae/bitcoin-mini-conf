@@ -1,5 +1,5 @@
 import GradientText from "@/components/GradientText";
-import ShinyText from "@/components/ShinyText";
+import StarBorder from "@/components/StarBorder";
 import Link from "next/link";
 
 export default function Hero() {
@@ -22,26 +22,33 @@ export default function Hero() {
           SECOND EDITION
         </span>
       </section>
-      <section className="flex flex-col items-center justify-center md:flex-row gap-10">
+      <section className="w-full flex flex-col items-center justify-between md:flex-row gap-10">
         <Link
           href="https://store.btcmap.kr/meetup/Bitcoin_Mini_Conference/11/"
-          className="hover:scale-105 transition-all duration-300"
+          className="hover:scale-105 transition-all duration-300 "
         >
-          <ShinyText
-            text="₿ Tickets (BTC)"
-            speed={3}
-            className="text-lg md:text-xl lg:text-2xl font-bold tracking-wider "
-          />
+          <StarBorder
+            as="button"
+            className="cursor-pointer"
+            color="orange"
+            speed="3s"
+            thickness={3}
+          >
+            ₿ Tickets (BTC)
+          </StarBorder>
         </Link>
         <Link
           href="https://smartstore.naver.com/promenadecastle/products/12055415750"
           className="hover:scale-105 transition-all duration-300"
         >
-          <ShinyText
-            text="₩ Tickets (KRW)"
-            speed={3}
-            className="text-lg md:text-xl lg:text-2xl font-bold tracking-wider"
-          />
+          <StarBorder
+            as="button"
+            className="cursor-pointer"
+            color="cyan"
+            speed="3s"
+          >
+            ₩ Tickets (KRW)
+          </StarBorder>
         </Link>
       </section>
     </div>
