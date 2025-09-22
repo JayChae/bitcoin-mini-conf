@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import DarkVeil from "./_components/DarkVeil";
+import Nav from "./_components/Nav";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,6 +17,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Bitcoin Mini Conference",
   description: "Bitcoin Mini Conference",
+  icons: {
+    icon: "/logo.jpg",
+  },
 };
 
 export default function RootLayout({
@@ -28,8 +32,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased size-full relative`}
       >
+        <Nav />
         {children}
-
         <DarkVeil speed={0.2} />
       </body>
     </html>
