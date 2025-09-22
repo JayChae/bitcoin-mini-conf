@@ -1,6 +1,7 @@
 import Hero from "./_components/Hero";
 import Schedule from "./_components/Schedule";
 import Speakers from "./_components/Speakers";
+import Sponsor from "./_components/Sponsor";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
         <Hero />
         <Speakers />
         <Schedule />
+        <Sponsor />
       </div>
     </main>
   );

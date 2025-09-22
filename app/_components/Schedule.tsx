@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Schedule() {
   return (
     <section className="flex flex-col items-center justify-center gap-16 mt-20">
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8">
+      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
         Schedule
       </h2>
 
