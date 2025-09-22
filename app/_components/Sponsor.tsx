@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Sponsor() {
   return (
-    <section className="w-full flex flex-col items-center justify-center gap-10 mt-20 ">
+    <section className="w-full flex flex-col items-center justify-center gap-10">
       <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold pointer-events-none text-accent animate-fade-in">
         Sponsor
       </h2>

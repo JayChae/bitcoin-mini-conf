@@ -19,7 +19,7 @@ export default function Hero() {
         </h1>
 
         <span className="text-md md:text-lg lg:text-xl font-bold pointer-events-none text-accent/35">
-          SECOND EDITION
+          SECOND EDITION | SEPTEMBER 29-30, 2025
         </span>
       </section>
       <section className="w-full flex flex-col items-center justify-between md:flex-row gap-10">
