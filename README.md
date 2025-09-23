@@ -1,4 +1,6 @@
-### [app/messages/ko.json](./app/messages/ko.json)
+### 한글 문구
+
+[app/messages/ko.json](./app/messages/ko.json)
 
 ```json
 {
@@ -34,7 +36,9 @@
 }
 ```
 
-### [app/messages/ko.json](./app/messages/en.json)
+### 영어 문구
+
+[app/messages/ko.json](./app/messages/en.json)
 
 ```json
 {
@@ -70,7 +74,9 @@
 }
 ```
 
-### [app/messages/speakers](./app/messages/speakers.ts)
+### 연사 정보 (en | ko)
+
+[app/messages/speakers](./app/messages/speakers.ts)
 
 ```ts
 const enItems = [
