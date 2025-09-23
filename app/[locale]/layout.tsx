@@ -54,6 +54,7 @@ type Props = {
 
 export default async function RootLayout({ children, params }: Props) {
   const { locale } = await params;
+  const lang = locale === "en" ? "en" : "ko";
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
@@ -65,7 +66,7 @@ export default async function RootLayout({ children, params }: Props) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased size-full relative`}
       >
         <NextIntlClientProvider>
-          <Nav items={navItems[locale as keyof typeof navItems]} />
+          <Nav items={navItems[lang]} />
           {children}
         </NextIntlClientProvider>
         <DarkVeil speed={0.2} />

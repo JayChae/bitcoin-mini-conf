@@ -13,6 +13,7 @@ type Props = {
 
 export default async function Home({ params }: Props) {
   const { locale } = await params;
+  const lang = locale === "en" ? "en" : "ko";
   const t = await getTranslations("Hero");
   const tSpeakers = await getTranslations("Speakers");
   const tSchedule = await getTranslations("Schedule");
@@ -29,15 +30,12 @@ export default async function Home({ params }: Props) {
           />
         </section>
         <section id="speakers" className="scroll-mt-16">
-          <Speakers
-            speakers={speakers[locale as keyof typeof speakers]}
-            title={tSpeakers("title")}
-          />
+          <Speakers speakers={speakers[lang]} title={tSpeakers("title")} />
         </section>
         <section id="schedule" className="mt-40 scroll-mt-16">
           <Schedule
             title={tSchedule("title")}
-            schedules={schedules[locale as keyof typeof schedules]}
+            schedules={schedules[lang]}
           />
         </section>
         <section id="sponsors" className="mt-40 scroll-mt-16">
