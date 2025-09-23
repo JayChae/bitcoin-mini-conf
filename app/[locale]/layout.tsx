@@ -31,8 +31,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://bitcoin-mini-conf.vercel.app/logo.png", // 배포된 절대경로
-        width: 1200,
-        height: 630,
+        width: 250,
+        height: 250,
         alt: "Bitcoin Mini Conference",
       },
     ],
