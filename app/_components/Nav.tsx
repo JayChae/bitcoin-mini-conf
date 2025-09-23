@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { useRouter } from "@/i18n/navigation";
+import { Link, useRouter } from "@/i18n/navigation";
 import { useLocale } from "next-intl";
 
 type Props = {
@@ -43,9 +43,9 @@ export default function Nav({ items }: Props) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex-shrink-0">
+          <Link href="/" className="flex-shrink-0">
             <Image src="/logo.png" alt="Logo" width={40} height={40} />
-          </div>
+          </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:block">
