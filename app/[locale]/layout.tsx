@@ -7,7 +7,7 @@ import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { setRequestLocale } from "next-intl/server";
-import { enItems, koItems } from "../messages/nav";
+import navItems from "../messages/nav";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -65,7 +65,7 @@ export default async function RootLayout({ children, params }: Props) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased size-full relative`}
       >
         <NextIntlClientProvider>
-          <Nav items={locale === "en" ? enItems : koItems} />
+          <Nav items={navItems[locale as keyof typeof navItems]} />
           {children}
         </NextIntlClientProvider>
         <DarkVeil speed={0.2} />

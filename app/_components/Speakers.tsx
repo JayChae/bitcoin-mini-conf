@@ -1,15 +1,8 @@
 import ChromaGrid from "@/components/ChromaGrid";
 import ShinyText from "@/components/ShinyText";
-
-type Speakers = {
-  image: string;
-  title: string;
-  subtitle: string;
-  handle: string;
-  url: string;
-};
+import { type Speaker } from "../messages/speakers";
 type Props = {
-  speakers: Speakers[];
+  speakers: Speaker[];
   title: string;
 };
 

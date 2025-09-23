@@ -11,19 +11,7 @@
     "title": "Speakers"
   },
   "Schedule": {
-    "title": "Schedule",
-    "firstDay": {
-      "title": "First Day",
-      "date": "September 29, 2025",
-      "description": "Curated talks to deliver maximum signal-to-noise ratio.",
-      "content": "A single stage with insightful talks prepared by industry leading experts. K-BBQ dinner provided afterwards to all attendees to strengthen relationships between community members."
-    },
-    "secondDay": {
-      "title": "Second Day",
-      "date": "September 30, 2025",
-      "description": "Hands on workshops with a Lightning Market in the heart of Seoul",
-      "content": "Workshops with a maximum size of 30 people to provide the attendees with quality educational sessions. Booths in the form of a Lightning market in the streets of Seoul to allow access for everyone in Seoul to visit and become a part of the community."
-    }
+    "title": "Schedule"
   },
   "Sponsor": {
     "title": "Sponsors"

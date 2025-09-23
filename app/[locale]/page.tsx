@@ -3,7 +3,9 @@ import Hero from "../_components/Hero";
 import Schedule from "../_components/Schedule";
 import Speakers from "../_components/Speakers";
 import Sponsor from "../_components/Sponsor";
-import { enItems, koItems } from "../messages/speakers";
+import speakers from "../messages/speakers";
+import sponsors from "../messages/sponsor";
+import schedules from "../messages/schedules";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -28,29 +30,18 @@ export default async function Home({ params }: Props) {
         </section>
         <section id="speakers" className="scroll-mt-16">
           <Speakers
-            speakers={locale === "en" ? enItems : koItems}
+            speakers={speakers[locale as keyof typeof speakers]}
             title={tSpeakers("title")}
           />
         </section>
         <section id="schedule" className="mt-40 scroll-mt-16">
           <Schedule
             title={tSchedule("title")}
-            firstDay={{
-              title: tSchedule("firstDay.title"),
-              date: tSchedule("firstDay.date"),
-              description: tSchedule("firstDay.description"),
-              content: tSchedule("firstDay.content"),
-            }}
-            secondDay={{
-              title: tSchedule("secondDay.title"),
-              date: tSchedule("secondDay.date"),
-              description: tSchedule("secondDay.description"),
-              content: tSchedule("secondDay.content"),
-            }}
+            schedules={schedules[locale as keyof typeof schedules]}
           />
         </section>
         <section id="sponsors" className="mt-40 scroll-mt-16">
-          <Sponsor title={tSponsor("title")} />
+          <Sponsor title={tSponsor("title")} sponsors={sponsors} />
         </section>
       </div>
     </main>

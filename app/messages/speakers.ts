@@ -1,4 +1,12 @@
-const enItems = [
+export type Speaker = {
+  image: string;
+  title: string;
+  subtitle: string;
+  handle: string;
+  url: string;
+};
+
+const enItems: Speaker[] = [
   {
     image: "/avatars/gandalf.webp",
     title: "Gandlaf",
@@ -110,9 +118,9 @@ const enItems = [
 
     url: "https://x.com/walletofsatoshi",
   },
-];
+] as const;
 
-const koItems = [
+const koItems: Speaker[] = [
   {
     image: "/avatars/gandalf.webp",
     title: "Gandlaf",
@@ -225,6 +233,11 @@ const koItems = [
 
     url: "https://x.com/walletofsatoshi",
   },
-];
+] as const;
 
-export { enItems, koItems };
+const speakers = {
+  ko: koItems,
+  en: enItems,
+};
+
+export default speakers;

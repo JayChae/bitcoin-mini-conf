@@ -4,9 +4,10 @@ import { useState } from "react";
 import Image from "next/image";
 import { Link, useRouter } from "@/i18n/navigation";
 import { useLocale } from "next-intl";
+import { type NavItem } from "../messages/nav";
 
 type Props = {
-  items: { label: string; href: string }[];
+  items: NavItem[];
 };
 
 export default function Nav({ items }: Props) {
