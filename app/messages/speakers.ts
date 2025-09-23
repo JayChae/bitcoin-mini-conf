@@ -56,7 +56,7 @@ const enItems = [
   {
     image: "/avatars/seedSigner.webp",
     title: "SeedSigner",
-    subtitle: "Founder | SeedSigner",
+    subtitle: "developer | SeedSigner",
     handle: "@seedSigner",
     // borderColor: "#84CC16",
     // gradient: "linear-gradient(90deg, #84CC16, #000)",
@@ -92,7 +92,7 @@ const enItems = [
   {
     image: "/avatars/trigger.png",
     title: "Trigger",
-    subtitle: "Bitcoin SeoulCenter | Coconut",
+    subtitle: "Bitcoin Seoul Center | Coconut",
     handle: "@Coconut_BTC",
     // borderColor: "#EC4899",
     // gradient: "linear-gradient(120deg, #EC4899, #000)",
@@ -110,7 +110,7 @@ const enItems = [
   {
     image: "/avatars/promenade.png",
     title: "Promenade",
-    subtitle: "Bitcoin Citadel",
+    subtitle: "Bitcoin Citadel | Promenade Castle",
     handle: "@PromenadeCastle",
     // borderColor: "#EC4899",
     // gradient: "linear-gradient(120deg, #EC4899, #000)",
@@ -119,7 +119,7 @@ const enItems = [
   {
     image: "/avatars/wos.png",
     title: "Wallet of Satoshi",
-    subtitle: "Bitcoin Citadel",
+    subtitle: "CEO",
     handle: "@Walletofsatoshi ",
     // borderColor: "#EC4899",
     // gradient: "linear-gradient(120deg, #EC4899, #000)",
@@ -166,8 +166,8 @@ const koItems = [
   },
   {
     image: "/avatars/nldd.webp",
-    title: "NLDD",
-    subtitle: "Youtuber | Translator",
+    title: "네딸바",
+    subtitle: "유튜버 | 번역가",
     handle: "@nldd21",
     // borderColor: "#EF4444",
     // gradient: "linear-gradient(315deg, #EF4444, #000)",
@@ -175,8 +175,8 @@ const koItems = [
   },
   {
     image: "/avatars/powdae.webp",
-    title: "PowDae",
-    subtitle: "CEO | Noncelab",
+    title: "포대",
+    subtitle: "CEO | 논스랩",
     handle: "@powdae",
     // borderColor: "#F59E0B",
     // gradient: "linear-gradient(45deg, #F59E0B, #000)",
@@ -185,7 +185,7 @@ const koItems = [
   {
     image: "/avatars/seedSigner.webp",
     title: "SeedSigner",
-    subtitle: "Founder | SeedSigner",
+    subtitle: "개발자 | SeedSigner",
     handle: "@seedSigner",
     // borderColor: "#84CC16",
     // gradient: "linear-gradient(90deg, #84CC16, #000)",
@@ -193,8 +193,8 @@ const koItems = [
   },
   {
     image: "/avatars/specter.webp",
-    title: "Specter",
-    subtitle: "Co-founder | BSL",
+    title: "스펙터",
+    subtitle: "공동 설립 | BSL",
     handle: "@specter",
     // borderColor: "#A855F7",
     // gradient: "linear-gradient(270deg, #A855F7, #000)",
@@ -212,7 +212,7 @@ const koItems = [
   {
     image: "/avatars/keypleb.png",
     title: "Keypleb",
-    subtitle: "Co-founder | Code Orange Dev",
+    subtitle: "공동 설립 | Code Orange Dev",
     handle: "@keypleb",
     // borderColor: "#EC4899",
     // gradient: "linear-gradient(120deg, #EC4899, #000)",
@@ -220,8 +220,8 @@ const koItems = [
   },
   {
     image: "/avatars/trigger.png",
-    title: "Trigger",
-    subtitle: "Bitcoin SeoulCenter | Coconut",
+    title: "트리거",
+    subtitle: "Bitcoin Seoul Center | Coconut",
     handle: "@Coconut_BTC",
     // borderColor: "#EC4899",
     // gradient: "linear-gradient(120deg, #EC4899, #000)",
@@ -230,7 +230,7 @@ const koItems = [
   {
     image: "/avatars/pororo.png",
     title: "Pororo",
-    subtitle: "Generalist | Developer",
+    subtitle: "제너럴리스트 | 개발자",
     handle: "@asheswook",
     // borderColor: "#EC4899",
     // gradient: "linear-gradient(120deg, #EC4899, #000)",
@@ -238,8 +238,8 @@ const koItems = [
   },
   {
     image: "/avatars/promenade.png",
-    title: "Promenade",
-    subtitle: "Bitcoin Citadel",
+    title: "프로메나드",
+    subtitle: "비트코인 시타델 | 프로메나드 캐슬",
     handle: "@PromenadeCastle",
     // borderColor: "#EC4899",
     // gradient: "linear-gradient(120deg, #EC4899, #000)",
@@ -248,7 +248,7 @@ const koItems = [
   {
     image: "/avatars/wos.png",
     title: "Wallet of Satoshi",
-    subtitle: "Bitcoin Citadel",
+    subtitle: "CEO",
     handle: "@Walletofsatoshi ",
     // borderColor: "#EC4899",
     // gradient: "linear-gradient(120deg, #EC4899, #000)",
