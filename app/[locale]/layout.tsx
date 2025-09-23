@@ -25,6 +25,26 @@ export const metadata: Metadata = {
   icons: {
     icon: "/logo.png",
   },
+  openGraph: {
+    title: "Bitcoin Mini Conference",
+    siteName: "Bitcoin Mini Conference",
+    images: [
+      {
+        url: "https://bitcoin-mini-conf.vercel.app/logo.png", // 배포된 절대경로
+        width: 1200,
+        height: 630,
+        alt: "Bitcoin Mini Conference",
+      },
+    ],
+    locale: "ko_KR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Bitcoin Mini Conference",
+    description: "Bitcoin Mini Conference",
+    images: ["https://bitcoin-mini-conf.vercel.app/logo.png"], // 절대경로
+  },
 };
 
 type Props = {
