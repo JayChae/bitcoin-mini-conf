@@ -4,8 +4,7 @@ const enItems = [
     title: "Gandlaf",
     subtitle: "Developer | Cashu",
     handle: "@gandlaf21",
-    // borderColor: "#F97316",
-    // gradient: "linear-gradient(145deg, #F97316, #000)",
+
     url: "https://primal.net/p/nprofile1qqsvfdfkn2wmy73wr0yhkf065jrzm8705ar4q6clyuhc7jekhqfdh4sa06kjr",
   },
   {
@@ -13,8 +12,6 @@ const enItems = [
     title: "Calvin Kim",
     subtitle: "Developer | Utreexo",
     handle: "@kcalvinalvinn",
-    // borderColor: "#8B5CF6",
-    // gradient: "linear-gradient(180deg, #8B5CF6, #000)",
     url: "https://x.com/kcalvinalvinn",
   },
   {
@@ -22,8 +19,7 @@ const enItems = [
     title: "Atomic Bitcoin",
     subtitle: "Auditor | BSL",
     handle: "@atomicBTC",
-    // borderColor: "#06B6D4",
-    // gradient: "linear-gradient(135deg, #06B6D4, #000)",
+
     url: "https://x.com/atomicbtc",
   },
   {
@@ -31,8 +27,7 @@ const enItems = [
     title: "Kevin Loaec",
     subtitle: "CEO | Wizardsardine",
     handle: "@KLoaec",
-    // borderColor: "#10B981",
-    // gradient: "linear-gradient(225deg, #10B981, #000)",
+
     url: "https://x.com/kloaec",
   },
   {
@@ -40,8 +35,7 @@ const enItems = [
     title: "NLDD",
     subtitle: "Youtuber | Translator",
     handle: "@nldd21",
-    // borderColor: "#EF4444",
-    // gradient: "linear-gradient(315deg, #EF4444, #000)",
+
     url: "https://x.com/nldd21",
   },
   {
@@ -49,8 +43,7 @@ const enItems = [
     title: "PowDae",
     subtitle: "CEO | Noncelab",
     handle: "@powdae",
-    // borderColor: "#F59E0B",
-    // gradient: "linear-gradient(45deg, #F59E0B, #000)",
+
     url: "https://twitter.com/powdae",
   },
   {
@@ -58,8 +51,7 @@ const enItems = [
     title: "SeedSigner",
     subtitle: "developer | SeedSigner",
     handle: "@seedSigner",
-    // borderColor: "#84CC16",
-    // gradient: "linear-gradient(90deg, #84CC16, #000)",
+
     url: "https://x.com/seedsigner",
   },
   {
@@ -67,8 +59,7 @@ const enItems = [
     title: "Specter",
     subtitle: "Co-founder | BSL",
     handle: "@specter",
-    // borderColor: "#A855F7",
-    // gradient: "linear-gradient(270deg, #A855F7, #000)",
+
     url: "https://x.com/k_bitcoiner",
   },
   {
@@ -76,8 +67,7 @@ const enItems = [
     title: "Win Ko Ko Aung",
     subtitle: "Global Bitcoin Adoption | HRF",
     handle: "@wkkaung",
-    // borderColor: "#EC4899",
-    // gradient: "linear-gradient(120deg, #EC4899, #000)",
+
     url: "https://x.com/wkkaung",
   },
   {
@@ -85,8 +75,7 @@ const enItems = [
     title: "Keypleb",
     subtitle: "Co-founder | Code Orange Dev",
     handle: "@keypleb",
-    // borderColor: "#EC4899",
-    // gradient: "linear-gradient(120deg, #EC4899, #000)",
+
     url: "https://x.com/keypleb",
   },
   {
@@ -94,8 +83,7 @@ const enItems = [
     title: "Trigger",
     subtitle: "Bitcoin Seoul Center | Coconut",
     handle: "@Coconut_BTC",
-    // borderColor: "#EC4899",
-    // gradient: "linear-gradient(120deg, #EC4899, #000)",
+
     url: "https://x.com/Coconut_BTC",
   },
   {
@@ -103,8 +91,7 @@ const enItems = [
     title: "Pororo",
     subtitle: "Generalist | Developer",
     handle: "@asheswook",
-    // borderColor: "#EC4899",
-    // gradient: "linear-gradient(120deg, #EC4899, #000)",
+
     url: "https://x.com/asheswook",
   },
   {
@@ -112,8 +99,7 @@ const enItems = [
     title: "Promenade",
     subtitle: "Bitcoin Citadel | Promenade Castle",
     handle: "@PromenadeCastle",
-    // borderColor: "#EC4899",
-    // gradient: "linear-gradient(120deg, #EC4899, #000)",
+
     url: "https://x.com/PromenadeCastle",
   },
   {
@@ -121,8 +107,7 @@ const enItems = [
     title: "Wallet of Satoshi",
     subtitle: "CEO",
     handle: "@Walletofsatoshi ",
-    // borderColor: "#EC4899",
-    // gradient: "linear-gradient(120deg, #EC4899, #000)",
+
     url: "https://x.com/walletofsatoshi",
   },
 ];
@@ -133,8 +118,7 @@ const koItems = [
     title: "Gandlaf",
     subtitle: "Developer | Cashu",
     handle: "@gandlaf21",
-    // borderColor: "#F97316",
-    // gradient: "linear-gradient(145deg, #F97316, #000)",
+
     url: "https://primal.net/p/nprofile1qqsvfdfkn2wmy73wr0yhkf065jrzm8705ar4q6clyuhc7jekhqfdh4sa06kjr",
   },
   {
@@ -142,8 +126,7 @@ const koItems = [
     title: "Calvin Kim",
     subtitle: "Developer | Utreexo",
     handle: "@kcalvinalvinn",
-    // borderColor: "#8B5CF6",
-    // gradient: "linear-gradient(180deg, #8B5CF6, #000)",
+
     url: "https://x.com/kcalvinalvinn",
   },
   {
@@ -151,8 +134,7 @@ const koItems = [
     title: "아토믹 비트코인",
     subtitle: "Auditor | BSL",
     handle: "@atomicBTC",
-    // borderColor: "#06B6D4",
-    // gradient: "linear-gradient(135deg, #06B6D4, #000)",
+
     url: "https://x.com/atomicbtc",
   },
   {
@@ -160,8 +142,7 @@ const koItems = [
     title: "Kevin Loaec",
     subtitle: "CEO | Wizardsardine",
     handle: "@KLoaec",
-    // borderColor: "#10B981",
-    // gradient: "linear-gradient(225deg, #10B981, #000)",
+
     url: "https://x.com/kloaec",
   },
   {
@@ -169,8 +150,7 @@ const koItems = [
     title: "네딸바",
     subtitle: "유튜버 | 번역가",
     handle: "@nldd21",
-    // borderColor: "#EF4444",
-    // gradient: "linear-gradient(315deg, #EF4444, #000)",
+
     url: "https://x.com/nldd21",
   },
   {
@@ -178,8 +158,7 @@ const koItems = [
     title: "포대",
     subtitle: "CEO | 논스랩",
     handle: "@powdae",
-    // borderColor: "#F59E0B",
-    // gradient: "linear-gradient(45deg, #F59E0B, #000)",
+
     url: "https://twitter.com/powdae",
   },
   {
@@ -187,8 +166,7 @@ const koItems = [
     title: "SeedSigner",
     subtitle: "개발자 | SeedSigner",
     handle: "@seedSigner",
-    // borderColor: "#84CC16",
-    // gradient: "linear-gradient(90deg, #84CC16, #000)",
+
     url: "https://x.com/seedsigner",
   },
   {
@@ -196,8 +174,7 @@ const koItems = [
     title: "스펙터",
     subtitle: "공동 설립 | BSL",
     handle: "@specter",
-    // borderColor: "#A855F7",
-    // gradient: "linear-gradient(270deg, #A855F7, #000)",
+
     url: "https://x.com/k_bitcoiner",
   },
   {
@@ -205,8 +182,7 @@ const koItems = [
     title: "Win Ko Ko Aung",
     subtitle: "Global Bitcoin Adoption | HRF",
     handle: "@wkkaung",
-    // borderColor: "#EC4899",
-    // gradient: "linear-gradient(120deg, #EC4899, #000)",
+
     url: "https://x.com/wkkaung",
   },
   {
@@ -214,8 +190,7 @@ const koItems = [
     title: "Keypleb",
     subtitle: "공동 설립 | Code Orange Dev",
     handle: "@keypleb",
-    // borderColor: "#EC4899",
-    // gradient: "linear-gradient(120deg, #EC4899, #000)",
+
     url: "https://x.com/keypleb",
   },
   {
@@ -223,8 +198,7 @@ const koItems = [
     title: "트리거",
     subtitle: "Bitcoin Seoul Center | Coconut",
     handle: "@Coconut_BTC",
-    // borderColor: "#EC4899",
-    // gradient: "linear-gradient(120deg, #EC4899, #000)",
+
     url: "https://x.com/Coconut_BTC",
   },
   {
@@ -232,8 +206,7 @@ const koItems = [
     title: "Pororo",
     subtitle: "제너럴리스트 | 개발자",
     handle: "@asheswook",
-    // borderColor: "#EC4899",
-    // gradient: "linear-gradient(120deg, #EC4899, #000)",
+
     url: "https://x.com/asheswook",
   },
   {
@@ -241,8 +214,7 @@ const koItems = [
     title: "프로메나드",
     subtitle: "비트코인 시타델 | 프로메나드 캐슬",
     handle: "@PromenadeCastle",
-    // borderColor: "#EC4899",
-    // gradient: "linear-gradient(120deg, #EC4899, #000)",
+
     url: "https://x.com/PromenadeCastle",
   },
   {
@@ -250,8 +222,7 @@ const koItems = [
     title: "Wallet of Satoshi",
     subtitle: "CEO",
     handle: "@Walletofsatoshi ",
-    // borderColor: "#EC4899",
-    // gradient: "linear-gradient(120deg, #EC4899, #000)",
+
     url: "https://x.com/walletofsatoshi",
   },
 ];
