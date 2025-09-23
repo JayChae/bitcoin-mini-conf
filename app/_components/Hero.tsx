@@ -2,7 +2,16 @@ import GradientText from "@/components/GradientText";
 import StarBorder from "@/components/StarBorder";
 import Link from "next/link";
 
-export default function Hero() {
+type Props = {
+  title: string;
+  subtitle: string;
+  tickets: {
+    krw: string;
+    btc: string;
+  };
+};
+
+export default async function Hero({ title, subtitle, tickets }: Props) {
   return (
     <div className="flex flex-col items-center justify-center h-screen gap-14">
       <section className="flex flex-col items-center justify-center gap-3">
@@ -14,12 +23,12 @@ export default function Hero() {
             showBorder={false}
             className="text-3xl md:text-4xl lg:text-5xl font-bold pointer-events-none"
           >
-            Bitcoin Mini Conference
+            {title}
           </GradientText>
         </h1>
 
         <span className="text-md md:text-lg lg:text-xl font-bold pointer-events-none text-accent/35">
-          SECOND EDITION | SEPTEMBER 29-30, 2025
+          {subtitle}
         </span>
       </section>
       <section className="w-full flex flex-col items-center justify-between md:flex-row gap-10">
@@ -34,7 +43,7 @@ export default function Hero() {
             speed="3s"
             thickness={3}
           >
-            ₿ Tickets (BTC)
+            {tickets.btc}
           </StarBorder>
         </Link>
         <Link
@@ -47,7 +56,7 @@ export default function Hero() {
             color="cyan"
             speed="3s"
           >
-            ₩ Tickets (KRW)
+            {tickets.krw}
           </StarBorder>
         </Link>
       </section>

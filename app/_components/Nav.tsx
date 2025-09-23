@@ -4,14 +4,11 @@ import { useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
-const items = [
-  { label: "Home", href: "#home" },
-  { label: "Speakers", href: "#speakers" },
-  { label: "Schedule", href: "#schedule" },
-  { label: "Sponsors", href: "#sponsors" },
-];
+type Props = {
+  items: { label: string; href: string }[];
+}
 
-export default function Nav() {
+export default function Nav({ items }: Props) {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
 
@@ -40,7 +37,7 @@ export default function Nav() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Image src="/logo.jpg" alt="Logo" width={40} height={40} />
+            <Image src="/logo.png" alt="Logo" width={40} height={40} />
           </div>
 
           {/* Desktop Menu */}
