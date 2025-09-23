@@ -2,15 +2,17 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/i18n/navigation";
+import { useLocale } from "next-intl";
 
 type Props = {
   items: { label: string; href: string }[];
-}
+};
 
 export default function Nav({ items }: Props) {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
+  const locale = useLocale();
 
   const handleClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
@@ -29,6 +31,11 @@ export default function Nav({ items }: Props) {
       });
     }
     setIsOpen(false);
+  };
+
+  const handleLanguageSwitch = () => {
+    const newLocale = locale === "en" ? "ko" : "en";
+    router.replace("/", { locale: newLocale });
   };
 
   return (
@@ -53,6 +60,12 @@ export default function Nav({ items }: Props) {
                   {item.label}
                 </a>
               ))}
+              <button
+                onClick={handleLanguageSwitch}
+                className="text-white/80 hover:text-white px-3 py-2 text-sm font-medium transition-colors duration-200 bg-white/10 hover:bg-white/20 rounded-md border border-white/20"
+              >
+                {locale === "en" ? "한국어" : "English"}
+              </button>
             </div>
           </div>
 
@@ -103,6 +116,14 @@ export default function Nav({ items }: Props) {
                   {item.label}
                 </a>
               ))}
+              <div className="pt-2 border-t border-white/10">
+                <button
+                  onClick={handleLanguageSwitch}
+                  className="text-white/80 hover:text-white block w-full text-left px-3 py-2 text-base font-medium transition-colors duration-200 bg-white/10 hover:bg-white/20 rounded-md border border-white/20"
+                >
+                  {locale === "en" ? "한국어" : "English"}
+                </button>
+              </div>
             </div>
           </div>
         )}
