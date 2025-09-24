@@ -4,10 +4,8 @@ import Schedule from "../_components/Schedule";
 import Speakers from "../_components/Speakers";
 import Sponsor from "../_components/Sponsor";
 import speakers from "../messages/speakers";
-import sponsors from "../messages/sponsor";
 import schedules from "../messages/schedules";
 import tickets from "../messages/tickets";
-import Image from "next/image";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -38,7 +36,7 @@ export default async function Home({ params }: Props) {
           <Schedule title={tSchedule("title")} schedules={schedules[lang]} />
         </section>
         <section id="sponsors" className="mt-40 scroll-mt-16">
-          <Sponsor title={tSponsor("title")} sponsors={sponsors} />
+          <Sponsor title={tSponsor("title")} />
         </section>
       </div>
     </main>
