@@ -1,11 +1,7 @@
 {
   "Hero": {
     "title": "Bitcoin Mini Conference",
-    "subtitle": "SECOND EDITION | 2025.9.29-30",
-    "tickets": {
-      "btc": "₿ 비트코인으로 티켓 구매",
-      "krw": "₩ 원화로 티켓 구매"
-    }
+    "subtitle": "SECOND EDITION | 2025.9.29-30"
   },
   "Speakers": {
     "title": "연사 소개"
