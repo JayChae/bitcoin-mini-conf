@@ -20,7 +20,7 @@ export default function Sponsor({ title }: Props) {
       </Link>
       <Link href={"https://walletofsatoshi.com"} target="_blank">
         <Image
-          src={"/sponsors/WoS.png"}
+          src={"/sponsors/ws.png"}
           alt={"Wallet of Satoshi"}
           width={350}
           height={350}
@@ -28,7 +28,7 @@ export default function Sponsor({ title }: Props) {
       </Link>
       <Link href={"https://noncelab.com"} target="_blank">
         <Image
-          src={"/sponsors/nonceLab.png"}
+          src={"/sponsors/nl.png"}
           alt={"NonceLab"}
           width={350}
           height={350}
