@@ -7,27 +7,49 @@ type Props = {
   title: string;
   subtitle: string;
   tickets: TicketButton[];
+  date: string;
+  location: string;
 };
 
-export default async function Hero({ title, subtitle, tickets }: Props) {
+export default async function Hero({
+  title,
+  subtitle,
+  tickets,
+  date,
+  location,
+}: Props) {
   return (
     <div className="flex flex-col items-center justify-center h-screen gap-14">
-      <section className="flex flex-col items-center justify-center gap-3">
+      <section className="flex flex-col items-center justify-center">
         {/* Hero Title Section */}
-        <h1 className="">
+        <h1 className="text-center mb-6">
           <GradientText
             colors={["#ff4040", "#ff7940", "#ff4040", "#ff7940", "#ff4040"]}
             animationSpeed={2}
             showBorder={false}
-            className="text-5xl md:text-6xl lg:text-7xl font-bold pointer-events-none"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold pointer-events-none"
           >
             {title}
           </GradientText>
         </h1>
 
-        <span className="text-lg md:text-xl lg:text-2xl font-bold pointer-events-none text-accent/35">
-          {subtitle}
-        </span>
+        {/* Subtitle with emphasis */}
+        <div className="mb-4">
+          <span className="text-xl md:text-2xl lg:text-3xl font-semibold pointer-events-none text-accent/60 tracking-wide">
+            {subtitle}
+          </span>
+        </div>
+
+        {/* Date and Location with different styling */}
+        <div className="flex flex-col md:flex-row items-center gap-1 md:gap-8">
+          <span className="text-base md:text-lg lg:text-xl font-medium pointer-events-none text-accent/50">
+            {date}
+          </span>
+
+          <span className="text-base md:text-lg lg:text-xl font-medium pointer-events-none text-accent/50">
+            {location}
+          </span>
+        </div>
       </section>
       <section className="w-full flex flex-col items-center lg:flex-row gap-3">
         {tickets.map((ticket) => (
