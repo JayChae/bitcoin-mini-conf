@@ -7,6 +7,7 @@ import speakers from "../messages/speakers";
 import sponsors from "../messages/sponsor";
 import schedules from "../messages/schedules";
 import tickets from "../messages/tickets";
+import Image from "next/image";
 
 type Props = {
   params: Promise<{ locale: string }>;

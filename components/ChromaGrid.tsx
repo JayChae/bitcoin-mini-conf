@@ -1,21 +1,13 @@
 "use client";
-import React, { useRef, useEffect } from "react";
+
+import React, { useRef, useEffect, ReactNode } from "react";
 import { gsap } from "gsap";
 import Image from "next/image";
-
-export interface ChromaItem {
-  image: string;
-  title: string;
-  subtitle: string;
-  handle?: string;
-  location?: string;
-  borderColor?: string;
-  gradient?: string;
-  url?: string;
-}
+import Link from "next/link";
+import { snsIconUrl, Speaker } from "@/app/messages/speakers";
 
 export interface ChromaGridProps {
-  items?: ChromaItem[];
+  items: Speaker[];
   className?: string;
   radius?: number;
   damping?: number;
@@ -39,64 +31,7 @@ const ChromaGrid: React.FC<ChromaGridProps> = ({
   const setY = useRef<SetterFn | null>(null);
   const pos = useRef({ x: 0, y: 0 });
 
-  const demo: ChromaItem[] = [
-    {
-      image: "https://i.pravatar.cc/300?img=8",
-      title: "Alex Rivera",
-      subtitle: "Full Stack Developer",
-      handle: "@alexrivera",
-      borderColor: "#4F46E5",
-      gradient: "linear-gradient(145deg,#4F46E5,#000)",
-      url: "https://github.com/",
-    },
-    {
-      image: "https://i.pravatar.cc/300?img=11",
-      title: "Jordan Chen",
-      subtitle: "DevOps Engineer",
-      handle: "@jordanchen",
-      borderColor: "#10B981",
-      gradient: "linear-gradient(210deg,#10B981,#000)",
-      url: "https://linkedin.com/in/",
-    },
-    {
-      image: "https://i.pravatar.cc/300?img=3",
-      title: "Morgan Blake",
-      subtitle: "UI/UX Designer",
-      handle: "@morganblake",
-      borderColor: "#F59E0B",
-      gradient: "linear-gradient(165deg,#F59E0B,#000)",
-      url: "https://dribbble.com/",
-    },
-    {
-      image: "https://i.pravatar.cc/300?img=16",
-      title: "Casey Park",
-      subtitle: "Data Scientist",
-      handle: "@caseypark",
-      borderColor: "#EF4444",
-      gradient: "linear-gradient(195deg,#EF4444,#000)",
-      url: "https://kaggle.com/",
-    },
-    {
-      image: "https://i.pravatar.cc/300?img=25",
-      title: "Sam Kim",
-      subtitle: "Mobile Developer",
-      handle: "@thesamkim",
-      borderColor: "#8B5CF6",
-      gradient: "linear-gradient(225deg,#8B5CF6,#000)",
-      url: "https://github.com/",
-    },
-    {
-      image: "https://i.pravatar.cc/300?img=60",
-      title: "Tyler Rodriguez",
-      subtitle: "Cloud Architect",
-      handle: "@tylerrod",
-      borderColor: "#06B6D4",
-      gradient: "linear-gradient(135deg,#06B6D4,#000)",
-      url: "https://aws.amazon.com/",
-    },
-  ];
-
-  const data = items?.length ? items : demo;
+  const data = items?.length ? items : [];
 
   useEffect(() => {
     const el = rootRef.current;
@@ -166,12 +101,12 @@ const ChromaGrid: React.FC<ChromaGridProps> = ({
         <article
           key={i}
           onMouseMove={handleCardMove}
-          onClick={() => handleCardClick(c.url)}
-          className="group relative flex flex-col w-[300px] rounded-[20px] overflow-hidden border-2 border-transparent transition-colors duration-300 cursor-pointer"
+          // onClick={() => handleCardClick(c.url)}
+          className="group relative flex flex-col w-[300px] rounded-[20px] overflow-hidden border-2 border-transparent transition-colors duration-300"
           style={
             {
-              "--card-border": c.borderColor || "transparent",
-              background: c.gradient,
+              "--card-border": "transparent",
+              background: "transparent",
               "--spotlight-color": "rgba(255,255,255,0.3)",
             } as React.CSSProperties
           }
@@ -194,17 +129,30 @@ const ChromaGrid: React.FC<ChromaGridProps> = ({
           </div>
           <footer className="relative z-10 p-3 text-white font-sans grid grid-cols-[1fr_auto] gap-x-3 gap-y-1">
             <h3 className="m-0 text-[1.05rem] font-semibold">{c.title}</h3>
-            {c.handle && (
-              <span className="text-[0.95rem] opacity-80 text-right">
-                {c.handle}
-              </span>
-            )}
+            <div className="flex items-center gap-x-2">
+              {c.links.map((link) => (
+                <Link
+                  key={link.url + link.type}
+                  href={link.url}
+                  target="_blank"
+                  className="hover:scale-110 transition-transform duration-200"
+                >
+                  <Image
+                    src={snsIconUrl[link.type]}
+                    alt={link.type}
+                    width={13}
+                    height={13}
+                  />
+                </Link>
+              ))}
+            </div>
             <p className="m-0 text-[0.85rem] opacity-85">{c.subtitle}</p>
-            {c.location && (
+
+            {/* {c.location && (
               <span className="text-[0.85rem] opacity-85 text-right">
                 {c.location}
               </span>
-            )}
+            )} */}
           </footer>
         </article>
       ))}

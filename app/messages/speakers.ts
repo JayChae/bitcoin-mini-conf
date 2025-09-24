@@ -1,212 +1,474 @@
+export type SNS = {
+  type: "x" | "website" | "youtube" | "nostr" | "telegram";
+  url: string;
+};
+
+export const snsIconUrl: Record<SNS["type"], string> = {
+  x: "/sns/x.svg",
+  website: "/sns/home.svg",
+  youtube: "/sns/youtube.svg",
+  nostr: "/sns/nostr.svg",
+  telegram: "/sns/telegram.svg",
+};
+
 export type Speaker = {
   image: string;
   title: string;
   subtitle: string;
-  handle: string;
-  url: string;
+  links: SNS[];
 };
 
 const enItems: Speaker[] = [
   {
-    image: "/avatars/gandalf.webp",
+    image: "/avatars/gandalf.png",
     title: "Gandlaf",
     subtitle: "Developer | Cashu",
-    handle: "@gandlaf21",
-    url: "https://primal.net/p/nprofile1qqsvfdfkn2wmy73wr0yhkf065jrzm8705ar4q6clyuhc7jekhqfdh4sa06kjr",
+    links: [
+      {
+        type: "nostr",
+        url: "https://primal.net/p/nprofile1qqsvfdfkn2wmy73wr0yhkf065jrzm8705ar4q6clyuhc7jekhqfdh4sa06kjr",
+      },
+    ],
   },
   {
-    image: "/avatars/calvin.webp",
+    image: "/avatars/calvin.png",
     title: "Calvin Kim",
     subtitle: "Developer | Utreexo",
-    handle: "@kcalvinalvinn",
-    url: "https://x.com/kcalvinalvinn",
+    links: [
+      {
+        type: "x",
+        url: "https://x.com/kcalvinalvinn",
+      },
+    ],
   },
   {
-    image: "/avatars/atomic.webp",
+    image: "/avatars/atomic.png",
     title: "Atomic Bitcoin",
     subtitle: "Auditor | BSL",
-    handle: "@atomicBTC",
-    url: "https://x.com/atomicbtc",
+    links: [
+      {
+        type: "x",
+        url: "https://x.com/atomicbtc",
+      },
+    ],
   },
   {
-    image: "/avatars/kelvin.webp",
+    image: "/avatars/kevin.png",
     title: "Kevin Loaec",
     subtitle: "CEO | Wizardsardine",
-    handle: "@KLoaec",
-    url: "https://x.com/kloaec",
+    links: [
+      {
+        type: "website",
+        url: "https://wizardsardine.com/liana",
+      },
+      {
+        type: "x",
+        url: "https://x.com/kloaec",
+      },
+    ],
   },
   {
-    image: "/avatars/nldd.webp",
+    image: "/avatars/nldd.png",
     title: "NLDD",
     subtitle: "Youtuber | Translator",
-    handle: "@nldd21",
-    url: "https://x.com/nldd21",
+    links: [
+      {
+        type: "youtube",
+        url: "https://youtube.com/channel/UCT_RhM-i6or1qS1JRm4Bqrw?si=gTwZokhgaWnbD7bY",
+      },
+      {
+        type: "x",
+        url: "https://x.com/nldd21",
+      },
+    ],
   },
   {
-    image: "/avatars/powdae.webp",
+    image: "/avatars/powdae.png",
     title: "PowDae",
     subtitle: "CEO | Noncelab",
-    handle: "@powdae",
-    url: "https://twitter.com/powdae",
+    links: [
+      {
+        type: "website",
+        url: "https://powbitcoiner.com/",
+      },
+      {
+        type: "x",
+        url: "https://twitter.com/powdae",
+      },
+    ],
   },
   {
-    image: "/avatars/seedSigner.webp",
+    image: "/avatars/seedSigner.png",
     title: "SeedSigner",
     subtitle: "developer | SeedSigner",
-    handle: "@seedSigner",
-    url: "https://x.com/seedsigner",
+    links: [
+      {
+        type: "website",
+        url: "https://seedsigner.com",
+      },
+      {
+        type: "x",
+        url: "https://x.com/seedsigner",
+      },
+    ],
   },
   {
-    image: "/avatars/specter.webp",
+    image: "/avatars/specter.png",
     title: "Specter",
     subtitle: "Co-founder | BSL",
-    handle: "@specter",
-    url: "https://x.com/k_bitcoiner",
+    links: [
+      {
+        type: "youtube",
+        url: "https://www.youtube.com/@BitcoinSPECTER2100",
+      },
+      {
+        type: "x",
+        url: "https://x.com/k_bitcoiner",
+      },
+    ],
   },
   {
-    image: "/avatars/win.webp",
+    image: "/avatars/win.png",
     title: "Win Ko Ko Aung",
     subtitle: "Global Bitcoin Adoption | HRF",
-    handle: "@wkkaung",
-
-    url: "https://x.com/wkkaung",
+    links: [
+      {
+        type: "website",
+        url: "https://hrf.org",
+      },
+      {
+        type: "x",
+        url: "https://x.com/wkkaung",
+      },
+    ],
   },
   {
     image: "/avatars/keypleb.png",
     title: "Keypleb",
     subtitle: "Co-founder | Code Orange Dev",
-    handle: "@keypleb",
-
-    url: "https://x.com/keypleb",
+    links: [
+      {
+        type: "website",
+        url: "https://codeorange.dev",
+      },
+      {
+        type: "x",
+        url: "https://x.com/keypleb",
+      },
+    ],
   },
   {
     image: "/avatars/trigger.png",
     title: "Trigger",
     subtitle: "Bitcoin Seoul Center | Coconut",
-    handle: "@Coconut_BTC",
-    url: "https://x.com/Coconut_BTC",
+    links: [
+      {
+        type: "website",
+        url: "https://linktr.ee/noncelab",
+      },
+      {
+        type: "x",
+        url: "https://x.com/Coconut_BTC",
+      },
+    ],
   },
   {
     image: "/avatars/pororo.png",
     title: "Pororo",
     subtitle: "Generalist | Developer",
-    handle: "@asheswook",
-    url: "https://x.com/asheswook",
+    links: [
+      {
+        type: "website",
+        url: "https://oksu.su/",
+      },
+      {
+        type: "x",
+        url: "https://x.com/asheswook",
+      },
+    ],
   },
   {
     image: "/avatars/promenade.png",
     title: "Promenade",
     subtitle: "Bitcoin Citadel | Promenade Castle",
-    handle: "@PromenadeCastle",
-    url: "https://x.com/PromenadeCastle",
+    links: [
+      {
+        type: "website",
+        url: "https://promenadecastle.com",
+      },
+      {
+        type: "telegram",
+        url: "https://t.me/+2yNtegasqLJmMjc1",
+      },
+      {
+        type: "x",
+        url: "https://x.com/PromenadeCastle",
+      },
+    ],
   },
   {
     image: "/avatars/wos.png",
     title: "Wallet of Satoshi",
     subtitle: "CEO",
-    handle: "@Walletofsatoshi ",
-    url: "https://x.com/walletofsatoshi",
+    links: [
+      {
+        type: "website",
+        url: "https://www.walletofsatoshi.com",
+      },
+      {
+        type: "x",
+        url: "https://x.com/walletofsatoshi",
+      },
+    ],
+  },
+  {
+    image: "/avatars/moonJun.png",
+    title: "Moon Jun Kim",
+    subtitle: "Outside director of KCGI",
+    links: [
+      {
+        type: "website",
+        url: "https://www.kcgiam.com/",
+      },
+    ],
+  },
+  {
+    image: "/avatars/jaeNam.png",
+    title: "Jae Nam Kang",
+    subtitle: "Virtual Asset Tax Accountant",
+    links: [
+      {
+        type: "website",
+        url: "https://fresh-credit-98a.notion.site/9065d93234844efc84d11aad22c0152e",
+      },
+    ],
   },
 ] as const;
 
 const koItems: Speaker[] = [
   {
-    image: "/avatars/gandalf.webp",
+    image: "/avatars/gandalf.png",
     title: "Gandlaf",
     subtitle: "Developer | Cashu",
-    handle: "@gandlaf21",
-    url: "https://primal.net/p/nprofile1qqsvfdfkn2wmy73wr0yhkf065jrzm8705ar4q6clyuhc7jekhqfdh4sa06kjr",
+    links: [
+      {
+        type: "nostr",
+        url: "https://primal.net/p/nprofile1qqsvfdfkn2wmy73wr0yhkf065jrzm8705ar4q6clyuhc7jekhqfdh4sa06kjr",
+      },
+    ],
   },
   {
-    image: "/avatars/calvin.webp",
+    image: "/avatars/calvin.png",
     title: "Calvin Kim",
     subtitle: "Developer | Utreexo",
-    handle: "@kcalvinalvinn",
-    url: "https://x.com/kcalvinalvinn",
+    links: [
+      {
+        type: "x",
+        url: "https://x.com/kcalvinalvinn",
+      },
+    ],
   },
   {
-    image: "/avatars/atomic.webp",
+    image: "/avatars/atomic.png",
     title: "아토믹 비트코인",
     subtitle: "Auditor | BSL",
-    handle: "@atomicBTC",
-    url: "https://x.com/atomicbtc",
+    links: [
+      {
+        type: "x",
+        url: "https://x.com/atomicbtc",
+      },
+    ],
   },
   {
-    image: "/avatars/kelvin.webp",
+    image: "/avatars/kevin.png",
     title: "Kevin Loaec",
     subtitle: "CEO | Wizardsardine",
-    handle: "@KLoaec",
-    url: "https://x.com/kloaec",
+    links: [
+      {
+        type: "website",
+        url: "https://wizardsardine.com/liana",
+      },
+      {
+        type: "x",
+        url: "https://x.com/kloaec",
+      },
+    ],
   },
   {
-    image: "/avatars/nldd.webp",
+    image: "/avatars/nldd.png",
     title: "네딸바",
     subtitle: "유튜버 | 번역가",
-    handle: "@nldd21",
-    url: "https://x.com/nldd21",
+    links: [
+      {
+        type: "youtube",
+        url: "https://youtube.com/channel/UCT_RhM-i6or1qS1JRm4Bqrw?si=gTwZokhgaWnbD7bY",
+      },
+      {
+        type: "x",
+        url: "https://x.com/nldd21",
+      },
+    ],
   },
   {
-    image: "/avatars/powdae.webp",
+    image: "/avatars/powdae.png",
     title: "포대",
     subtitle: "CEO | 논스랩",
-    handle: "@powdae",
-    url: "https://twitter.com/powdae",
+    links: [
+      {
+        type: "website",
+        url: "https://powbitcoiner.com/",
+      },
+      {
+        type: "x",
+        url: "https://twitter.com/powdae",
+      },
+    ],
   },
   {
-    image: "/avatars/seedSigner.webp",
+    image: "/avatars/seedSigner.png",
     title: "SeedSigner",
     subtitle: "개발자 | SeedSigner",
-    handle: "@seedSigner",
-    url: "https://x.com/seedsigner",
+    links: [
+      {
+        type: "website",
+        url: "https://seedsigner.com",
+      },
+      {
+        type: "x",
+        url: "https://x.com/seedsigner",
+      },
+    ],
   },
   {
-    image: "/avatars/specter.webp",
+    image: "/avatars/specter.png",
     title: "스펙터",
     subtitle: "공동 설립 | BSL",
-    handle: "@specter",
-    url: "https://x.com/k_bitcoiner",
+    links: [
+      {
+        type: "youtube",
+        url: "https://www.youtube.com/@BitcoinSPECTER2100",
+      },
+      {
+        type: "x",
+        url: "https://x.com/k_bitcoiner",
+      },
+    ],
   },
   {
-    image: "/avatars/win.webp",
+    image: "/avatars/win.png",
     title: "Win Ko Ko Aung",
     subtitle: "Global Bitcoin Adoption | HRF",
-    handle: "@wkkaung",
-    url: "https://x.com/wkkaung",
+    links: [
+      {
+        type: "website",
+        url: "https://hrf.org",
+      },
+      {
+        type: "x",
+        url: "https://x.com/wkkaung",
+      },
+    ],
   },
   {
     image: "/avatars/keypleb.png",
     title: "Keypleb",
     subtitle: "공동 설립 | Code Orange Dev",
-    handle: "@keypleb",
-    url: "https://x.com/keypleb",
+    links: [
+      {
+        type: "website",
+        url: "https://codeorange.dev",
+      },
+      {
+        type: "x",
+        url: "https://x.com/keypleb",
+      },
+    ],
   },
   {
     image: "/avatars/trigger.png",
     title: "트리거",
     subtitle: "Bitcoin Seoul Center | Coconut",
-    handle: "@Coconut_BTC",
-    url: "https://x.com/Coconut_BTC",
+    links: [
+      {
+        type: "website",
+        url: "https://linktr.ee/noncelab",
+      },
+      {
+        type: "x",
+        url: "https://x.com/Coconut_BTC",
+      },
+    ],
   },
   {
     image: "/avatars/pororo.png",
     title: "Pororo",
     subtitle: "제너럴리스트 | 개발자",
-    handle: "@asheswook",
-    url: "https://x.com/asheswook",
+    links: [
+      {
+        type: "website",
+        url: "https://oksu.su/",
+      },
+      {
+        type: "x",
+        url: "https://x.com/asheswook",
+      },
+    ],
   },
   {
     image: "/avatars/promenade.png",
     title: "프로메나드",
     subtitle: "비트코인 시타델 | 프로메나드 캐슬",
-    handle: "@PromenadeCastle",
-    url: "https://x.com/PromenadeCastle",
+    links: [
+      {
+        type: "website",
+        url: "https://promenadecastle.com",
+      },
+      {
+        type: "telegram",
+        url: "https://t.me/+2yNtegasqLJmMjc1",
+      },
+      {
+        type: "x",
+        url: "https://x.com/PromenadeCastle",
+      },
+    ],
   },
   {
     image: "/avatars/wos.png",
     title: "Wallet of Satoshi",
     subtitle: "CEO",
-    handle: "@Walletofsatoshi ",
-    url: "https://x.com/walletofsatoshi",
+    links: [
+      {
+        type: "website",
+        url: "https://www.walletofsatoshi.com",
+      },
+      {
+        type: "x",
+        url: "https://x.com/walletofsatoshi",
+      },
+    ],
+  },
+  {
+    image: "/avatars/moonJun.png",
+    title: "김문준",
+    subtitle: "KCGI 자산운용 사외이사",
+    links: [
+      {
+        type: "website",
+        url: "https://www.kcgiam.com/",
+      },
+    ],
+  },
+  {
+    image: "/avatars/jaeNam.png",
+    title: "강재남",
+    subtitle: "가상자산 전문 세무사",
+    links: [
+      {
+        type: "website",
+        url: "https://fresh-credit-98a.notion.site/9065d93234844efc84d11aad22c0152e",
+      },
+    ],
   },
 ] as const;
 
