@@ -8,12 +8,12 @@ const sponsors: Sponsor[] = [
   {
     name: "NonceLab",
     url: "https://noncelab.com",
-    image: "/nonceLab.webp",
+    image: "/sponsors/nonceLab.webp",
   },
   {
     name: "HRF",
     url: "https://hrf.org",
-    image: "/hrf.jpg",
+    image: "/sponsors/hrf.jpg",
   },
 ] as const;
 
