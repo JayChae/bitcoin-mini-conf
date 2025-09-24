@@ -1,14 +1,12 @@
 import GradientText from "@/components/GradientText";
 import StarBorder from "@/components/StarBorder";
 import Link from "next/link";
+import { type TicketButton } from "../messages/tickets";
 
 type Props = {
   title: string;
   subtitle: string;
-  tickets: {
-    krw: string;
-    btc: string;
-  };
+  tickets: TicketButton[];
 };
 
 export default async function Hero({ title, subtitle, tickets }: Props) {
@@ -32,33 +30,23 @@ export default async function Hero({ title, subtitle, tickets }: Props) {
         </span>
       </section>
       <section className="w-full flex flex-col items-center justify-between md:flex-row gap-10">
-        <Link
-          href="https://store.btcmap.kr/meetup/Bitcoin_Mini_Conference/11/"
-          className="hover:scale-105 transition-all duration-300 "
-        >
-          <StarBorder
-            as="button"
-            className="cursor-pointer"
-            color="orange"
-            speed="3s"
-            thickness={3}
+        {tickets.map((ticket) => (
+          <Link
+            key={ticket.url}
+            href={ticket.url}
+            className="hover:scale-105 transition-all duration-300 "
           >
-            {tickets.btc}
-          </StarBorder>
-        </Link>
-        <Link
-          href="https://smartstore.naver.com/promenadecastle/products/12055415750"
-          className="hover:scale-105 transition-all duration-300"
-        >
-          <StarBorder
-            as="button"
-            className="cursor-pointer"
-            color="cyan"
-            speed="3s"
-          >
-            {tickets.krw}
-          </StarBorder>
-        </Link>
+            <StarBorder
+              as="button"
+              className="cursor-pointer"
+              color={ticket.color}
+              speed="3s"
+              thickness={3}
+            >
+              {ticket.name}
+            </StarBorder>
+          </Link>
+        ))}
       </section>
     </div>
   );

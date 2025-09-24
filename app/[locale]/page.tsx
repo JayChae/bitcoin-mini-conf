@@ -6,6 +6,7 @@ import Sponsor from "../_components/Sponsor";
 import speakers from "../messages/speakers";
 import sponsors from "../messages/sponsor";
 import schedules from "../messages/schedules";
+import tickets from "../messages/tickets";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -13,8 +14,8 @@ type Props = {
 
 export default async function Home({ params }: Props) {
   const { locale } = await params;
-  const lang = locale === "en" ? "en" : "ko";
-  const t = await getTranslations("Hero");
+  const lang = locale === "ko" ? "ko" : "en";
+  const tHero = await getTranslations("Hero");
   const tSpeakers = await getTranslations("Speakers");
   const tSchedule = await getTranslations("Schedule");
   const tSponsor = await getTranslations("Sponsor");
@@ -24,19 +25,16 @@ export default async function Home({ params }: Props) {
       <div className="flex flex-col items-center justify-center max-w-4xl mx-auto ">
         <section id="home" className="scroll-mt-16">
           <Hero
-            title={t("title")}
-            subtitle={t("subtitle")}
-            tickets={{ krw: t("tickets.krw"), btc: t("tickets.btc") }}
+            title={tHero("title")}
+            subtitle={tHero("subtitle")}
+            tickets={tickets[lang]}
           />
         </section>
         <section id="speakers" className="scroll-mt-16">
-          <Speakers speakers={speakers[lang]} title={tSpeakers("title")} />
+          <Speakers title={tSpeakers("title")} speakers={speakers[lang]} />
         </section>
         <section id="schedule" className="mt-40 scroll-mt-16">
-          <Schedule
-            title={tSchedule("title")}
-            schedules={schedules[lang]}
-          />
+          <Schedule title={tSchedule("title")} schedules={schedules[lang]} />
         </section>
         <section id="sponsors" className="mt-40 scroll-mt-16">
           <Sponsor title={tSponsor("title")} sponsors={sponsors} />

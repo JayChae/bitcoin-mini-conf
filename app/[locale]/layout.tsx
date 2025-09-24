@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     siteName: "Bitcoin Mini Conference",
     images: [
       {
-        url: "https://bitcoin-mini-conf.vercel.app/logo.png", // 배포된 절대경로
+        url: "https://bitcoin-mini-conf.vercel.app/logo.png", 
         width: 250,
         height: 250,
         alt: "Bitcoin Mini Conference",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Bitcoin Mini Conference",
     description: "Bitcoin Mini Conference",
-    images: ["https://bitcoin-mini-conf.vercel.app/logo.png"], // 절대경로
+    images: ["https://bitcoin-mini-conf.vercel.app/logo.png"],
   },
 };
 
@@ -54,7 +54,7 @@ type Props = {
 
 export default async function RootLayout({ children, params }: Props) {
   const { locale } = await params;
-  const lang = locale === "en" ? "en" : "ko";
+  const lang = locale === "ko" ? "ko" : "en";
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
