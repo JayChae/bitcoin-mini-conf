@@ -55,7 +55,7 @@ const enItems: Speaker[] = [
   {
     image: "/avatars/kevin.png",
     title: "Kevin Loaec",
-    subtitle: "CEO | Wizardsardine",
+    subtitle: "CEO of Wizardsardine",
     links: [
       {
         type: "website",
@@ -85,7 +85,7 @@ const enItems: Speaker[] = [
   {
     image: "/avatars/powdae.png",
     title: "PowDae",
-    subtitle: "CEO | Noncelab",
+    subtitle: "CEO of Noncelab",
     links: [
       {
         type: "website",
@@ -100,7 +100,7 @@ const enItems: Speaker[] = [
   {
     image: "/avatars/seedSigner.png",
     title: "SeedSigner",
-    subtitle: "developer | SeedSigner",
+    subtitle: "developer",
     links: [
       {
         type: "website",
@@ -115,7 +115,7 @@ const enItems: Speaker[] = [
   {
     image: "/avatars/specter.png",
     title: "Specter",
-    subtitle: "Co-founder | BSL",
+    subtitle: "Co-founder of BSL",
     links: [
       {
         type: "youtube",
@@ -130,7 +130,7 @@ const enItems: Speaker[] = [
   {
     image: "/avatars/win.png",
     title: "Win Ko Ko Aung",
-    subtitle: "Global Bitcoin Adoption | HRF",
+    subtitle: "Human Rights Foundation",
     links: [
       {
         type: "website",
@@ -145,7 +145,7 @@ const enItems: Speaker[] = [
   {
     image: "/avatars/keypleb.png",
     title: "Keypleb",
-    subtitle: "Co-founder | Code Orange Dev",
+    subtitle: "Founder of Code Orange Dev",
     links: [
       {
         type: "website",
@@ -160,7 +160,7 @@ const enItems: Speaker[] = [
   {
     image: "/avatars/trigger.png",
     title: "Trigger",
-    subtitle: "Bitcoin Seoul Center | Coconut",
+    subtitle: "Coconut",
     links: [
       {
         type: "website",
@@ -190,7 +190,7 @@ const enItems: Speaker[] = [
   {
     image: "/avatars/promenade.png",
     title: "Promenade",
-    subtitle: "Bitcoin Citadel | Promenade Castle",
+    subtitle: "Bitcoin Citadel",
     links: [
       {
         type: "website",

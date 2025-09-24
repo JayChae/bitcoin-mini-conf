@@ -102,7 +102,7 @@ const ChromaGrid: React.FC<ChromaGridProps> = ({
           key={i}
           onMouseMove={handleCardMove}
           // onClick={() => handleCardClick(c.url)}
-          className="group relative flex flex-col w-[200px] rounded-[20px] overflow-hidden border-2 border-transparent transition-colors duration-300"
+          className="group relative flex flex-col w-[220px] rounded-[20px] overflow-hidden border-2 border-transparent transition-colors duration-300"
           style={
             {
               "--card-border": "transparent",
@@ -127,26 +127,28 @@ const ChromaGrid: React.FC<ChromaGridProps> = ({
               className="w-full h-full object-cover rounded-[10px]"
             />
           </div>
-          <footer className="relative z-10 p-3 text-white font-sans grid grid-cols-[1fr_auto] gap-x-3 gap-y-1">
-            <h3 className="m-0 text-[1.05rem] font-semibold">{c.title}</h3>
-            <div className="flex items-center gap-x-2">
-              {c.links.map((link) => (
-                <Link
-                  key={link.url + link.type}
-                  href={link.url}
-                  target="_blank"
-                  className="hover:scale-110 transition-transform duration-200"
-                >
-                  <Image
-                    src={snsIconUrl[link.type]}
-                    alt={link.type}
-                    width={13}
-                    height={13}
-                  />
-                </Link>
-              ))}
+          <footer className="relative z-10 p-3 text-white font-sans flex flex-col">
+            <div className="flex justify-between items-center">
+              <h3 className="text-[1.05rem] font-semibold">{c.title}</h3>
+              <div className="flex items-center gap-2">
+                {c.links.map((link) => (
+                  <Link
+                    key={link.url + link.type}
+                    href={link.url}
+                    target="_blank"
+                    className="hover:scale-110 transition-transform duration-200"
+                  >
+                    <Image
+                      src={snsIconUrl[link.type]}
+                      alt={link.type}
+                      width={13}
+                      height={13}
+                    />
+                  </Link>
+                ))}
+              </div>
             </div>
-            <p className="m-0 text-[0.85rem] opacity-85">{c.subtitle}</p>
+            <p className="text-[0.85rem] opacity-85">{c.subtitle}</p>
 
             {/* {c.location && (
               <span className="text-[0.85rem] opacity-85 text-right">
