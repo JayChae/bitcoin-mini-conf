@@ -19,29 +19,29 @@ export default async function Hero({ title, subtitle, tickets }: Props) {
             colors={["#ff4040", "#ff7940", "#ff4040", "#ff7940", "#ff4040"]}
             animationSpeed={3}
             showBorder={false}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold pointer-events-none"
+            className="text-5xl md:text-6xl lg:text-7xl font-bold pointer-events-none"
           >
             {title}
           </GradientText>
         </h1>
 
-        <span className="text-md md:text-lg lg:text-xl font-bold pointer-events-none text-accent/35">
+        <span className="text-lg md:text-xl lg:text-2xl font-bold pointer-events-none text-accent/35">
           {subtitle}
         </span>
       </section>
-      <section className="w-full flex flex-col items-center justify-between md:flex-row gap-10">
+      <section className="w-full flex flex-col items-center lg:flex-row gap-3">
         {tickets.map((ticket) => (
           <Link
             key={ticket.url}
             href={ticket.url}
-            className="hover:scale-105 transition-all duration-300 "
+            className="w-full hover:scale-105 transition-all duration-300 "
           >
             <StarBorder
               as="button"
-              className="cursor-pointer"
+              className="cursor-pointer w-full"
               color={ticket.color}
               speed="3s"
-              thickness={3}
+              thickness={4}
             >
               {ticket.name}
             </StarBorder>

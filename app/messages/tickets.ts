@@ -11,12 +11,12 @@ const urlList = {
 
 const koTickets: TicketButton[] = [
   {
-    name: "₿ 티켓 구매",
+    name: "₿ 티켓 구매 (비트코인)",
     url: urlList.btc,
     color: "orange",
   },
   {
-    name: "₩ 티켓 구매",
+    name: "₩ 티켓 구매 (원화)",
     url: urlList.krw,
     color: "cyan",
   },
