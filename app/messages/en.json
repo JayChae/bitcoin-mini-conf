@@ -1,10 +1,14 @@
 {
   "Hero": {
     "title": "Bitcoin Mini Conference",
-    "subtitle": "SECOND EDITION | November 29-30, 2025 | Seoul, South Korea"
+    "subtitle": "SECOND EDITION",
+    "date": "November 29-30, 2025",
+    "location": "Seoul, South Korea"
   },
   "Speakers": {
-    "title": "Speakers"
+    "title": "Speakers",
+    "moreText": "More",
+    "closeText": "Close"
   },
   "Schedule": {
     "title": "Schedule"

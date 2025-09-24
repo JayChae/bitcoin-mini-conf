@@ -26,11 +26,18 @@ export default async function Home({ params }: Props) {
           <Hero
             title={tHero("title")}
             subtitle={tHero("subtitle")}
+            date={tHero("date")}
+            location={tHero("location")}
             tickets={tickets[lang]}
           />
         </section>
         <section id="speakers" className="scroll-mt-16">
-          <Speakers title={tSpeakers("title")} speakers={speakers[lang]} />
+          <Speakers
+            title={tSpeakers("title")}
+            speakers={speakers[lang]}
+            moreText={tSpeakers("moreText")}
+            closeText={tSpeakers("closeText")}
+          />
         </section>
         <section id="schedule" className="mt-40 scroll-mt-16">
           <Schedule title={tSchedule("title")} schedules={schedules[lang]} />
