@@ -154,8 +154,6 @@ const enSchedules: Schedule[] = [
 ...
 ```
 
-### Edit the Schedules
-
 ## [sponsor.ts](./app/messages/sponsor.ts)
 
 ### Edit the Sponsor
