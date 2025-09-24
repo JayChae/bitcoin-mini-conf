@@ -1,72 +1,213 @@
-### 한글 문구
+# Bitcoin Mini Conf Web
 
-[app/messages/ko.json](./app/messages/ko.json)
+## Quick Start
 
-```json
-{
-  "Hero": {
-    "title": "Bitcoin Mini Conference",
-    "subtitle": "SECOND EDITION | 2025년 9월 29-30일",
-    "tickets": {
-      "btc": "₿ 비트코인으로 티켓 구매",
-      "krw": "₩ 원화로 티켓 구매"
-    }
-  },
-  "Speakers": {
-    "title": "연사 소개"
-  },
-  "Schedule": {
-    "title": "일정",
-    "firstDay": {
-      "title": "첫째 날",
-      "date": "2025년 9월 29일",
-      "description": "",
-      "content": "비트코인의 이해도가 높고 인사이트가 있는 사람들로 엄선하여 모두 함께 강연 형식으로 컨퍼런스를 즐기실 수 있습니다. 행사가 마무리 된 이후에는 참석자끼리의 교류를 활성화 하기 위해 모든 참여자분들께 소고기 회식을 제공합니다."
-    },
-    "secondDay": {
-      "title": "둘째 날",
-      "date": "2025년 9월 30일",
-      "description": "",
-      "content": "만나기 어렵던 진짜 전문가들과 함께 심층 높은 지식을 강의 형식으로 빠르게 배워갈 수 있습니다. 별도의 라이트닝 마켓 공간에서는 다양한 비트코인 관련 물건들을 만나보고 비트코인으로 구매하실 수 있습니다."
-    }
-  },
-  "Sponsor": {
-    "title": "후원자"
-  }
-}
+```bash
+git clone https://github.com/JayChae/mini-conf.git
+cd mini-conf
+pnpm install
+pnpm dev
 ```
 
-### 영어 문구
+## Quick Edit
 
-[app/messages/ko.json](./app/messages/en.json)
+This project can be easily modified through the [`app/messages`](./app/messages/) folder.
+
+### Messages Folder Structure
+
+```bash
+app/messages/
+├── en.json        # titles & subtitles (en)
+├── ko.json        # titles & subtitles (ko)
+├── nav.ts         # Navigation menu (en & ko)
+├── schedules.ts   # Schedule information (en & ko)
+├── speakers.ts    # Speaker information (en & ko)
+├── sponsor.ts     # Sponsor information (en & ko)
+└── tickets.ts     # Ticket purchase links (en & ko)
+```
+
+## [tickets.ts](./app/messages/tickets.ts)
+
+### Edit the ticket purchase button text and link
+
+![ticket button](./public/docs/ticketButton.png)
+
+#### Simply want to modify the URL, edit it in urlList.
+
+```ts
+const urlList = {
+  //Bitcoin purchase link
+  btc: "https://store.btcmap.kr/meetup/Bitcoin_Mini_Conference/11/",
+  //Korean won purchase link.
+  krw: "https://smartstore.naver.com/promenadecastle/products/12055415750",
+};
+```
+
+#### Want to modify the text, edit it in enTickets or koTickets.
+
+```ts
+export type TicketButton = {
+  name: string; //button text
+  url: string; //button Link
+  color: string; //border animation color
+};
+
+const enTickets: TicketButton[] = [
+  {
+    name: "₿ Tickets (BTC) ",
+    url: urlList.btc,
+    color: "orange",
+  },
+  {
+    name: "₩ Tickets (KRW) ",
+    url: urlList.krw,
+    color: "cyan",
+  },
+] as const;
+```
+
+## [speakers.ts](./app/messages/speakers.ts)
+
+### Edit the Speakers
+
+You need to put the image in the [public/avatars](./public/avatars/). The path will be `/avatars/image.png`.
+
+```bash
+public/avatars/
+├── atomic.webp
+└── calvin.webp
+```
+
+![speakers](./public/docs/speakers.png)
+
+```ts
+export type Speaker = {
+  image: string; //Avatar
+  title: string; // Name
+  subtitle: string; // Description
+  handle: string; //SNS Handle
+  url: string; // SNS Link
+};
+
+//english version
+const enItems: Speaker[] = [
+  {
+    image: "/avatars/atomic.webp",
+    title: "Atomic Bitcoin",
+    subtitle: "Auditor | BSL",
+    handle: "@atomicBTC",
+    url: "https://x.com/atomicbtc",
+  },
+
+  ....
+//korean version
+const koItems: Speaker[] = [
+    {
+    image: "/avatars/atomic.webp",
+    title: "아토믹 비트코인",
+  ...
+```
+
+## [schedules.ts](./app/messages/schedules.ts)
+
+### Edit the Schedules
+
+![schedules](./public/docs/schedules.png)
+
+You need to put the image in the [public/schedules](./public/schedules/). The path will be `/schedules/image.png`.
+
+```bash
+public/schedules/
+├── mainDay.webp
+└── uniDay.webp
+```
+
+```ts
+export type Schedule = {
+  title: string;
+  date: string;
+  description: string; //simple description
+  content: string; // detail description
+  image?: string; //image of schedule
+  alt?: string; // alt for image err
+};
+
+const koSchedules: Schedule[] = [
+  {
+    title: "첫째 날",
+    date: "2025.9.29",
+    description: "",
+    content:
+      "비트코인의 이해도가 높고 인사이트가 있는 사람들...",
+    image: "/schedules/mainDay.webp",
+    alt: "mainDay",
+    ...
+
+const enSchedules: Schedule[] = [
+  {
+    title: "First Day",
+    date: "September 29, 2025",
+    description: "Curated talks to deliver maximum signal-to-noise ratio.",
+    content:
+      "A single stage with insightful talks prepared by industry leading experts....",
+    image: "/schedules/mainDay.webp",
+...
+```
+
+### Edit the Schedules
+
+## [sponsor.ts](./app/messages/sponsor.ts)
+
+### Edit the Sponsor
+
+![sponsors](./public/docs/sponsors.png)
+
+You need to put the image in the [public/sponsors](./public/sponsors/). The path will be `/sponsors/image.png`.
+
+```bash
+public/sponsors/
+├── nonceLab.webp
+└── hrf.webp
+```
+
+```ts
+export type Sponsor = {
+  name: string;
+  url: string;
+  image: string;
+};
+
+const sponsors: Sponsor[] = [
+  {
+    name: "NonceLab",
+    url: "https://noncelab.com",
+    image: "/sponsors/nonceLab.webp",
+  },
+  {
+    name: "HRF",
+    url: "https://hrf.org",
+    image: "/sponsors/hrf.jpg",
+  },
+] as const;
+```
+
+## [en.json](./app/messages/en.json) & [ko.json](./app/messages/ko.json)
+
+### titles of each section
+
+If you want to change Korean, modify ko.json, and if you want to change English, modify en.json.
 
 ```json
 {
   "Hero": {
     "title": "Bitcoin Mini Conference",
-    "subtitle": "SECOND EDITION | SEPTEMBER 29-30, 2025",
-    "tickets": {
-      "btc": "₿ Tickets (BTC) ",
-      "krw": "₩ Tickets (KRW) "
-    }
+    "subtitle": "SECOND EDITION | SEPTEMBER 29-30, 2025"
   },
   "Speakers": {
     "title": "Speakers"
   },
   "Schedule": {
-    "title": "Schedule",
-    "firstDay": {
-      "title": "First Day",
-      "date": "September 29, 2025",
-      "description": "Curated talks to deliver maximum signal-to-noise ratio.",
-      "content": "A single stage with insightful talks prepared by industry leading experts. K-BBQ dinner provided afterwards to all attendees to strengthen relationships between community members."
-    },
-    "secondDay": {
-      "title": "Second Day",
-      "date": "September 30, 2025",
-      "description": "Hands on workshops with a Lightning Market in the heart of Seoul",
-      "content": "Workshops with a maximum size of 30 people to provide the attendees with quality educational sessions. Booths in the form of a Lightning market in the streets of Seoul to allow access for everyone in Seoul to visit and become a part of the community."
-    }
+    "title": "Schedule"
   },
   "Sponsor": {
     "title": "Sponsors"
@@ -74,237 +215,30 @@
 }
 ```
 
-### 연사 정보 (en | ko)
+#### hero section title
 
-[app/messages/speakers](./app/messages/speakers.ts)
+![heroTitle](./public/docs/heroTitle.png)
+
+#### section title
+
+![sectionTitle](./public/docs/sectionTitle.png)
+
+## [nav.ts](./app/messages/nav.ts)
+
+![nav](./public/docs/nav.png)
 
 ```ts
-const enItems = [
-  {
-    image: "/avatars/gandalf.webp",
-    title: "Gandlaf",
-    subtitle: "Developer | Cashu",
-    handle: "@gandlaf21",
-
-    url: "https://primal.net/p/nprofile1qqsvfdfkn2wmy73wr0yhkf065jrzm8705ar4q6clyuhc7jekhqfdh4sa06kjr",
-  },
-  {
-    image: "/avatars/calvin.webp",
-    title: "Calvin Kim",
-    subtitle: "Developer | Utreexo",
-    handle: "@kcalvinalvinn",
-    url: "https://x.com/kcalvinalvinn",
-  },
-  {
-    image: "/avatars/atomic.webp",
-    title: "Atomic Bitcoin",
-    subtitle: "Auditor | BSL",
-    handle: "@atomicBTC",
-
-    url: "https://x.com/atomicbtc",
-  },
-  {
-    image: "/avatars/kelvin.webp",
-    title: "Kevin Loaec",
-    subtitle: "CEO | Wizardsardine",
-    handle: "@KLoaec",
-
-    url: "https://x.com/kloaec",
-  },
-  {
-    image: "/avatars/nldd.webp",
-    title: "NLDD",
-    subtitle: "Youtuber | Translator",
-    handle: "@nldd21",
-
-    url: "https://x.com/nldd21",
-  },
-  {
-    image: "/avatars/powdae.webp",
-    title: "PowDae",
-    subtitle: "CEO | Noncelab",
-    handle: "@powdae",
-
-    url: "https://twitter.com/powdae",
-  },
-  {
-    image: "/avatars/seedSigner.webp",
-    title: "SeedSigner",
-    subtitle: "developer | SeedSigner",
-    handle: "@seedSigner",
-
-    url: "https://x.com/seedsigner",
-  },
-  {
-    image: "/avatars/specter.webp",
-    title: "Specter",
-    subtitle: "Co-founder | BSL",
-    handle: "@specter",
-
-    url: "https://x.com/k_bitcoiner",
-  },
-  {
-    image: "/avatars/win.webp",
-    title: "Win Ko Ko Aung",
-    subtitle: "Global Bitcoin Adoption | HRF",
-    handle: "@wkkaung",
-
-    url: "https://x.com/wkkaung",
-  },
-  {
-    image: "/avatars/keypleb.png",
-    title: "Keypleb",
-    subtitle: "Co-founder | Code Orange Dev",
-    handle: "@keypleb",
-
-    url: "https://x.com/keypleb",
-  },
-  {
-    image: "/avatars/trigger.png",
-    title: "Trigger",
-    subtitle: "Bitcoin Seoul Center | Coconut",
-    handle: "@Coconut_BTC",
-
-    url: "https://x.com/Coconut_BTC",
-  },
-  {
-    image: "/avatars/pororo.png",
-    title: "Pororo",
-    subtitle: "Generalist | Developer",
-    handle: "@asheswook",
-
-    url: "https://x.com/asheswook",
-  },
-  {
-    image: "/avatars/promenade.png",
-    title: "Promenade",
-    subtitle: "Bitcoin Citadel | Promenade Castle",
-    handle: "@PromenadeCastle",
-
-    url: "https://x.com/PromenadeCastle",
-  },
-  {
-    image: "/avatars/wos.png",
-    title: "Wallet of Satoshi",
-    subtitle: "CEO",
-    handle: "@Walletofsatoshi ",
-
-    url: "https://x.com/walletofsatoshi",
-  },
-];
-
-const koItems = [
-  {
-    image: "/avatars/gandalf.webp",
-    title: "Gandlaf",
-    subtitle: "Developer | Cashu",
-    handle: "@gandlaf21",
-
-    url: "https://primal.net/p/nprofile1qqsvfdfkn2wmy73wr0yhkf065jrzm8705ar4q6clyuhc7jekhqfdh4sa06kjr",
-  },
-  {
-    image: "/avatars/calvin.webp",
-    title: "Calvin Kim",
-    subtitle: "Developer | Utreexo",
-    handle: "@kcalvinalvinn",
-
-    url: "https://x.com/kcalvinalvinn",
-  },
-  {
-    image: "/avatars/atomic.webp",
-    title: "아토믹 비트코인",
-    subtitle: "Auditor | BSL",
-    handle: "@atomicBTC",
-
-    url: "https://x.com/atomicbtc",
-  },
-  {
-    image: "/avatars/kelvin.webp",
-    title: "Kevin Loaec",
-    subtitle: "CEO | Wizardsardine",
-    handle: "@KLoaec",
-
-    url: "https://x.com/kloaec",
-  },
-  {
-    image: "/avatars/nldd.webp",
-    title: "네딸바",
-    subtitle: "유튜버 | 번역가",
-    handle: "@nldd21",
-
-    url: "https://x.com/nldd21",
-  },
-  {
-    image: "/avatars/powdae.webp",
-    title: "포대",
-    subtitle: "CEO | 논스랩",
-    handle: "@powdae",
-
-    url: "https://twitter.com/powdae",
-  },
-  {
-    image: "/avatars/seedSigner.webp",
-    title: "SeedSigner",
-    subtitle: "개발자 | SeedSigner",
-    handle: "@seedSigner",
-
-    url: "https://x.com/seedsigner",
-  },
-  {
-    image: "/avatars/specter.webp",
-    title: "스펙터",
-    subtitle: "공동 설립 | BSL",
-    handle: "@specter",
-
-    url: "https://x.com/k_bitcoiner",
-  },
-  {
-    image: "/avatars/win.webp",
-    title: "Win Ko Ko Aung",
-    subtitle: "Global Bitcoin Adoption | HRF",
-    handle: "@wkkaung",
-
-    url: "https://x.com/wkkaung",
-  },
-  {
-    image: "/avatars/keypleb.png",
-    title: "Keypleb",
-    subtitle: "공동 설립 | Code Orange Dev",
-    handle: "@keypleb",
-
-    url: "https://x.com/keypleb",
-  },
-  {
-    image: "/avatars/trigger.png",
-    title: "트리거",
-    subtitle: "Bitcoin Seoul Center | Coconut",
-    handle: "@Coconut_BTC",
-
-    url: "https://x.com/Coconut_BTC",
-  },
-  {
-    image: "/avatars/pororo.png",
-    title: "Pororo",
-    subtitle: "제너럴리스트 | 개발자",
-    handle: "@asheswook",
-
-    url: "https://x.com/asheswook",
-  },
-  {
-    image: "/avatars/promenade.png",
-    title: "프로메나드",
-    subtitle: "비트코인 시타델 | 프로메나드 캐슬",
-    handle: "@PromenadeCastle",
-
-    url: "https://x.com/PromenadeCastle",
-  },
-  {
-    image: "/avatars/wos.png",
-    title: "Wallet of Satoshi",
-    subtitle: "CEO",
-    handle: "@Walletofsatoshi ",
-
-    url: "https://x.com/walletofsatoshi",
-  },
-];
+export type NavItem = { 
+  label: string; //text
+  href: string  // href
+};
+...
+//english nav
+const enItems: NavItem[] = [
+  { label: "Tickets", href: hrefList.home },
+...
+//korean nav
+const koItems: NavItem[] = [
+  { label: "티켓", href: hrefList.home },
+...
 ```
