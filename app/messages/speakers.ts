@@ -280,7 +280,7 @@ const koItems: Speaker[] = [
     ],
   },
   {
-    image: "/avatars/kevin.png",
+    image: "/avatars/Loaec.png",
     title: "Kevin Loaec",
     subtitle: "CEO | Wizardsardine",
     links: [
