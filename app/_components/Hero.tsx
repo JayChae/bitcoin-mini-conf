@@ -17,7 +17,7 @@ export default async function Hero({ title, subtitle, tickets }: Props) {
         <h1 className="">
           <GradientText
             colors={["#ff4040", "#ff7940", "#ff4040", "#ff7940", "#ff4040"]}
-            animationSpeed={3}
+            animationSpeed={2}
             showBorder={false}
             className="text-5xl md:text-6xl lg:text-7xl font-bold pointer-events-none"
           >

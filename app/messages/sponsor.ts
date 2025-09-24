@@ -10,11 +10,6 @@ const sponsors: Sponsor[] = [
     url: "https://noncelab.com",
     image: "/sponsors/nonceLab.webp",
   },
-  {
-    name: "HRF",
-    url: "https://hrf.org",
-    image: "/sponsors/hrf.jpg",
-  },
 ] as const;
 
 export default sponsors;
