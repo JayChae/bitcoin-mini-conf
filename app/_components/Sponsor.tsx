@@ -33,7 +33,7 @@ export default function Sponsor({
       sponsors: sponsors.gold,
       imageWidth: 400,
       imageHeight: 400,
-      titleClass: "text-4xl",
+      titleClass: "text-3xl md:text-4xl",
       colors: ["#FFD700", "#FFF4B0", "#FFC300", "#FFD700"],
     },
     {
@@ -69,7 +69,7 @@ export default function Sponsor({
           <GradientText
             colors={tier.colors}
             className={cn(
-              "text-3xl font-bold pointer-events-none",
+              "text-2xl md:text-3xl font-bold pointer-events-none",
               tier.titleClass
             )}
           >
