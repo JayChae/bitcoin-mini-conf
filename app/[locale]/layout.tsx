@@ -67,7 +67,7 @@ export default async function RootLayout({ children, params }: Props) {
       >
         <NextIntlClientProvider>
           <Nav items={navItems[lang]} />
-          <div className="w-full h-full">{children}</div>
+          {children}
         </NextIntlClientProvider>
         <DarkVeil speed={0.2} />
       </body>
