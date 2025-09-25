@@ -27,7 +27,7 @@ export default async function Hero({
             colors={["#ff4040", "#ff7940", "#ff4040", "#ff7940", "#ff4040"]}
             animationSpeed={2}
             showBorder={false}
-            className="text-4xl md:text-6xl lg:text-7xl font-bold pointer-events-none"
+            className="text-4xl md:text-6xl lg:text-7xl font-extrabold pointer-events-none"
           >
             {title}
           </GradientText>

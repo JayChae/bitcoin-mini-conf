@@ -136,13 +136,14 @@ const ChromaGrid: React.FC<ChromaGridProps> = ({
                     key={link.url + link.type}
                     href={link.url}
                     target="_blank"
-                    className="hover:scale-110 transition-transform duration-200"
+                    className="hover:scale-110 transition-transform duration-200 flex items-center justify-center w-4 h-4"
                   >
                     <Image
                       src={snsIconUrl[link.type]}
                       alt={link.type}
-                      width={13}
-                      height={13}
+                      width={16}
+                      height={16}
+                      className="w-full h-full object-contain"
                     />
                   </Link>
                 ))}

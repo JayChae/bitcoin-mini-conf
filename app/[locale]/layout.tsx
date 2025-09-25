@@ -63,11 +63,11 @@ export default async function RootLayout({ children, params }: Props) {
   return (
     <html lang={locale} className="size-full">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased size-full relative`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased size-full relative overflow-y-auto`}
       >
         <NextIntlClientProvider>
           <Nav items={navItems[lang]} />
-          {children}
+          <div className="w-full h-full">{children}</div>
         </NextIntlClientProvider>
         <DarkVeil speed={0.2} />
       </body>

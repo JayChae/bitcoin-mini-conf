@@ -5,7 +5,7 @@ export type SNS = {
 
 export const snsIconUrl: Record<SNS["type"], string> = {
   x: "/sns/x.svg",
-  website: "/sns/home.svg",
+  website: "/sns/globe.svg",
   youtube: "/sns/youtube.svg",
   nostr: "/sns/nostr.svg",
   telegram: "/sns/telegram.svg",
@@ -192,10 +192,6 @@ const enItems: Speaker[] = [
     title: "Promenade",
     subtitle: "Bitcoin Citadel",
     links: [
-      {
-        type: "website",
-        url: "https://promenadecastle.com",
-      },
       {
         type: "telegram",
         url: "https://t.me/+2yNtegasqLJmMjc1",
