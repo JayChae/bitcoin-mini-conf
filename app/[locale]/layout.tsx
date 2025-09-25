@@ -30,9 +30,9 @@ export const metadata: Metadata = {
     siteName: "Bitcoin Mini Conference",
     images: [
       {
-        url: "https://bitcoin-mini-conf.vercel.app/logo-v2.png",
-        width: 250,
-        height: 250,
+        url: "https://bitcoin-mini-conf.vercel.app/logo-dark.png",
+        width: 200,
+        height: 200,
         alt: "Bitcoin Mini Conference",
       },
     ],
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Bitcoin Mini Conference",
     description: "Bitcoin Mini Conference",
-    images: ["https://bitcoin-mini-conf.vercel.app/logo-v2.png"],
+    images: ["https://bitcoin-mini-conf.vercel.app/logo-dark.png"],
   },
 };
 
