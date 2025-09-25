@@ -3,6 +3,8 @@ export type Sponsor = {
   url: string;
   image: string;
   alt: string;
+  customWidth?: number;
+  customHeight?: number;
 };
 
 const sponsors: {
@@ -25,27 +27,25 @@ const sponsors: {
       url: "https://walletofsatoshi.com",
       image: "/sponsors/ws.png",
       alt: "Wallet of Satoshi",
+      customWidth: 500,
+      customHeight: 500,
     },
     {
       name: "Frostsnap",
       url: "https://frostsnap.com",
-      image: "/sponsors/frost.png",
+      image: "/sponsors/frostsnap.png",
       alt: "frostsnap",
     },
     {
       name: "Calvin Kim",
       url: "https://x.com/kcalvinalvinn",
-      image: "/sponsors/calvin.png",
+      image: "/sponsors/calvinkim.png",
       alt: "calvinkim",
+      customWidth: 420,
+      customHeight: 420,
     },
   ],
   bronze: [
-    {
-      name: "Wallet of Satoshi",
-      url: "https://walletofsatoshi.com",
-      image: "/sponsors/ws.png",
-      alt: "Wallet of Satoshi",
-    },
     {
       name: "NonceLab",
       url: "https://noncelab.com",
