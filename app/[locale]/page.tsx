@@ -47,7 +47,12 @@ export default async function Home({ params }: Props) {
         </Section>
         <Divider />
         <Section id="sponsors" title={tSponsor("title")}>
-          <Sponsor />
+          <Sponsor
+            goldTitle={tSponsor("gold")}
+            silverTitle={tSponsor("silver")}
+            bronzeTitle={tSponsor("bronze")}
+            individualTitle={tSponsor("individual")}
+          />
         </Section>
       </div>
     </main>
