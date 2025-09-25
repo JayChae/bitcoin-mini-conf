@@ -33,7 +33,7 @@ export default function Sponsor({
       sponsors: sponsors.gold,
       imageWidth: 400,
       imageHeight: 400,
-      titleClass: "text-3xl md:text-4xl",
+      titleClass: "text-5xl md:text-6xl",
       colors: ["#FFD700", "#FFF4B0", "#FFC300", "#FFD700"],
     },
     {
@@ -41,6 +41,7 @@ export default function Sponsor({
       sponsors: sponsors.silver,
       imageWidth: 350,
       imageHeight: 350,
+      titleClass: "text-4xl md:text-5xl",
       colors: ["#C0C0C0", "#FFFFFF", "#E0E0E0", "#C0C0C0"],
     },
     {
@@ -48,6 +49,7 @@ export default function Sponsor({
       sponsors: sponsors.bronze,
       imageWidth: 300,
       imageHeight: 300,
+      titleClass: "text-3xl md:text-4xl",
       colors: ["#CD7F32", "#B87333", "#CD7F32"],
     },
     // {
@@ -68,10 +70,8 @@ export default function Sponsor({
         >
           <GradientText
             colors={tier.colors}
-            className={cn(
-              "text-2xl md:text-3xl font-bold pointer-events-none",
-              tier.titleClass
-            )}
+            className={cn("font-bold pointer-events-none", tier.titleClass)}
+            animationSpeed={2}
           >
             {tier.title}
           </GradientText>
