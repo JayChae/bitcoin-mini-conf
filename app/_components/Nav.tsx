@@ -45,7 +45,7 @@ export default function Nav({ items }: Props) {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
-            <Image src="/logo.png" alt="Logo" width={40} height={40} />
+            <Image src="/logo-v2.png" alt="Logo" width={40} height={40} />
           </Link>
 
           {/* Desktop Menu */}
