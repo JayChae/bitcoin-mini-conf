@@ -31,24 +31,24 @@ export default function Sponsor({
     {
       title: goldTitle,
       sponsors: sponsors.gold,
-      imageWidth: 400,
-      imageHeight: 400,
+      imageWidth: 450,
+      imageHeight: 450,
       titleClass: "text-5xl md:text-6xl",
       colors: ["#FFD700", "#FFF4B0", "#FFC300", "#FFD700"],
     },
     {
       title: silverTitle,
       sponsors: sponsors.silver,
-      imageWidth: 350,
-      imageHeight: 350,
+      imageWidth: 320,
+      imageHeight: 320,
       titleClass: "text-4xl md:text-5xl",
       colors: ["#C0C0C0", "#FFFFFF", "#E0E0E0", "#C0C0C0"],
     },
     {
       title: bronzeTitle,
       sponsors: sponsors.bronze,
-      imageWidth: 300,
-      imageHeight: 300,
+      imageWidth: 280,
+      imageHeight: 280,
       titleClass: "text-3xl md:text-4xl",
       colors: ["#CD7F32", "#B87333", "#CD7F32"],
     },
@@ -62,7 +62,7 @@ export default function Sponsor({
   ];
 
   return (
-    <div className="w-full flex flex-col items-center justify-center gap-12">
+    <div className="w-full flex flex-col items-center justify-center gap-24">
       {sponsorTiers.map((tier, tierIndex) => (
         <div
           key={tierIndex}
@@ -75,7 +75,7 @@ export default function Sponsor({
           >
             {tier.title}
           </GradientText>
-          <div className="flex justify-center items-center gap-8">
+          <div className="flex justify-center items-center gap-8 flex-wrap">
             {tier.sponsors.map((sponsor, sponsorIndex) => (
               <Link
                 key={sponsorIndex}
@@ -86,9 +86,9 @@ export default function Sponsor({
                 <Image
                   src={sponsor.image}
                   alt={sponsor.alt}
-                  width={tier.imageWidth}
-                  height={tier.imageHeight}
-                  className="rounded-lg shadow-lg"
+                  width={sponsor.customWidth || tier.imageWidth}
+                  height={sponsor.customHeight || tier.imageHeight}
+                  className="rounded-lg shadow-lg object-contain"
                 />
               </Link>
             ))}

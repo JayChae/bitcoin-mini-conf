@@ -186,7 +186,7 @@ const enItems: Speaker[] = [
   {
     image: "/avatars/specter.png",
     title: "Specter",
-    subtitle: "Bitcoin Mini Conference | Host",
+    subtitle: "Host | Mini Conference",
     links: [
       {
         type: "youtube",
@@ -376,7 +376,7 @@ const koItems: Speaker[] = [
   {
     image: "/avatars/specter.png",
     title: "스펙터",
-    subtitle: "비트코인 미니 컨퍼런스 | 호스트",
+    subtitle: "호스트 | 미니컨퍼런스",
     links: [
       {
         type: "youtube",
