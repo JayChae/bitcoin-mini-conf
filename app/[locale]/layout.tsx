@@ -8,15 +8,11 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { setRequestLocale } from "next-intl/server";
 import navItems from "../messages/nav";
+import localFont from "next/font/local";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const pretendard = localFont({
+  src: "../../public/PretendardVariable.woff2",
+  variable: "--font-pretendard",
 });
 
 export const metadata: Metadata = {
@@ -62,9 +58,7 @@ export default async function RootLayout({ children, params }: Props) {
 
   return (
     <html lang={locale} className="size-full">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased size-full relative overflow-y-auto`}
-      >
+      <body className={`${pretendard.variable} antialiased size-full relative overflow-y-auto`}>
         <NextIntlClientProvider>
           <Nav items={navItems[lang]} />
           {children}
