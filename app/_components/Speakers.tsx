@@ -7,17 +7,11 @@ import { type Speaker } from "../messages/speakers";
 
 type Props = {
   speakers: Speaker[];
-  title: string;
   moreText: string;
   closeText: string;
 };
 
-export default function Speakers({
-  speakers,
-  title,
-  moreText,
-  closeText,
-}: Props) {
+export default function Speakers({ speakers, moreText, closeText }: Props) {
   const [showAll, setShowAll] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -40,10 +34,7 @@ export default function Speakers({
   const hasMoreSpeakers = isMobile && speakers.length > 6;
 
   return (
-    <section className="flex flex-col items-center justify-center gap-10">
-      <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold pointer-events-none text-accent">
-        {title}
-      </h2>
+    <div className="flex flex-col items-center justify-center gap-6">
       <ChromaGrid
         items={displayedSpeakers}
         radius={300}
@@ -66,6 +57,6 @@ export default function Speakers({
       )}
 
       <ShinyText text="More speakers on the way!" className="text-2xl" />
-    </section>
+    </div>
   );
 }

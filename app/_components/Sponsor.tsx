@@ -1,15 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 
-type Props = {
-  title: string;
-};
-export default function Sponsor({ title }: Props) {
+type Props = {};
+export default function Sponsor({}: Props) {
   return (
-    <section className="w-full flex flex-col items-center justify-center gap-10">
-      <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold pointer-events-none text-accent animate-fade-in">
-        {title}
-      </h2>
+    <div className="w-full flex flex-col items-center justify-center gap-10">
       <Link href={"https://hrf.org"} target="_blank">
         <Image
           src={"/sponsors/hrf.png"}
@@ -34,6 +29,6 @@ export default function Sponsor({ title }: Props) {
           height={350}
         />
       </Link>
-    </section>
+    </div>
   );
 }
