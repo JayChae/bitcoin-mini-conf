@@ -21,6 +21,12 @@ const sponsors: {
   ],
   silver: [
     {
+      name: "Wallet of Satoshi",
+      url: "https://walletofsatoshi.com",
+      image: "/sponsors/ws.png",
+      alt: "Wallet of Satoshi",
+    },
+    {
       name: "Frostsnap",
       url: "https://frostsnap.com",
       image: "/sponsors/frost.png",
