@@ -41,12 +41,6 @@ const sponsors: {
   ],
   bronze: [
     {
-      name: "Wallet of Satoshi",
-      url: "https://walletofsatoshi.com",
-      image: "/sponsors/ws.png",
-      alt: "Wallet of Satoshi",
-    },
-    {
       name: "NonceLab",
       url: "https://noncelab.com",
       image: "/sponsors/nonce.png",

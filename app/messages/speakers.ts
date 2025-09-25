@@ -66,7 +66,7 @@ const enItems: Speaker[] = [
   {
     image: "/avatars/keypleb.png",
     title: "Keypleb",
-    subtitle: "Co-Founder | Code Orange Dev",
+    subtitle: "Founder | Code Orange",
     links: [
       {
         type: "website",
@@ -81,7 +81,7 @@ const enItems: Speaker[] = [
   {
     image: "/avatars/Loaec.png",
     title: "Kevin Loaec",
-    subtitle: "CEO | Wizardsardine",
+    subtitle: "CEO | Liana Wallet",
     links: [
       {
         type: "website",
@@ -96,7 +96,7 @@ const enItems: Speaker[] = [
   {
     image: "/avatars/moonJun.png",
     title: "Moon Jun Kim",
-    subtitle: "Outside director | KCGI",
+    subtitle: "Outside Director | KCGI",
     links: [
       {
         type: "website",
@@ -271,7 +271,7 @@ const koItems: Speaker[] = [
   {
     image: "/avatars/keypleb.png",
     title: "Keypleb",
-    subtitle: "공동 설립 | Code Orange Dev",
+    subtitle: "Founder | Code Orange",
     links: [
       {
         type: "website",
@@ -286,7 +286,7 @@ const koItems: Speaker[] = [
   {
     image: "/avatars/Loaec.png",
     title: "Kevin Loaec",
-    subtitle: "CEO | Wizardsardine",
+    subtitle: "CEO | Liana Wallet",
     links: [
       {
         type: "website",
