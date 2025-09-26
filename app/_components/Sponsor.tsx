@@ -135,15 +135,6 @@ export default function Sponsor({
                             : "180px",
                       }}
                     />
-                    {/* 호버 시 글로우 효과 */}
-                    <div
-                      className={cn(
-                        "absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none",
-                        tierIndex === 0 && "shadow-2xl shadow-yellow-300/40",
-                        tierIndex === 1 && "shadow-2xl shadow-gray-300/40",
-                        tierIndex === 2 && ""
-                      )}
-                    />
                   </div>
                 </Link>
               );
