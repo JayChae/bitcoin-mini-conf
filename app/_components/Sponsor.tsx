@@ -8,8 +8,7 @@ import { cn } from "@/lib/utils";
 type SponsorTier = {
   title: string;
   sponsors: Sponsor[];
-  imageWidth: number;
-  imageHeight: number;
+  imageClass: string;
   titleClass?: string;
   colors: string;
   backgroundClass: string;
@@ -33,8 +32,8 @@ export default function Sponsor({
     {
       title: goldTitle,
       sponsors: sponsors.gold,
-      imageWidth: 450,
-      imageHeight: 450,
+      imageClass:
+        "max-w-[200px] md:max-w-[400px] lg:max-w-[500px] xl:max-w-[600px] max-h-[200px] md:max-h-[300px] lg:max-h-[350px] xl:max-h-[400px]",
       colors: "#FFD700",
       backgroundClass: "",
       borderClass: "shadow-xl shadow-yellow-400/30",
@@ -42,8 +41,8 @@ export default function Sponsor({
     {
       title: silverTitle,
       sponsors: sponsors.silver,
-      imageWidth: 320,
-      imageHeight: 320,
+      imageClass:
+        "max-w-[140px] sm:max-w-[180px] md:max-w-[240px] lg:max-w-[300px] xl:max-w-[350px] max-h-[100px] sm:max-h-[120px] md:max-h-[160px] lg:max-h-[200px] xl:max-h-[240px]",
       colors: "#C0C0C0",
       backgroundClass: "",
       borderClass: "shadow-xl shadow-gray-400/30",
@@ -51,19 +50,12 @@ export default function Sponsor({
     {
       title: bronzeTitle,
       sponsors: sponsors.bronze,
-      imageWidth: 250,
-      imageHeight: 250,
+      imageClass:
+        "max-w-[120px] sm:max-w-[160px] md:max-w-[220px] lg:max-w-[280px] xl:max-w-[320px] max-h-[100px] sm:max-h-[120px] md:max-h-[150px] lg:max-h-[180px] xl:max-h-[200px]",
       colors: "#CD7F32",
       backgroundClass: "",
       borderClass: "border-0 shadow-none",
     },
-    // {
-    //   title: individualTitle,
-    //   sponsors: sponsors.individual,
-    //   imageWidth: 200,
-    //   imageHeight: 200,
-    //   titleClass: "text-2xl font-bold text-gray-400 mb-4",
-    // },
   ];
 
   return (
@@ -88,7 +80,7 @@ export default function Sponsor({
               {tier.title}
             </h2>
           </div>
-          <div className="flex justify-center items-center gap-4 sm:gap-6 md:gap-8 lg:gap-10 flex-wrap max-w-7xl">
+          <div className=" size-fit flex justify-center items-center gap-4 sm:gap-6 md:gap-8 lg:gap-10 flex-wrap max-w-7xl">
             {tier.sponsors.map((sponsor, sponsorIndex) => {
               return (
                 <Link
@@ -97,13 +89,16 @@ export default function Sponsor({
                   target="_blank"
                   className="group transition-all duration-300 hover:scale-105 flex-shrink-0"
                 >
-                  <div className="relative p-4 sm:p-6 rounded-xl  hover:shadow-xl transition-all duration-300 group-hover:border-gray-600/50 dark:group-hover:border-gray-500/50">
+                  <div className="relative p-4 sm:p-6 rounded-xl hover:shadow-xl transition-all duration-300">
                     <Image
                       src={sponsor.image}
                       alt={sponsor.alt}
-                      width={sponsor.customWidth || tier.imageWidth}
-                      height={sponsor.customHeight || tier.imageHeight}
-                      className="rounded-lg object-contain w-auto h-auto max-w-[200px] sm:max-w-[250px] md:max-w-[300px] lg:max-w-none transition-all duration-300 group-hover:brightness-110"
+                      width={600}
+                      height={400}
+                      className={cn(
+                        "rounded-lg object-contain transition-all duration-300 group-hover:brightness-110 w-auto h-auto",
+                        sponsor.customImageClass || tier.imageClass
+                      )}
                     />
                   </div>
                 </Link>
