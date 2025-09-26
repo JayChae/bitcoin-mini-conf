@@ -129,7 +129,9 @@ const ChromaGrid: React.FC<ChromaGridProps> = ({
           </div>
           <footer className="relative z-10 p-3 text-white font-sans flex flex-col">
             <div className="flex justify-between items-center">
-              <h3 className="text-[1.05rem] font-semibold">{c.title}</h3>
+              <h3 className="text-[1.05rem] font-semibold text-silver">
+                {c.title}
+              </h3>
               <div className="flex items-center gap-2">
                 {c.links.map((link) => (
                   <Link

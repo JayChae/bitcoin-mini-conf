@@ -210,6 +210,34 @@ body {
   animation: green-glow 2s ease-in-out infinite;
 }
 
+.section-title-glow {
+  background: radial-gradient(
+    ellipse 100% 70% at center,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.12) 20%,
+    rgba(255, 255, 255, 0.06) 35%,
+    rgba(255, 255, 255, 0.02) 50%,
+    rgba(255, 255, 255, 0.005) 65%,
+    transparent 80%
+  );
+}
+
+.dark .section-title-glow {
+  background: radial-gradient(
+    ellipse 100% 70% at center,
+    rgba(147, 197, 253, 0.25) 0%,
+    rgba(147, 197, 253, 0.15) 20%,
+    rgba(147, 197, 253, 0.08) 35%,
+    rgba(147, 197, 253, 0.03) 50%,
+    rgba(147, 197, 253, 0.008) 65%,
+    transparent 80%
+  );
+}
+
+.text-silver {
+  color: #efefef;
+}
+
 /* Custom scrollbar for dark theme */
 ::-webkit-scrollbar {
   width: 10px;

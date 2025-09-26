@@ -33,7 +33,7 @@ export default async function Home({ params }: Props) {
             tickets={tickets[lang]}
           />
         </section>
-        <Divider />
+        {/* <Divider /> */}
         <Section id="speakers" title={tSpeakers("title")}>
           <Speakers
             speakers={speakers[lang]}
@@ -41,11 +41,11 @@ export default async function Home({ params }: Props) {
             closeText={tSpeakers("closeText")}
           />
         </Section>
-        <Divider />
+        {/* <Divider /> */}
         <Section id="schedule" title={tSchedule("title")}>
           <Schedule schedules={schedules[lang]} />
         </Section>
-        <Divider />
+        {/* <Divider /> */}
         <Section id="sponsors" title={tSponsor("title")}>
           <Sponsor
             goldTitle={tSponsor("gold")}

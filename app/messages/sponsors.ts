@@ -3,8 +3,7 @@ export type Sponsor = {
   url: string;
   image: string;
   alt: string;
-  customWidth?: number;
-  customHeight?: number;
+  customImageClass?: string; // 특정 스폰서만 다른 크기 적용 가능
 };
 
 const sponsors: {
@@ -27,22 +26,14 @@ const sponsors: {
       url: "https://walletofsatoshi.com",
       image: "/sponsors/ws.png",
       alt: "Wallet of Satoshi",
-      customWidth: 500,
-      customHeight: 500,
+      customImageClass:
+        "max-w-[210px] sm:max-w-[270px] md:max-w-[360px] lg:max-w-[450px] xl:max-w-[525px] max-h-[150px] sm:max-h-[180px] md:max-h-[240px] lg:max-h-[300px] xl:max-h-[360px]", // 기본보다 1.5배 크게
     },
     {
       name: "Frostsnap",
       url: "https://frostsnap.com",
       image: "/sponsors/frostsnap.png",
       alt: "frostsnap",
-    },
-    {
-      name: "Calvin Kim",
-      url: "https://x.com/kcalvinalvinn",
-      image: "/sponsors/calvinkim.png",
-      alt: "calvinkim",
-      customWidth: 420,
-      customHeight: 420,
     },
   ],
   bronze: [

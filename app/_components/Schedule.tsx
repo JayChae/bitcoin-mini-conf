@@ -28,7 +28,7 @@ export default function Schedule({ schedules }: Props) {
           </div>
           <div className="w-full md:w-1/2 text-center md:text-left space-y-4">
             <div className="flex items-center gap-2">
-              <h3 className="text-xl md:text-2xl font-semibold text-white">
+              <h3 className="text-xl md:text-2xl font-semibold text-silver">
                 {schedule.title}
               </h3>
               <time className="text-gray-400 text-sm font-medium">
