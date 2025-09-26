@@ -11,7 +11,9 @@ type SponsorTier = {
   imageWidth: number;
   imageHeight: number;
   titleClass?: string;
-  colors: string[];
+  colors: string;
+  backgroundClass: string;
+  borderClass?: string;
 };
 
 type Props = {
@@ -33,24 +35,33 @@ export default function Sponsor({
       sponsors: sponsors.gold,
       imageWidth: 450,
       imageHeight: 450,
-      titleClass: "text-3xl sm:text-4xl md:text-5xl lg:text-6xl",
-      colors: ["#FFD700", "#FFF4B0", "#FFC300", "#FFD700"],
+      titleClass: "text-3xl sm:text-3xl md:text-4xl lg:text-5xl",
+      colors: "#FFD700",
+      backgroundClass:
+        "dark:from-yellow-500/35 dark:via-yellow-400/40 dark:to-amber-600/35",
+      borderClass:
+        "shadow-xl shadow-yellow-400/30",
     },
     {
       title: silverTitle,
       sponsors: sponsors.silver,
       imageWidth: 320,
       imageHeight: 320,
-      titleClass: "text-2xl sm:text-3xl md:text-4xl lg:text-5xl",
-      colors: ["#C0C0C0", "#FFFFFF", "#E0E0E0", "#C0C0C0"],
+      titleClass: "text-2xl sm:text-2xl md:text-3xl lg:text-4xl",
+      colors: "#C0C0C0",
+      backgroundClass:
+        "bg-gradient-to-br from-slate-400/20 via-gray-300/25 to-slate-500/20 dark:from-slate-400/30 dark:via-gray-300/35 dark:to-slate-500/30",
+      borderClass: "border border-slate-400/40 dark:border-gray-300/50",
     },
     {
       title: bronzeTitle,
       sponsors: sponsors.bronze,
       imageWidth: 280,
       imageHeight: 280,
-      titleClass: "text-xl sm:text-2xl md:text-3xl lg:text-4xl",
-      colors: ["#CD7F32", "#B87333", "#CD7F32"],
+      titleClass: "text-xl sm:text-xl md:text-2xl lg:text-3xl",
+      colors: "#CD7F32",
+      backgroundClass: "bg-transparent",
+      borderClass: "border-0 shadow-none",
     },
     // {
     //   title: individualTitle,
@@ -66,18 +77,23 @@ export default function Sponsor({
       {sponsorTiers.map((tier, tierIndex) => (
         <div
           key={tierIndex}
-          className="w-full flex flex-col items-center gap-4 sm:gap-6 md:gap-8"
+          className={cn(
+            "w-full flex flex-col items-center gap-4 sm:gap-6 md:gap-8 p-6 sm:p-8 md:p-10 lg:p-12 rounded-2xl sm:rounded-3xl transition-all duration-500",
+            tier.backgroundClass,
+            tier.borderClass
+          )}
         >
-          <GradientText
-            colors={tier.colors}
-            className={cn(
-              "font-bold pointer-events-none text-center",
-              tier.titleClass
-            )}
-            animationSpeed={2}
-          >
-            {tier.title}
-          </GradientText>
+          <div className="w-full flex justify-start">
+            <h2
+              className={cn(
+                "font-bold pointer-events-none drop-shadow-sm",
+                tier.titleClass
+              )}
+              style={{ color: tier.colors }}
+            >
+              {tier.title}
+            </h2>
+          </div>
           <div className="flex justify-center items-center gap-4 sm:gap-6 md:gap-8 lg:gap-10 flex-wrap max-w-7xl">
             {tier.sponsors.map((sponsor, sponsorIndex) => {
               // 반응형 이미지 크기 계산
@@ -104,15 +120,15 @@ export default function Sponsor({
                   key={sponsorIndex}
                   href={sponsor.url}
                   target="_blank"
-                  className="transition-all duration-300 hover:scale-105 hover:opacity-90 flex-shrink-0"
+                  className="group transition-all duration-300 hover:scale-105 flex-shrink-0"
                 >
-                  <div className="relative">
+                  <div className="relative p-4 sm:p-6 rounded-xl  hover:shadow-xl transition-all duration-300 group-hover:border-gray-600/50 dark:group-hover:border-gray-500/50">
                     <Image
                       src={sponsor.image}
                       alt={sponsor.alt}
                       width={sizes.width}
                       height={sizes.height}
-                      className="rounded-lg shadow-lg object-contain w-auto h-auto max-w-[200px] sm:max-w-[250px] md:max-w-[300px] lg:max-w-none"
+                      className="rounded-lg object-contain w-auto h-auto max-w-[200px] sm:max-w-[250px] md:max-w-[300px] lg:max-w-none transition-all duration-300 group-hover:brightness-110"
                       style={{
                         maxHeight:
                           tierIndex === 0
@@ -121,6 +137,15 @@ export default function Sponsor({
                             ? "220px"
                             : "180px",
                       }}
+                    />
+                    {/* 호버 시 글로우 효과 */}
+                    <div
+                      className={cn(
+                        "absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none",
+                        tierIndex === 0 && "shadow-2xl shadow-yellow-300/40",
+                        tierIndex === 1 && "",
+                        tierIndex === 2 && "shadow-2xl shadow-amber-600/30"
+                      )}
                     />
                   </div>
                 </Link>
