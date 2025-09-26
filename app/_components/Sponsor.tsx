@@ -37,10 +37,8 @@ export default function Sponsor({
       imageHeight: 450,
       titleClass: "text-3xl sm:text-3xl md:text-4xl lg:text-5xl",
       colors: "#FFD700",
-      backgroundClass:
-        "dark:from-yellow-500/35 dark:via-yellow-400/40 dark:to-amber-600/35",
-      borderClass:
-        "shadow-xl shadow-yellow-400/30",
+      backgroundClass: "",
+      borderClass: "shadow-xl shadow-yellow-400/30",
     },
     {
       title: silverTitle,
@@ -49,9 +47,8 @@ export default function Sponsor({
       imageHeight: 320,
       titleClass: "text-2xl sm:text-2xl md:text-3xl lg:text-4xl",
       colors: "#C0C0C0",
-      backgroundClass:
-        "bg-gradient-to-br from-slate-400/20 via-gray-300/25 to-slate-500/20 dark:from-slate-400/30 dark:via-gray-300/35 dark:to-slate-500/30",
-      borderClass: "border border-slate-400/40 dark:border-gray-300/50",
+      backgroundClass: "",
+      borderClass: "shadow-xl shadow-gray-400/30",
     },
     {
       title: bronzeTitle,
@@ -78,7 +75,7 @@ export default function Sponsor({
         <div
           key={tierIndex}
           className={cn(
-            "w-full flex flex-col items-center gap-4 sm:gap-6 md:gap-8 p-6 sm:p-8 md:p-10 lg:p-12 rounded-2xl sm:rounded-3xl transition-all duration-500",
+            "w-full flex flex-col items-center gap-4 sm:gap-6 md:gap-8 p-6 sm:p-8 md:p-10 lg:p-12 rounded-2xl sm:rounded-3xl",
             tier.backgroundClass,
             tier.borderClass
           )}
