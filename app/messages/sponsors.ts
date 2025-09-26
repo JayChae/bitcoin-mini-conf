@@ -35,14 +35,6 @@ const sponsors: {
       image: "/sponsors/frostsnap.png",
       alt: "frostsnap",
     },
-    {
-      name: "Calvin Kim",
-      url: "https://x.com/kcalvinalvinn",
-      image: "/sponsors/calvinkim.png",
-      alt: "calvinkim",
-      customImageClass:
-        "max-w-[160px] sm:max-w-[220px] md:max-w-[300px] lg:max-w-[380px] xl:max-w-[450px] max-h-[100px] sm:max-h-[130px] md:max-h-[180px] lg:max-h-[230px] xl:max-h-[280px]", // 기본보다 1.5배 크게
-    },
   ],
   bronze: [
     {
