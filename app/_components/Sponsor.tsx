@@ -57,7 +57,7 @@ export default function Sponsor({
       imageHeight: 280,
       titleClass: "text-lg md:text-2xl lg:text-3xl",
       colors: "#CD7F32",
-      backgroundClass: "bg-transparent",
+      backgroundClass: "",
       borderClass: "border-0 shadow-none",
     },
     // {
@@ -140,8 +140,8 @@ export default function Sponsor({
                       className={cn(
                         "absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none",
                         tierIndex === 0 && "shadow-2xl shadow-yellow-300/40",
-                        tierIndex === 1 && "",
-                        tierIndex === 2 && "shadow-2xl shadow-amber-600/30"
+                        tierIndex === 1 && "shadow-2xl shadow-gray-300/40",
+                        tierIndex === 2 && ""
                       )}
                     />
                   </div>
