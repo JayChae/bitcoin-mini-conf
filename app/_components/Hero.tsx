@@ -27,7 +27,7 @@ export default async function Hero({
             colors={["#ff4040", "#ff7940", "#ff4040", "#ff7940", "#ff4040"]}
             animationSpeed={2}
             showBorder={false}
-            className="text-4xl md:text-6xl lg:text-7xl font-extrabold pointer-events-none"
+            className="text-4xl md:text-6xl lg:text-7xl lg:font-bold md:font-extrabold sm:font-bold xs:font-bold pointer-events-none"
           >
             {title}
           </GradientText>
@@ -35,7 +35,7 @@ export default async function Hero({
 
         {/* Subtitle with emphasis */}
         <div className="mb-4">
-          <span className="text-xl md:text-2xl lg:text-3xl font-semibold pointer-events-none text-accent/60 tracking-wide">
+          <span className="text-xl md:text-2xl lg:text-3xl font-semibold pointer-events-none text-accent/60 tracking-tight">
             {subtitle}
           </span>
         </div>

@@ -7,12 +7,6 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { setRequestLocale } from "next-intl/server";
 import navItems from "../messages/nav";
-// import localFont from "next/font/local";
-
-// const pretendard = localFont({
-//   src: "../PretendardVariable.woff2",
-//   variable: "--font-pretendard",
-// });
 
 export const metadata: Metadata = {
   title: "Bitcoin Mini Conference",
@@ -56,7 +50,7 @@ export default async function RootLayout({ children, params }: Props) {
 
   return (
     <html lang={locale} className="size-full">
-      <body className={`font-pretendard antialiased size-full relative overflow-y-auto`}>
+      <body className={`antialiased size-full relative overflow-y-auto`}>
         <NextIntlClientProvider>
           <Nav items={navItems[lang]} />
           {children}
