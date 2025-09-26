@@ -152,7 +152,7 @@ const enItems: Speaker[] = [
   {
     image: "/avatars/promenade.png",
     title: "Promenade",
-    subtitle: "Bitcoin Citadel | Promenade Castle",
+    subtitle: "Bitcoin Citadel | Sea of Corea",
     links: [
       {
         type: "website",
@@ -243,6 +243,9 @@ const enItems: Speaker[] = [
       },
     ],
   },
+] as const;
+
+const koItems: Speaker[] = [
   {
     image: "/avatars/calvin.png",
     title: "Calvin Kim",
@@ -311,28 +314,9 @@ const enItems: Speaker[] = [
     ],
   },
   {
-    image: "/avatars/promenade.png",
-    title: "Promenade",
-    subtitle: "Bitcoin Citadel | Promenade Castle",
-    links: [
-      {
-        type: "website",
-        url: "https://promenadecastle.com",
-      },
-      {
-        type: "telegram",
-        url: "https://t.me/+2yNtegasqLJmMjc1",
-      },
-      {
-        type: "x",
-        url: "https://x.com/PromenadeCastle",
-      },
-    ],
-  },
-  {
     image: "/avatars/seedSigner.png",
     title: "SeedSigner",
-    subtitle: "Developer | SeedSigner",
+    subtitle: "개발자 | SeedSigner",
     links: [
       {
         type: "website",
@@ -360,36 +344,6 @@ const enItems: Speaker[] = [
     ],
   },
   {
-    image: "/avatars/trigger.png",
-    title: "Trigger",
-    subtitle: "Bitcoin Seoul Center | Coconut",
-    links: [
-      {
-        type: "website",
-        url: "https://linktr.ee/noncelab",
-      },
-      {
-        type: "x",
-        url: "https://x.com/Coconut_BTC",
-      },
-    ],
-  },
-  {
-    image: "/avatars/wos.png",
-    title: "Wallet of Satoshi",
-    subtitle: "CEO | Wallet of Satoshi",
-    links: [
-      {
-        type: "website",
-        url: "https://www.walletofsatoshi.com",
-      },
-      {
-        type: "x",
-        url: "https://x.com/walletofsatoshi",
-      },
-    ],
-  },
-  {
     image: "/avatars/win.png",
     title: "Win Ko Ko Aung",
     subtitle: "Global Bitcoin Adoption | HRF",
@@ -401,31 +355,6 @@ const enItems: Speaker[] = [
       {
         type: "x",
         url: "https://x.com/wkkaung",
-      },
-    ],
-  },
-] as const;
-
-const koItems: Speaker[] = [
-  {
-    image: "/avatars/calvin.png",
-    title: "Calvin Kim",
-    subtitle: "개발자 | Utreexo",
-    links: [
-      {
-        type: "x",
-        url: "https://x.com/kcalvinalvinn",
-      },
-    ],
-  },
-  {
-    image: "/avatars/gandalf.png",
-    title: "Gandlaf",
-    subtitle: "개발자 | Cashu",
-    links: [
-      {
-        type: "nostr",
-        url: "https://primal.net/p/nprofile1qqsvfdfkn2wmy73wr0yhkf065jrzm8705ar4q6clyuhc7jekhqfdh4sa06kjr",
       },
     ],
   },
@@ -508,132 +437,9 @@ const koItems: Speaker[] = [
     ],
   },
   {
-    image: "/avatars/seedSigner.png",
-    title: "SeedSigner",
-    subtitle: "개발자 | SeedSigner",
-    links: [
-      {
-        type: "website",
-        url: "https://seedsigner.com",
-      },
-      {
-        type: "x",
-        url: "https://x.com/seedsigner",
-      },
-    ],
-  },
-  {
-    image: "/avatars/wos.png",
-    title: "Wallet of Satoshi",
-    subtitle: "CEO | 월렛 오브 사토시",
-    links: [
-      {
-        type: "website",
-        url: "https://www.walletofsatoshi.com",
-      },
-      {
-        type: "x",
-        url: "https://x.com/walletofsatoshi",
-      },
-    ],
-  },
-  {
-    image: "/avatars/win.png",
-    title: "Win Ko Ko Aung",
-    subtitle: "Global Bitcoin Adoption | HRF",
-    links: [
-      {
-        type: "website",
-        url: "https://hrf.org",
-      },
-      {
-        type: "x",
-        url: "https://x.com/wkkaung",
-      },
-    ],
-  },
-  {
-    image: "/avatars/nldd.png",
-    title: "네딸바",
-    subtitle: "유튜버 | 번역가",
-    links: [
-      {
-        type: "youtube",
-        url: "https://youtube.com/channel/UCT_RhM-i6or1qS1JRm4Bqrw?si=gTwZokhgaWnbD7bY",
-      },
-      {
-        type: "x",
-        url: "https://x.com/nldd21",
-      },
-    ],
-  },
-  {
-    image: "/avatars/specter.png",
-    title: "스펙터",
-    subtitle: "비트코인 미니 컨퍼런스 | 호스트",
-    links: [
-      {
-        type: "youtube",
-        url: "https://www.youtube.com/@BitcoinSPECTER2100",
-      },
-      {
-        type: "x",
-        url: "https://x.com/k_bitcoiner",
-      },
-    ],
-  },
-  {
-    image: "/avatars/jaeNam.png",
-    title: "강재남",
-    subtitle: "가상자산 전문 세무사",
-    links: [
-      {
-        type: "website",
-        url: "https://fresh-credit-98a.notion.site/9065d93234844efc84d11aad22c0152e",
-      },
-    ],
-  },
-  {
-    image: "/avatars/moonJun.png",
-    title: "김문준",
-    subtitle: "KCGI 자산운용 사외이사",
-    links: [
-      {
-        type: "website",
-        url: "https://www.kcgiam.com/",
-      },
-    ],
-  },
-  {
-    image: "/avatars/atomic.png",
-    title: "아토믹 비트코인",
-    subtitle: "Auditor | BSL",
-    links: [
-      {
-        type: "x",
-        url: "https://x.com/atomicbtc",
-      },
-    ],
-  },
-  {
-    image: "/avatars/powdae.png",
-    title: "포대",
-    subtitle: "CEO | 논스랩",
-    links: [
-      {
-        type: "website",
-        url: "https://powbitcoiner.com/",
-      },
-      {
-        type: "x",
-        url: "https://twitter.com/powdae",
-      },
-    ],
-  },
-  {
     image: "/avatars/promenade.png",
     title: "프로메나드",
-    subtitle: "비트코인 시타델 | 프로메나드 캐슬",
+    subtitle: "Bitcoin Citadel | Sea of Corea",
     links: [
       {
         type: "website",
