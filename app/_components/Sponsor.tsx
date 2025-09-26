@@ -35,7 +35,6 @@ export default function Sponsor({
       sponsors: sponsors.gold,
       imageWidth: 450,
       imageHeight: 450,
-      titleClass: "text-2xl md:text-4xl lg:text-5xl",
       colors: "#FFD700",
       backgroundClass: "",
       borderClass: "shadow-xl shadow-yellow-400/30",
@@ -45,7 +44,6 @@ export default function Sponsor({
       sponsors: sponsors.silver,
       imageWidth: 320,
       imageHeight: 320,
-      titleClass: "text-lg md:text-3xl lg:text-4xl",
       colors: "#C0C0C0",
       backgroundClass: "",
       borderClass: "shadow-xl shadow-gray-400/30",
@@ -53,9 +51,8 @@ export default function Sponsor({
     {
       title: bronzeTitle,
       sponsors: sponsors.bronze,
-      imageWidth: 280,
-      imageHeight: 280,
-      titleClass: "text-lg md:text-2xl lg:text-3xl",
+      imageWidth: 250,
+      imageHeight: 250,
       colors: "#CD7F32",
       backgroundClass: "",
       borderClass: "border-0 shadow-none",
@@ -84,7 +81,7 @@ export default function Sponsor({
             <h2
               className={cn(
                 "font-bold pointer-events-none drop-shadow-sm",
-                tier.titleClass
+                "text-lg md:text-3xl lg:text-4xl"
               )}
               style={{ color: tier.colors }}
             >
@@ -93,25 +90,6 @@ export default function Sponsor({
           </div>
           <div className="flex justify-center items-center gap-4 sm:gap-6 md:gap-8 lg:gap-10 flex-wrap max-w-7xl">
             {tier.sponsors.map((sponsor, sponsorIndex) => {
-              // 반응형 이미지 크기 계산
-              const getResponsiveSize = () => {
-                const baseWidth = sponsor.customWidth || tier.imageWidth;
-                const baseHeight = sponsor.customHeight || tier.imageHeight;
-
-                // 모바일: 70%, 태블릿: 80%, 데스크톱: 100%
-                const mobileWidth = Math.round(baseWidth * 0.7);
-                const mobileHeight = Math.round(baseHeight * 0.7);
-
-                return {
-                  width: baseWidth,
-                  height: baseHeight,
-                  mobileWidth,
-                  mobileHeight,
-                };
-              };
-
-              const sizes = getResponsiveSize();
-
               return (
                 <Link
                   key={sponsorIndex}
@@ -123,17 +101,9 @@ export default function Sponsor({
                     <Image
                       src={sponsor.image}
                       alt={sponsor.alt}
-                      width={sizes.width}
-                      height={sizes.height}
+                      width={sponsor.customWidth || tier.imageWidth}
+                      height={sponsor.customHeight || tier.imageHeight}
                       className="rounded-lg object-contain w-auto h-auto max-w-[200px] sm:max-w-[250px] md:max-w-[300px] lg:max-w-none transition-all duration-300 group-hover:brightness-110"
-                      style={{
-                        maxHeight:
-                          tierIndex === 0
-                            ? "300px"
-                            : tierIndex === 1
-                            ? "220px"
-                            : "180px",
-                      }}
                     />
                   </div>
                 </Link>

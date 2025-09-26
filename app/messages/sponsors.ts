@@ -41,8 +41,8 @@ const sponsors: {
       url: "https://x.com/kcalvinalvinn",
       image: "/sponsors/calvinkim.png",
       alt: "calvinkim",
-      customWidth: 420,
-      customHeight: 420,
+      customWidth: 400,
+      customHeight: 400,
     },
   ],
   bronze: [
