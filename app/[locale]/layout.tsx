@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import DarkVeil from "../_components/DarkVeil";
 import Nav from "../_components/Nav";
@@ -8,12 +7,12 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { setRequestLocale } from "next-intl/server";
 import navItems from "../messages/nav";
-import localFont from "next/font/local";
+// import localFont from "next/font/local";
 
-const pretendard = localFont({
-  src: "../../public/PretendardVariable.woff2",
-  variable: "--font-pretendard",
-});
+// const pretendard = localFont({
+//   src: "../PretendardVariable.woff2",
+//   variable: "--font-pretendard",
+// });
 
 export const metadata: Metadata = {
   title: "Bitcoin Mini Conference",
@@ -51,14 +50,13 @@ type Props = {
 export default async function RootLayout({ children, params }: Props) {
   const { locale } = await params;
   const lang = locale === "ko" ? "ko" : "en";
-  if (!hasLocale(routing.locales, locale)) {
-    notFound();
-  }
+
+  if (!hasLocale(routing.locales, locale)) notFound();
   setRequestLocale(locale);
 
   return (
     <html lang={locale} className="size-full">
-      <body className={`${pretendard.variable} antialiased size-full relative overflow-y-auto`}>
+      <body className={`font-pretendard antialiased size-full relative overflow-y-auto`}>
         <NextIntlClientProvider>
           <Nav items={navItems[lang]} />
           {children}
