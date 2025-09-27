@@ -36,7 +36,7 @@ export default function Sponsor({
         "max-w-[200px] md:max-w-[400px] lg:max-w-[500px] xl:max-w-[600px] max-h-[200px] md:max-h-[300px] lg:max-h-[350px] xl:max-h-[400px]",
       colors: "#FFD700",
       backgroundClass: "",
-      borderClass: "shadow-xl shadow-yellow-400/30",
+      borderClass: "shadow-xl shadow-yellow-400/60",
     },
     {
       title: silverTitle,
@@ -45,7 +45,7 @@ export default function Sponsor({
         "max-w-[140px] sm:max-w-[180px] md:max-w-[240px] lg:max-w-[300px] xl:max-w-[350px] max-h-[100px] sm:max-h-[120px] md:max-h-[160px] lg:max-h-[200px] xl:max-h-[240px]",
       colors: "#C0C0C0",
       backgroundClass: "",
-      borderClass: "shadow-xl shadow-gray-400/30",
+      borderClass: "shadow-xl shadow-gray-400/60",
     },
     {
       title: bronzeTitle,
