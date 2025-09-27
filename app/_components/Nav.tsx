@@ -63,7 +63,7 @@ export default function Nav({ items }: Props) {
               ))}
               <button
                 onClick={handleLanguageSwitch}
-                className="text-white/80 hover:text-white px-3 py-2 text-sm font-medium transition-colors duration-200 bg-white/10 hover:bg-white/20 rounded-md border border-white/20"
+                className="text-white/80 hover:text-white px-3 py-2 text-sm font-medium transition-colors duration-200 bg-white/10 hover:bg-white/20 rounded-md border border-white/20 cursor-pointer"
               >
                 {locale === "en" ? "한국어" : "English"}
               </button>
@@ -74,7 +74,7 @@ export default function Nav({ items }: Props) {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-white/80 hover:text-white p-2 rounded-md transition-colors duration-200"
+              className="text-white/80 hover:text-white p-2 rounded-md transition-colors duration-200 cursor-pointer"
               aria-label="Toggle menu"
             >
               <svg
@@ -120,7 +120,7 @@ export default function Nav({ items }: Props) {
               <div className="pt-2 border-t border-white/10">
                 <button
                   onClick={handleLanguageSwitch}
-                  className="text-white/80 hover:text-white block w-full text-left px-3 py-2 text-base font-medium transition-colors duration-200 bg-white/10 hover:bg-white/20 rounded-md border border-white/20"
+                  className="text-white/80 hover:text-white block w-full text-left px-3 py-2 text-base font-medium transition-colors duration-200 bg-white/10 hover:bg-white/20 rounded-md border border-white/20 cursor-pointer"
                 >
                   {locale === "en" ? "한국어" : "English"}
                 </button>
