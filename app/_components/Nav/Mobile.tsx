@@ -55,7 +55,7 @@ export default function Mobile({
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden absolute top-full left-0 right-0">
-          <div className="px-2 pt-2 pb-3 space-y-1 bg-black/30 backdrop-blur-md rounded-b-lg">
+          <div className="px-2 pt-2 pb-3 space-y-1 bg-black/90 backdrop-blur-md rounded-b-lg border border-white/10">
             {items.map((item) => (
               <Link
                 key={item.label}
