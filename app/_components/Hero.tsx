@@ -1,5 +1,4 @@
 import GradientText from "@/components/GradientText";
-import StarBorder from "@/components/StarBorder";
 import Link from "next/link";
 import { type TicketButton } from "../messages/tickets";
 import BlurText from "@/components/BlurText";
@@ -19,7 +18,7 @@ export default async function Hero({ title, subtitle, tickets, date, location }:
     <div className="flex flex-col items-center justify-center h-screen gap-14 pt-16">
       <section className="flex flex-col items-center justify-center">
         {/* Hero Title Section */}
-        <h1 className="text-center mb-8 md:mt-8 mt-24">
+        <h1 className="text-center mb-8 md:mt-8 mt-12">
           <GradientText
             colors={["#ff4040", "#ff7940", "#ff4040", "#ff7940", "#ff4040"]}
             animationSpeed={2}
@@ -56,17 +55,9 @@ export default async function Hero({ title, subtitle, tickets, date, location }:
             href={ticket.url}
             className="w-full hover:scale-105 transition-all duration-300"
           >
-            {/* <StarBorder
-              as="button"
-              className="cursor-pointer w-full"
-              color={ticket.color}
-              speed="3s"
-              thickness={4}
-            > */}
             <span className="inline-block w-full text-center border border-accent/40 rounded-full py-3 bg-black/40 backdrop-blur-md">
               <ShinyText text={ticket.name} className="text-lg md:text-xl font-bold" speed={1.7} />
             </span>
-            {/* </StarBorder> */}
           </Link>
         ))}
       </section>

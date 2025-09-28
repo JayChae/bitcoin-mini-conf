@@ -9,13 +9,13 @@ type Props = {
 
 export default function Attendees({ items }: Props) {
   return (
-    <section className="w-full rounded-2xl px-8 py-16 md:px-16 md:py-20">
+    <section className="w-full rounded-2xl px-8 pt-16 md:px-16 md:py-20 lg:pt-48">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14">
           <div className="flex flex-col gap-12 lg:gap-16">
             <div className="flex flex-col items-center justify-center gap-6">
-              <span className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white">
-                200 +
+              <span className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white">
+                200+
               </span>
               <p className="text-gray-400 text-base md:text-lg lg:text-xl leading-relaxed">
                 {items[0]?.subtitle}
@@ -25,12 +25,12 @@ export default function Attendees({ items }: Props) {
             {/* 2번 아이템 */}
             {items[2] && (
               <div className="flex flex-col items-center justify-center gap-6">
-                <span className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white">
+                <span className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white">
                   <CountUp
                     to={400}
                     from={350}
                     duration={1}
-                    className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white"
+                    className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white"
                   />
                   +
                 </span>
@@ -55,11 +55,11 @@ export default function Attendees({ items }: Props) {
                     "#809BFF", // 네온 블루
                     "#FFFFFF", // 다시 빛
                   ]}
-                  className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-tight"
+                  className="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-white leading-tight"
                 >
                   {items[1].title}
                 </GradientText>
-                <p className="text-gray-400 text-base md:text-xl lg:text-2xl leading-relaxed max-w-md lg:ml-auto">
+                <p className="text-gray-400 text-center md:text-left text-base md:text-xl lg:text-2xl leading-relaxed max-w-md lg:ml-auto">
                   {items[1].subtitle}
                 </p>
               </div>

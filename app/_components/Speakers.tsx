@@ -34,7 +34,7 @@ export default function Speakers({ speakers, moreText, closeText }: Props) {
   const hasMoreSpeakers = isMobile && speakers.length > 6;
 
   return (
-    <div className="flex flex-col items-center justify-center gap-6">
+    <div className="flex flex-col items-center justify-center gap-16 md:gap-6">
       <ChromaGrid
         items={displayedSpeakers}
         radius={300}
@@ -56,7 +56,10 @@ export default function Speakers({ speakers, moreText, closeText }: Props) {
         </button>
       )}
 
-      <ShinyText text="More speakers on the way!" className="text-2xl" />
+      <ShinyText
+        text="More speakers on the way!"
+        className="text-2xl font-semibold mt-6 md:mt-18 md:text-3xl lg:text-4xl lg:mg-24"
+      />
     </div>
   );
 }
