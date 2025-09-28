@@ -9,7 +9,7 @@ type Props = {
 
 export default function Section({ id, title, children }: Props) {
   return (
-    <section id={id} className="w-full scroll-mt-24 mt-24">
+    <section id={id} className="w-full scroll-mt-24 mt-44">
       <div className="relative inline-block mb-12 w-full text-center">
         <div className="absolute inset-0 section-title-glow pointer-events-none" />
         <h2
