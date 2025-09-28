@@ -36,7 +36,6 @@ export default async function Home({ params }: Props) {
         </section>
         <Divider />
         <Attendees items={attendees[lang]} />
-        <Divider />
         <Section id="speakers" title={tSpeakers("title")}>
           <Speakers
             speakers={speakers[lang]}
