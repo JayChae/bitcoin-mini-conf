@@ -15,10 +15,7 @@ export default function Nav({ items }: Props) {
   const router = useRouter();
   const locale = useLocale();
 
-  const handleClick = (
-    e: React.MouseEvent<HTMLAnchorElement>,
-    href: string
-  ) => {
+  const handleClick = (e: React.MouseEvent, href: string) => {
     e.preventDefault();
     const targetId = href.replace("#", "");
     const element = document.getElementById(targetId);
@@ -34,11 +31,6 @@ export default function Nav({ items }: Props) {
     setIsOpen(false);
   };
 
-  const handleLanguageSwitch = () => {
-    const newLocale = locale === "en" ? "ko" : "en";
-    router.replace("/", { locale: newLocale });
-  };
-
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-md border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -52,21 +44,22 @@ export default function Nav({ items }: Props) {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
               {items.map((item) => (
-                <a
+                <Link
                   key={item.label}
                   href={item.href}
                   onClick={(e) => handleClick(e, item.href)}
                   className="text-white/80 hover:text-white px-3 py-2 text-sm font-medium transition-colors duration-200 cursor-pointer"
                 >
                   {item.label}
-                </a>
+                </Link>
               ))}
-              <button
-                onClick={handleLanguageSwitch}
+              <Link
+                href="/"
+                locale={locale === "en" ? "ko" : "en"}
                 className="text-white/80 hover:text-white px-3 py-2 text-sm font-medium transition-colors duration-200 bg-white/10 hover:bg-white/20 rounded-md border border-white/20 cursor-pointer"
               >
                 {locale === "en" ? "한국어" : "English"}
-              </button>
+              </Link>
             </div>
           </div>
 
@@ -108,22 +101,24 @@ export default function Nav({ items }: Props) {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-black/30 backdrop-blur-md rounded-b-lg">
               {items.map((item) => (
-                <a
+                <Link
                   key={item.label}
                   href={item.href}
                   onClick={(e) => handleClick(e, item.href)}
                   className="text-white/80 hover:text-white block px-3 py-2 text-base font-medium transition-colors duration-200 cursor-pointer"
                 >
                   {item.label}
-                </a>
+                </Link>
               ))}
               <div className="pt-2 border-t border-white/10">
-                <button
-                  onClick={handleLanguageSwitch}
+                <Link
+                  href="/"
+                  locale={locale === "en" ? "ko" : "en"}
                   className="text-white/80 hover:text-white block w-full text-left px-3 py-2 text-base font-medium transition-colors duration-200 bg-white/10 hover:bg-white/20 rounded-md border border-white/20 cursor-pointer"
+                  onClick={() => setIsOpen(false)}
                 >
                   {locale === "en" ? "한국어" : "English"}
-                </button>
+                </Link>
               </div>
             </div>
           </div>
