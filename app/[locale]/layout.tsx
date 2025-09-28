@@ -50,7 +50,9 @@ export default async function RootLayout({ children, params }: Props) {
 
   return (
     <html lang={locale} className="size-full">
-      <body className={`antialiased size-full relative overflow-y-auto`}>
+      <body
+        className={`antialiased size-full relative overflow-y-auto bg-black`}
+      >
         <NextIntlClientProvider>
           <Nav items={navItems[lang]} />
           {children}

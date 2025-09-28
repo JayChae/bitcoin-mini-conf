@@ -4,6 +4,7 @@ import Link from "next/link";
 import { type TicketButton } from "../messages/tickets";
 import BlurText from "@/components/BlurText";
 import ShinyText from "@/components/ShinyText";
+import Attendees from "./Attendees";
 
 type Props = {
   title: string;
@@ -15,7 +16,7 @@ type Props = {
 
 export default async function Hero({ title, subtitle, tickets, date, location }: Props) {
   return (
-    <div className="flex flex-col items-center justify-center h-screen gap-16">
+    <div className="flex flex-col items-center justify-center h-screen gap-14 pt-16">
       <section className="flex flex-col items-center justify-center">
         {/* Hero Title Section */}
         <h1 className="text-center mb-8 md:mt-8 mt-24">
