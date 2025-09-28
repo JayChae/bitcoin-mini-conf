@@ -2,6 +2,7 @@ import GradientText from "@/components/GradientText";
 import StarBorder from "@/components/StarBorder";
 import Link from "next/link";
 import { type TicketButton } from "../messages/tickets";
+import Attendees from "./Attendees";
 
 type Props = {
   title: string;
@@ -19,7 +20,7 @@ export default async function Hero({
   location,
 }: Props) {
   return (
-    <div className="flex flex-col items-center justify-center h-screen gap-14">
+    <div className="flex flex-col items-center justify-center h-screen gap-14 pt-16">
       <section className="flex flex-col items-center justify-center">
         {/* Hero Title Section */}
         <h1 className="text-center mb-6">
