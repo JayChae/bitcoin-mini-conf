@@ -2,6 +2,8 @@ import GradientText from "@/components/GradientText";
 import StarBorder from "@/components/StarBorder";
 import Link from "next/link";
 import { type TicketButton } from "../messages/tickets";
+import BlurText from "@/components/BlurText";
+import ShinyText from "@/components/ShinyText";
 
 type Props = {
   title: string;
@@ -11,62 +13,59 @@ type Props = {
   location: string;
 };
 
-export default async function Hero({
-  title,
-  subtitle,
-  tickets,
-  date,
-  location,
-}: Props) {
+export default async function Hero({ title, subtitle, tickets, date, location }: Props) {
   return (
-    <div className="flex flex-col items-center justify-center h-screen gap-14">
+    <div className="flex flex-col items-center justify-center h-screen gap-16">
       <section className="flex flex-col items-center justify-center">
         {/* Hero Title Section */}
-        <h1 className="text-center mb-6">
+        <h1 className="text-center mb-8 md:mt-8 mt-24">
           <GradientText
             colors={["#ff4040", "#ff7940", "#ff4040", "#ff7940", "#ff4040"]}
             animationSpeed={2}
             showBorder={false}
-            className="text-4xl md:text-6xl lg:text-7xl lg:font-bold md:font-extrabold sm:font-bold xs:font-bold pointer-events-none"
+            className="text-5xl md:text-6xl lg:text-7xl lg:font-bold md:font-extrabold sm:font-bold xs:font-bold pointer-events-none"
           >
             {title}
           </GradientText>
         </h1>
 
         {/* Subtitle with emphasis */}
-        <div className="mb-4">
-          <span className="text-xl md:text-2xl lg:text-3xl font-semibold pointer-events-none text-accent/60 tracking-tight">
-            {subtitle}
-          </span>
+        <div className="mb-5 flex items-center gap-2">
+          <BlurText
+            text={subtitle}
+            className="text-xl md:text-3xl lg:text-4xl font-semibold pointer-events-none text-accent/70 tracking-tight"
+          />
         </div>
 
         {/* Date and Location with different styling */}
-        <div className="flex flex-col md:flex-row items-center gap-1 md:gap-8">
-          <span className="text-base md:text-lg lg:text-xl font-medium pointer-events-none text-accent/50">
+        <div className="flex flex-row md:flex-row items-center gap-1 md:gap-4">
+          <span className="text-lg lg:text-2xl font-medium pointer-events-none text-accent/70">
             {date}
           </span>
 
-          <span className="text-base md:text-lg lg:text-xl font-medium pointer-events-none text-accent/50">
-            {location}
+          <span className="text-lg lg:text-2xl font-semibold pointer-events-none text-accent/70">
+            / {location}
           </span>
         </div>
       </section>
-      <section className="w-full flex flex-col items-center lg:flex-row gap-3">
+      <section className="w-full md:w-3/5 lg:w-4/5 flex flex-col items-center lg:flex-row gap-3">
         {tickets.map((ticket) => (
           <Link
             key={ticket.url}
             href={ticket.url}
-            className="w-full hover:scale-105 transition-all duration-300 "
+            className="w-full hover:scale-105 transition-all duration-300"
           >
-            <StarBorder
+            {/* <StarBorder
               as="button"
               className="cursor-pointer w-full"
               color={ticket.color}
               speed="3s"
               thickness={4}
-            >
-              {ticket.name}
-            </StarBorder>
+            > */}
+            <span className="inline-block w-full text-center border border-accent/40 rounded-full py-3 bg-black/40 backdrop-blur-md">
+              <ShinyText text={ticket.name} className="text-lg md:text-xl font-bold" speed={1.7} />
+            </span>
+            {/* </StarBorder> */}
           </Link>
         ))}
       </section>
