@@ -48,9 +48,12 @@ export default async function Hero({
           <span className="text-lg lg:text-2xl font-medium pointer-events-none text-accent/70">
             {date}
           </span>
+          <span className="text-lg lg:text-2xl font-medium pointer-events-none text-accent/70">
+            /
+          </span>
 
           <span className="text-lg lg:text-2xl font-semibold pointer-events-none text-accent/70">
-            / {location}
+            {location}
           </span>
         </div>
       </section>
