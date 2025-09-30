@@ -1,6 +1,5 @@
 import { type AttendeeItem } from "../messages/attendees";
 import CountUp from "../../components/CountUp";
-import ShinyText from "../../components/ShinyText";
 import GradientText from "@/components/GradientText";
 
 type Props = {
@@ -35,7 +34,6 @@ export default function Attendees({ items }: Props) {
               </div>
             </div>
           )}
-
           <div className="flex flex-col gap-12 lg:gap-16">
             <div className="flex flex-col items-center justify-center gap-6">
               <span className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white">
