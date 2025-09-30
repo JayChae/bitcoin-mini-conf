@@ -64,7 +64,7 @@ export default async function Hero({
             href={ticket.url}
             className="w-full hover:scale-105 transition-all duration-300"
           >
-            <span className="inline-block w-full text-center border border-accent/40 rounded-full py-3 bg-black/40 backdrop-blur-md">
+            <span className="inline-block w-full text-center border-2 border-accent/40 rounded-full py-3 bg-black/40 backdrop-blur-md">
               <ShinyText
                 text={ticket.name}
                 className="text-lg md:text-xl font-bold"
