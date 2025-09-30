@@ -13,15 +13,21 @@ type Props = {
   location: string;
 };
 
-export default async function Hero({ title, subtitle, tickets, date, location }: Props) {
+export default async function Hero({
+  title,
+  subtitle,
+  tickets,
+  date,
+  location,
+}: Props) {
   return (
     <div className="flex flex-col items-center justify-center h-screen gap-14 pt-16">
       <section className="flex flex-col items-center justify-center">
         {/* Hero Title Section */}
         <h1 className="text-center mb-8 md:mt-8 mt-12">
           <GradientText
-            colors={["#ff4040", "#ff7940", "#ff4040", "#ff7940", "#ff4040"]}
-            animationSpeed={2}
+            colors={["#ff4040", "#ff4040", "#ff4040", "#ff4040", "#6a0dad"]}
+            animationSpeed={8}
             showBorder={false}
             className="text-5xl md:text-6xl lg:text-7xl lg:font-bold md:font-extrabold sm:font-bold xs:font-bold pointer-events-none"
           >
@@ -42,9 +48,12 @@ export default async function Hero({ title, subtitle, tickets, date, location }:
           <span className="text-lg lg:text-2xl font-medium pointer-events-none text-accent/70">
             {date}
           </span>
+          <span className="text-lg lg:text-2xl font-medium pointer-events-none text-accent/70">
+            /
+          </span>
 
           <span className="text-lg lg:text-2xl font-semibold pointer-events-none text-accent/70">
-            / {location}
+            {location}
           </span>
         </div>
       </section>
@@ -55,8 +64,12 @@ export default async function Hero({ title, subtitle, tickets, date, location }:
             href={ticket.url}
             className="w-full hover:scale-105 transition-all duration-300"
           >
-            <span className="inline-block w-full text-center border border-accent/40 rounded-full py-3 bg-black/40 backdrop-blur-md">
-              <ShinyText text={ticket.name} className="text-lg md:text-xl font-bold" speed={1.7} />
+            <span className="inline-block w-full text-center border-2 border-accent/40 rounded-full py-3 bg-black/40 backdrop-blur-md">
+              <ShinyText
+                text={ticket.name}
+                className="text-lg md:text-xl font-bold"
+                speed={1.7}
+              />
             </span>
           </Link>
         ))}
