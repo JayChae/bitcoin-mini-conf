@@ -4,6 +4,7 @@ import { type TicketButton } from "../messages/tickets";
 import BlurText from "@/components/BlurText";
 import ShinyText from "@/components/ShinyText";
 import Attendees from "./Attendees";
+import StarBorder from "@/components/StarBorder";
 
 type Props = {
   title: string;
@@ -65,13 +66,15 @@ export default async function Hero({
             href={ticket.url}
             className="w-full hover:scale-105 transition-all duration-300"
           >
-            <span className="inline-block w-full text-center border-2 border-accent/40 rounded-full py-3 bg-black/40 backdrop-blur-md">
-              <ShinyText
-                text={ticket.name}
-                className="text-lg md:text-xl font-bold"
-                speed={1.7}
-              />
-            </span>
+            <StarBorder
+              as="button"
+              className="cursor-pointer w-full text-lg md:text-xl font-bold"
+              color={ticket.color}
+              speed="2.5s"
+              thickness={4}
+            >
+              {ticket.name}
+            </StarBorder>
           </Link>
         ))}
       </section>
