@@ -39,6 +39,7 @@ export default async function Hero({
         <div className="mb-5 flex items-center gap-2">
           <BlurText
             text={subtitle}
+            delay={500}
             className="text-xl md:text-3xl lg:text-4xl font-semibold pointer-events-none text-accent/70 tracking-tight"
           />
         </div>
