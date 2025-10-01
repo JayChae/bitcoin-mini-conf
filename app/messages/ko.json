@@ -19,5 +19,15 @@
     "silver": "Silver Sponsor",
     "bronze": "Bronze Sponsor",
     "individual": "Individual Sponsor"
+  },
+  "Footer": {
+    "contact": "Contact",
+    "email": "문의 이메일:",
+    "location": "장소",
+    "day1": "29일",
+    "day2": "30일",
+    "address1": "서울 강서구 마곡중앙1로 20 지하 1층 NSP 홀",
+    "address2": "서울 서대문구 연희로2길 76 (홍대 한빛)",
+    "address3": "서울 마포구 동교로 30길 21 (SPACE BE)"
   }
 }
