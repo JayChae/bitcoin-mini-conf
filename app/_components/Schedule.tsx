@@ -35,12 +35,30 @@ export default function Schedule({ schedules }: Props) {
                 {schedule.date}
               </time>
             </div>
-            <p className="text-gray-300 text-sm md:text-base leading-relaxed">
-              {schedule.description}
-            </p>
+            {schedule.description && (
+              <p className="text-gray-300 text-sm md:text-base leading-relaxed">
+                {schedule.description}
+              </p>
+            )}
             <p className="text-gray-400 text-lg leading-relaxed">
               {schedule.content}
             </p>
+            <div className="space-y-1">
+              <div className="space-y-2">
+                {schedule.locations.map((location, locationIndex) => (
+                  <div key={locationIndex} className="text-gray-300">
+                    <div className="text-sm font-medium">📍 {location}</div>
+                  </div>
+                ))}
+              </div>
+              <div className="flex items-center justify-center md:justify-start gap-2">
+                {schedule.locationDescription && (
+                  <span className="text-gray-400 text-sm">
+                    {schedule.locationDescription}
+                  </span>
+                )}
+              </div>
+            </div>
           </div>
         </div>
       ))}
