@@ -23,7 +23,7 @@ export default async function Home({ params }: Props) {
   const tSponsor = await getTranslations("Sponsor");
 
   return (
-    <main className="w-full px-8 pb-10 z-10">
+    <main className="w-full px-4 md:px-6 pb-10 z-10">
       <div className="flex flex-col items-center justify-center max-w-6xl mx-auto">
         <section id="home" className="scroll-mt-16">
           <Hero
