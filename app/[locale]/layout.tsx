@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import DarkVeil from "../_components/DarkVeil";
 import Nav from "../_components/Nav";
+import Footer from "../_components/Footer";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
@@ -61,6 +62,7 @@ export default async function RootLayout({ children, params }: Props) {
         <NextIntlClientProvider>
           <Nav items={navItems[lang]} />
           {children}
+          <Footer />
         </NextIntlClientProvider>
         <DarkVeil speed={0.8} />
       </body>

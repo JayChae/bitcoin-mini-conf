@@ -19,5 +19,16 @@
     "silver": "Silver Sponsor",
     "bronze": "Bronze Sponsor",
     "individual": "Individual Sponsor"
+  },
+  "Footer": {
+    "contact": "Contact",
+    "email": "Email:",
+    "location": "Location",
+    "day1": "Nov 29",
+    "day2": "Nov 30",
+    "address1": "NSP Hall, B1, 20, Magokjungang 1-ro, Gangseo-gu, Seoul, Republic of Korea",
+    "address2": "Hanbit Building, 76, Yeonhui-ro 2-gil, Seodaemun-gu, Seoul, Republic of Korea",
+    "address3": "SPACE BE, 21, Donggyo-ro 30-gil, Mapo-gu, Seoul, Republic of Korea",
+    "copyright": "© 2025 Bitcoin Mini Conference. All rights reserved."
   }
 }
