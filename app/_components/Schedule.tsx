@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { type Schedule } from "../messages/schedules";
+import { MapPin } from "lucide-react";
 
 type Props = {
   schedules: Schedule[];
@@ -35,12 +36,33 @@ export default function Schedule({ schedules }: Props) {
                 {schedule.date}
               </time>
             </div>
-            <p className="text-gray-300 text-sm md:text-base leading-relaxed">
-              {schedule.description}
-            </p>
+            {schedule.description && (
+              <p className="text-gray-300 text-sm md:text-base leading-relaxed">
+                {schedule.description}
+              </p>
+            )}
             <p className="text-gray-400 text-lg leading-relaxed">
               {schedule.content}
             </p>
+            <div className="space-y-1">
+              <div className="space-y-2">
+                {schedule.locations.map((location, locationIndex) => (
+                  <div key={locationIndex} className="text-gray-300">
+                    <div className="flex items-center gap-2 text-sm font-medium text-orange-400/80">
+                      <MapPin className="w-4 h-4 text-orange-400/80" />{" "}
+                      {location}
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="flex items-center justify-start gap-2">
+                {schedule.locationDescription && (
+                  <span className="text-gray-400 text-sm pl-1">
+                    {schedule.locationDescription}
+                  </span>
+                )}
+              </div>
+            </div>
           </div>
         </div>
       ))}

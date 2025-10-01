@@ -200,7 +200,7 @@ const enItems: Speaker[] = [
   },
   {
     image: "/avatars/trigger.png",
-    title: "Trigger",
+    title: "Team Coconut",
     subtitle: "Bitcoin Seoul Center | Coconut",
     links: [
       {
@@ -457,7 +457,7 @@ const koItems: Speaker[] = [
   },
   {
     image: "/avatars/trigger.png",
-    title: "트리거",
+    title: "코코넛 팀",
     subtitle: "Bitcoin Seoul Center | Coconut",
     links: [
       {
