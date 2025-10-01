@@ -55,9 +55,9 @@ export default function Schedule({ schedules }: Props) {
                   </div>
                 ))}
               </div>
-              <div className="flex items-center justify-center md:justify-start gap-2">
+              <div className="flex items-center justify-start gap-2">
                 {schedule.locationDescription && (
-                  <span className="text-gray-400 text-sm md:pl-1">
+                  <span className="text-gray-400 text-sm pl-1">
                     {schedule.locationDescription}
                   </span>
                 )}
