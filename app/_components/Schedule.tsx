@@ -48,7 +48,7 @@ export default function Schedule({ schedules }: Props) {
               <div className="space-y-2">
                 {schedule.locations.map((location, locationIndex) => (
                   <div key={locationIndex} className="text-gray-300">
-                    <div className="flex items-center gap-2 text-sm font-medium text-orange-400/80">
+                    <div className="flex flex-col lg:flex-row items-center gap-2 text-sm font-medium text-orange-400/80">
                       <MapPin className="w-4 h-4 text-orange-400/80" />{" "}
                       {location}
                     </div>
