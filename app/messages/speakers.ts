@@ -94,6 +94,21 @@ const enItems: Speaker[] = [
     ],
   },
   {
+    image: "/avatars/luke.png",
+    title: "Luke Dashjr",
+    subtitle: "CTO | Ocean Mining",
+    links: [
+      {
+        type: "website",
+        url: "https://ocean.xyz/",
+      },
+      {
+        type: "x",
+        url: "https://x.com/LukeDashjr",
+      },
+    ],
+  },
+  {
     image: "/avatars/moonJun.png",
     title: "Moon Jun Kim",
     subtitle: "Outside Director | KCGI",
@@ -299,6 +314,21 @@ const koItems: Speaker[] = [
     ],
   },
   {
+    image: "/avatars/luke.png",
+    title: "Luke Dashjr",
+    subtitle: "CTO | Ocean Mining",
+    links: [
+      {
+        type: "website",
+        url: "https://ocean.xyz/",
+      },
+      {
+        type: "x",
+        url: "https://x.com/LukeDashjr",
+      },
+    ],
+  },
+  {
     image: "/avatars/pororo.png",
     title: "Pororo",
     subtitle: "제너럴리스트 | 개발자",
@@ -359,6 +389,28 @@ const koItems: Speaker[] = [
     ],
   },
   {
+    image: "/avatars/jaeNam.png",
+    title: "강재남",
+    subtitle: "가상자산 전문 세무사",
+    links: [
+      {
+        type: "website",
+        url: "https://fresh-credit-98a.notion.site/9065d93234844efc84d11aad22c0152e",
+      },
+    ],
+  },
+  {
+    image: "/avatars/moonJun.png",
+    title: "김문준",
+    subtitle: "KCGI 자산운용 사외이사",
+    links: [
+      {
+        type: "website",
+        url: "https://www.kcgiam.com/",
+      },
+    ],
+  },
+  {
     image: "/avatars/nldd.png",
     title: "네딸바",
     subtitle: "유튜버 | 번역가",
@@ -389,28 +441,6 @@ const koItems: Speaker[] = [
     ],
   },
   {
-    image: "/avatars/jaeNam.png",
-    title: "강재남",
-    subtitle: "가상자산 전문 세무사",
-    links: [
-      {
-        type: "website",
-        url: "https://fresh-credit-98a.notion.site/9065d93234844efc84d11aad22c0152e",
-      },
-    ],
-  },
-  {
-    image: "/avatars/moonJun.png",
-    title: "김문준",
-    subtitle: "KCGI 자산운용 사외이사",
-    links: [
-      {
-        type: "website",
-        url: "https://www.kcgiam.com/",
-      },
-    ],
-  },
-  {
     image: "/avatars/atomic.png",
     title: "아토믹 비트코인",
     subtitle: "Auditor | BSL",
@@ -418,6 +448,21 @@ const koItems: Speaker[] = [
       {
         type: "x",
         url: "https://x.com/atomicbtc",
+      },
+    ],
+  },
+  {
+    image: "/avatars/trigger.png",
+    title: "코코넛 팀",
+    subtitle: "Bitcoin Seoul Center | Coconut",
+    links: [
+      {
+        type: "website",
+        url: "https://linktr.ee/noncelab",
+      },
+      {
+        type: "x",
+        url: "https://x.com/Coconut_BTC",
       },
     ],
   },
@@ -452,21 +497,6 @@ const koItems: Speaker[] = [
       {
         type: "x",
         url: "https://x.com/PromenadeCastle",
-      },
-    ],
-  },
-  {
-    image: "/avatars/trigger.png",
-    title: "코코넛 팀",
-    subtitle: "Bitcoin Seoul Center | Coconut",
-    links: [
-      {
-        type: "website",
-        url: "https://linktr.ee/noncelab",
-      },
-      {
-        type: "x",
-        url: "https://x.com/Coconut_BTC",
       },
     ],
   },
