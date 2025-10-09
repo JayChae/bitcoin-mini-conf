@@ -108,7 +108,7 @@ export default function MarketModal({ market, isOpen, onClose }: Props) {
                     className="group relative rounded-2xl bg-gradient-to-br from-purple-500/10 to-purple-600/5 border border-purple-500/20 hover:border-purple-400/40 transition-all duration-500 hover:scale-105 overflow-hidden"
                   >
                     {/* Image Container */}
-                    <div className="relative aspect-[4/3] w-full overflow-hidden rounded-t-2xl bg-gray-900/50">
+                    <div className="relative aspect-[3/2] w-full overflow-hidden rounded-t-2xl bg-gray-900/50">
                       {product.image ? (
                         <Image
                           src={product.image}
