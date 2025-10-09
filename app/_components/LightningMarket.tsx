@@ -4,6 +4,23 @@ import { useState } from "react";
 import { type Market } from "../messages/markets";
 import MarketModal from "./MarketModal";
 
+// Image preloading function
+const preloadImages = (market: Market) => {
+  // Preload market logo
+  if (market.logo) {
+    const logoImg = new Image();
+    logoImg.src = market.logo;
+  }
+
+  // Preload product images
+  market.products?.forEach((product) => {
+    if (product.image) {
+      const productImg = new Image();
+      productImg.src = product.image;
+    }
+  });
+};
+
 export default function LightningMarket({
   markets,
   moreText,
@@ -60,10 +77,16 @@ function MarketCard({
 }) {
   const [isHovered, setIsHovered] = useState(false);
 
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+    // Preload images when user hovers over the card
+    preloadImages(market);
+  };
+
   return (
     <div
       className="relative group cursor-pointer"
-      onMouseEnter={() => setIsHovered(true)}
+      onMouseEnter={handleMouseEnter}
       onMouseLeave={() => setIsHovered(false)}
       onClick={onClick}
     >

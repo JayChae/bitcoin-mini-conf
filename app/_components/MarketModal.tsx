@@ -90,6 +90,7 @@ export default function MarketModal({ market, isOpen, onClose }: Props) {
                         alt={`${market.name} logo`}
                         fill
                         className="object-contain rounded-full"
+                        priority
                       />
                     </div>
                   </div>
@@ -122,48 +123,11 @@ export default function MarketModal({ market, isOpen, onClose }: Props) {
               </h3>
               <div className="grid grid-cols-2 gap-6">
                 {market.products?.map((product, index) => (
-                  <div
+                  <ProductImageCard
                     key={index}
-                    className="group flex flex-col items-center space-y-3"
-                  >
-                    {/* Image Container */}
-                    <div className="relative size-36 overflow-hidden rounded-xl bg-gray-900/50 transition-transform duration-300 group-hover:scale-110">
-                      {product.image ? (
-                        <Image
-                          src={product.image}
-                          alt={product.name}
-                          fill
-                          className="object-contain"
-                          onError={(e) => {
-                            // Fallback to placeholder if image fails to load
-                            const target = e.target as HTMLImageElement;
-                            target.style.display = "none";
-                          }}
-                        />
-                      ) : (
-                        <div className="w-full h-full bg-purple-500/20 flex items-center justify-center">
-                          <svg
-                            className="w-8 h-8 text-purple-400/60"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={1.5}
-                              d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                            />
-                          </svg>
-                        </div>
-                      )}
-                    </div>
-
-                    {/* Product Name */}
-                    <p className="text-sm text-gray-300 font-medium text-center leading-tight">
-                      {product.name}
-                    </p>
-                  </div>
+                    product={product}
+                    index={index}
+                  />
                 )) || (
                   <div className="col-span-full text-center py-12">
                     <div className="text-gray-400 italic text-sm md:text-lg">
@@ -288,6 +252,59 @@ export default function MarketModal({ market, isOpen, onClose }: Props) {
           </div>
         </div>
       </div>
+    </div>
+  );
+}
+
+// Separate component for product images
+function ProductImageCard({
+  product,
+  index,
+}: {
+  product: Product;
+  index: number;
+}) {
+  return (
+    <div className="group flex flex-col items-center space-y-3">
+      {/* Image Container */}
+      <div className="relative size-36 overflow-hidden rounded-xl bg-gray-900/50 transition-transform duration-300 group-hover:scale-110">
+        {product.image ? (
+          <Image
+            src={product.image}
+            alt={product.name}
+            fill
+            className="object-contain"
+            sizes="(max-width: 768px) 144px, 144px"
+            priority={index < 2} // Prioritize first 2 images
+            onError={(e) => {
+              // Fallback to placeholder if image fails to load
+              const target = e.target as HTMLImageElement;
+              target.style.display = "none";
+            }}
+          />
+        ) : (
+          <div className="w-full h-full bg-purple-500/20 flex items-center justify-center">
+            <svg
+              className="w-8 h-8 text-purple-400/60"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={1.5}
+                d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+              />
+            </svg>
+          </div>
+        )}
+      </div>
+
+      {/* Product Name */}
+      <p className="text-sm text-gray-300 font-medium text-center leading-tight">
+        {product.name}
+      </p>
     </div>
   );
 }
