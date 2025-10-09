@@ -46,7 +46,7 @@ export default function MarketModal({ market, isOpen, onClose }: Props) {
       />
 
       {/* Modal */}
-      <div className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto animate-in zoom-in-95 duration-300">
+      <div className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto animate-in zoom-in-95 duration-300 modal-scrollbar">
         <div className="relative">
           {/* Background with gradient */}
           <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/40 to-purple-600/60 rounded-3xl" />
