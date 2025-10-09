@@ -35,6 +35,10 @@ export default function Schedule({ schedules }: Props) {
               <time className="text-gray-400 text-sm font-medium">
                 {schedule.date}
               </time>
+              <span className="text-gray-400 text-sm">|</span>
+              <time className="text-gray-400 text-sm font-medium">
+                {schedule.time}
+              </time>
             </div>
             {schedule.description && (
               <p className="text-gray-300 text-sm md:text-base leading-relaxed">
