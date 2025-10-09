@@ -183,7 +183,7 @@ export default function MarketModal({ market, isOpen, onClose }: Props) {
                 <div className="p-4 rounded-xl bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30">
                   <div className="flex items-start gap-3">
                     <svg
-                      className="w-6 h-6 text-yellow-400 mt-1 flex-shrink-0"
+                      className="size-4 md:size-6 text-yellow-400 mt-1 flex-shrink-0"
                       fill="currentColor"
                       viewBox="0 0 24 24"
                     >
