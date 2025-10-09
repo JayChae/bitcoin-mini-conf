@@ -178,7 +178,7 @@ const markets: Markets = {
     },
     {
       name: "빵집 아줌마",
-      logo: "/markets/breadLady/logo.jpg",
+      logo: "/markets/breadLady/logo.png",
       description:
         "현재 페이먼트 스토어를 운영하며 행사에서 5개 상품을 판매합니다. 쌍화탕으로 추운 겨울을 따뜻하게, 배고픈 배를 채워보세요!",
       onlineStore: "https://smartstore.naver.com/1000nuri",
