@@ -44,22 +44,17 @@ const markets: Markets = {
         "Leading the Lightning Payment Store Merchants' Association with a Bitcoin Citadel space set up in the offline store. Solve your hunger during the event with Lightning!",
       website: "https://promenadecastle.com",
       products: [
-        {
-          name: "Omega Candle Financier",
-          image: "/markets/promenade/candle.jpg",
-        },
-        {
-          name: "Bitcoin Citadel offline space",
-          image: "/markets/promenade/citadel.jpg",
-        },
-        { name: "Choco-₿it", image: "/markets/promenade/choco-bit.jpg" },
-        { name: "Cookie-₿it", image: "/markets/promenade/cookie-bit.jpg" },
+        { name: "Choco-₿it", image: "/markets/promenade/chocobit.jpeg" },
+        { name: "Cookie-₿it", image: "/markets/promenade/cookiebit.jpeg" },
         { name: "Ice Americano", image: "/markets/promenade/americano.jpg" },
-        { name: "Ice Latte", image: "/markets/promenade/latte.jpg" },
+        {
+          name: "Long Candle Financier",
+          image: "/markets/promenade/longcandle.jpeg",
+        },
       ],
       contact: "@PromenadeCastle",
       specialEvent:
-        "Customers spending over 10,000 satoshis get a “Carousel of Life” Rainbow Gacha Ticket.",
+        "Customers spending over 10,000 satoshis get a Gacha Ticket.",
     },
     {
       name: "Bitcoin Seoul Center",
@@ -68,18 +63,18 @@ const markets: Markets = {
       website: "https://bitcoincenterseoul.com",
       onlineStore: "https://m.smartstore.naver.com/noncelab",
       products: [
-        { name: "21 Lessons", image: "/markets/bitcoin-seoul/21-lessons.jpg" },
+        { name: "21 Lessons", image: "/markets/center/lessons.jpg" },
         {
           name: "The Bullish Case for Bitcoin",
-          image: "/markets/bitcoin-seoul/bullish-case.jpg",
+          image: "/markets/center/bullish.jpg",
         },
         {
           name: "The Block Size War",
-          image: "/markets/bitcoin-seoul/block-size-war.jpg",
+          image: "/markets/center/blocksize.jpg",
         },
         {
           name: "Bitcoin Handbook",
-          image: "/markets/bitcoin-seoul/handbook.jpg",
+          image: "/markets/center/handbook.jpg",
         },
       ],
       contact: "@Coconut_BTC",
@@ -87,21 +82,21 @@ const markets: Markets = {
     {
       name: "Bread Shop Lady",
       description:
-        "Currently operating a payment store and selling 5 products at the event. Customers purchasing 20,000 sats or more will receive a complimentary gift. Warm up this cold winter with ssanghwatang and fill your hungry stomach!",
+        "Currently operating a payment store and selling 5 products at the event. Warm up this cold winter with ssanghwatang and fill your hungry stomach!",
       onlineStore: "https://smartstore.naver.com/1000nuri",
       products: [
         {
           name: "Bibimbap bread",
-          image: "/markets/bread-shop/bibimbap-bread.jpg",
+          image: "/markets/breadLady/bread.jpg",
         },
         {
           name: "Jeonju-style Bibimm Noodle",
-          image: "/markets/bread-shop/bibim-noodle.jpg",
+          image: "/markets/breadLady/noodle.jpg",
         },
-        { name: "Ssanghwa tea", image: "/markets/bread-shop/ssanghwa-tea.jpg" },
+        { name: "Ssanghwa tea", image: "/markets/breadLady/tea.jpg" },
         {
           name: "Korean wheat pie",
-          image: "/markets/bread-shop/wheat-pie.jpg",
+          image: "/markets/breadLady/pie.jpg",
         },
       ],
       contact: "@yunyoungjnag",
@@ -129,20 +124,25 @@ const markets: Markets = {
         "라이트닝 페이먼트 스토어 상인회를 이끌고 있으며, 오프라인 매장에 비트코인 시타델 공간을 설치했습니다. 행사 중 라이트닝으로 배고픔을 해결하세요!",
       website: "https://promenadecastle.com",
       products: [
-        { name: "오메가캔들 피낭시에", image: "/markets/promenade/candle.jpg" },
+        {
+          name: "장대양봉 피낭시에",
+          image: "/markets/promenade/longcandle.jpeg",
+        },
         {
           name: "쿠키빗(Cookie-₿it)",
-          image: "/markets/promenade/cookie-bit.jpg",
+          image: "/markets/promenade/cookiebit.jpeg",
         },
         {
           name: "초코빗(Choco-₿it)",
-          image: "/markets/promenade/choco-bit.jpg",
+          image: "/markets/promenade/chocobit.jpeg",
         },
-        { name: "아아&아이스라떼", image: "/markets/promenade/americano.jpg" },
+        {
+          name: "아이스 아메리카노",
+          image: "/markets/promenade/americano.jpg",
+        },
       ],
       contact: "@PromenadeCastle",
-      specialEvent:
-        "1만 사토시 이상 구매 고객 ‘인생의 회전목마’ 무지개룰렛 가챠권 지급",
+      specialEvent: "10,000사토시 이상 구매시 돌림판 가챠 이벤트 참여가능",
     },
     {
       name: "비트코인 서울 센터",
@@ -151,18 +151,18 @@ const markets: Markets = {
       website: "https://bitcoincenterseoul.com",
       onlineStore: "https://m.smartstore.naver.com/noncelab",
       products: [
-        { name: "21가지 교훈", image: "/markets/bitcoin-seoul/21-lessons.jpg" },
+        { name: "21가지 교훈", image: "/markets/center/lessons.jpg" },
         {
           name: "비트코인 낙관론",
-          image: "/markets/bitcoin-seoul/bullish-case.jpg",
+          image: "/markets/center/bullish.jpg",
         },
         {
           name: "블록사이즈워",
-          image: "/markets/bitcoin-seoul/block-size-war.jpg",
+          image: "/markets/center/blocksize.jpg",
         },
         {
           name: "비트코인 핸드북",
-          image: "/markets/bitcoin-seoul/handbook.jpg",
+          image: "/markets/center/handbook.jpg",
         },
       ],
       contact: "@Coconut_BTC",
@@ -170,13 +170,13 @@ const markets: Markets = {
     {
       name: "빵집 아줌마",
       description:
-        "현재 페이먼트 스토어를 운영하며 행사에서 5개 상품을 판매합니다. 20,000 sats 이상 구매 고객에게는 사은품을 드립니다. 쌍화탕으로 추운 겨울을 따뜻하게, 배고픈 배를 채워보세요!",
+        "현재 페이먼트 스토어를 운영하며 행사에서 5개 상품을 판매합니다. 쌍화탕으로 추운 겨울을 따뜻하게, 배고픈 배를 채워보세요!",
       onlineStore: "https://smartstore.naver.com/1000nuri",
       products: [
-        { name: "비빔빵", image: "/markets/bread-shop/bibimbap-bread.jpg" },
-        { name: "전주 비빔면", image: "/markets/bread-shop/bibim-noodle.jpg" },
-        { name: "쌍화탕", image: "/markets/bread-shop/ssanghwa-tea.jpg" },
-        { name: "우리밀 파이", image: "/markets/bread-shop/wheat-pie.jpg" },
+        { name: "비빔빵", image: "/markets/breadLady/bread.jpg" },
+        { name: "전주 비빔면", image: "/markets/breadLady/noodle.jpg" },
+        { name: "쌍화탕", image: "/markets/breadLady/tea.jpg" },
+        { name: "우리밀 파이", image: "/markets/breadLady/pie.jpg" },
       ],
       contact: "@yunyoungjnag",
       specialEvent: "20,000 sats 이상 구매 시 사은품 증정",

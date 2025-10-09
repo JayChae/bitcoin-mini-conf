@@ -108,13 +108,13 @@ export default function MarketModal({ market, isOpen, onClose }: Props) {
                     className="group flex flex-col items-center space-y-3"
                   >
                     {/* Image Container */}
-                    <div className="relative w-20 h-20 overflow-hidden rounded-full bg-gray-900/50 transition-transform duration-300 group-hover:scale-110">
+                    <div className="relative size-36 overflow-hidden rounded-xl bg-gray-900/50 transition-transform duration-300 group-hover:scale-110">
                       {product.image ? (
                         <Image
                           src={product.image}
                           alt={product.name}
                           fill
-                          className="object-cover"
+                          className="object-contain"
                           onError={(e) => {
                             // Fallback to placeholder if image fails to load
                             const target = e.target as HTMLImageElement;
@@ -141,7 +141,7 @@ export default function MarketModal({ market, isOpen, onClose }: Props) {
                     </div>
 
                     {/* Product Name */}
-                    <p className="text-xs text-gray-300 font-medium text-center leading-tight">
+                    <p className="text-sm text-gray-300 font-medium text-center leading-tight">
                       {product.name}
                     </p>
                   </div>
