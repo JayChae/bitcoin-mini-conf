@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import Image from "next/image";
-import { type Market, type Product } from "../messages/markets";
+import { type Market, type Product } from "../../messages/markets";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 

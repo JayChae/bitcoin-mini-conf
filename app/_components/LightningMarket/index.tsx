@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { type Market } from "../messages/markets";
-import MarketModal from "./MarketModal";
+import { type Market } from "../../messages/markets";
+import MarketModal from "./Modal";
 
 // Image preloading function
 const preloadImages = (market: Market) => {
