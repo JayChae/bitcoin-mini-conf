@@ -8,8 +8,10 @@ import speakers from "../messages/speakers";
 import schedules from "../messages/schedules";
 import tickets from "../messages/tickets";
 import attendees from "../messages/attendees";
+import markets from "../messages/markets";
 import Section from "../_components/Section";
 import Attendees from "../_components/Attendees";
+import LightningMarket from "../_components/LightningMarket";
 type Props = {
   params: Promise<{ locale: string }>;
 };
@@ -21,6 +23,7 @@ export default async function Home({ params }: Props) {
   const tSpeakers = await getTranslations("Speakers");
   const tSchedule = await getTranslations("Schedule");
   const tSponsor = await getTranslations("Sponsor");
+  const tLightningMarket = await getTranslations("LightningMarket");
 
   return (
     <main className="w-full px-4 md:px-6 pb-10 z-10">
@@ -45,6 +48,9 @@ export default async function Home({ params }: Props) {
         </Section>
         <Section id="schedule" title={tSchedule("title")}>
           <Schedule schedules={schedules[lang]} />
+        </Section>
+        <Section id="lightningMarket" title={tLightningMarket("title")}>
+          <LightningMarket markets={markets[lang]} />
         </Section>
         <Section id="sponsors" title={tSponsor("title")}>
           <Sponsor

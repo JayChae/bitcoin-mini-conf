@@ -13,6 +13,9 @@
   "Schedule": {
     "title": "일정"
   },
+  "LightningMarket": {
+    "title": "라이트닝 마켓"
+  },
   "Sponsor": {
     "title": "후원자",
     "gold": "Gold Sponsor",
