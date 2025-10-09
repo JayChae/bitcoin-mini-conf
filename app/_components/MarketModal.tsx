@@ -101,20 +101,20 @@ export default function MarketModal({ market, isOpen, onClose }: Props) {
               <h3 className="text-lg md:text-xl font-semibold text-purple-200 mb-4">
                 {t("products")}
               </h3>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-6">
                 {market.products?.map((product, index) => (
                   <div
                     key={index}
-                    className="group relative rounded-2xl bg-gradient-to-br from-purple-500/10 to-purple-600/5 border border-purple-500/20 hover:border-purple-400/40 transition-all duration-500 hover:scale-105 overflow-hidden"
+                    className="group flex flex-col items-center space-y-3"
                   >
                     {/* Image Container */}
-                    <div className="relative aspect-[3/2] w-full overflow-hidden rounded-t-2xl bg-gray-900/50">
+                    <div className="relative w-20 h-20 overflow-hidden rounded-full bg-gray-900/50 transition-transform duration-300 group-hover:scale-110">
                       {product.image ? (
                         <Image
                           src={product.image}
                           alt={product.name}
                           fill
-                          className="object-cover transition-transform duration-500 group-hover:scale-110"
+                          className="object-cover"
                           onError={(e) => {
                             // Fallback to placeholder if image fails to load
                             const target = e.target as HTMLImageElement;
@@ -124,7 +124,7 @@ export default function MarketModal({ market, isOpen, onClose }: Props) {
                       ) : (
                         <div className="w-full h-full bg-purple-500/20 flex items-center justify-center">
                           <svg
-                            className="w-16 h-16 text-purple-400/60"
+                            className="w-8 h-8 text-purple-400/60"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -138,22 +138,12 @@ export default function MarketModal({ market, isOpen, onClose }: Props) {
                           </svg>
                         </div>
                       )}
-
-                      {/* Gradient overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </div>
 
-                    {/* Product Name - Caption Style */}
-                    <div className="p-3">
-                      <p className="text-xs md:text-xs text-gray-400 font-light leading-relaxed text-center">
-                        {product.name}
-                      </p>
-                    </div>
-
-                    {/* Subtle shine effect */}
-                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/5 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-                    </div>
+                    {/* Product Name */}
+                    <p className="text-xs text-gray-300 font-medium text-center leading-tight">
+                      {product.name}
+                    </p>
                   </div>
                 )) || (
                   <div className="col-span-full text-center py-12">

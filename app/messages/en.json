@@ -15,6 +15,7 @@
   },
   "LightningMarket": {
     "title": "Lightning Market",
+    "moreText": "Details",
     "about": "About",
     "products": "Products",
     "specialEvent": "Special Event",

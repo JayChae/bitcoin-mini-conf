@@ -4,7 +4,13 @@ import { useState } from "react";
 import { type Market } from "../messages/markets";
 import MarketModal from "./MarketModal";
 
-export default function LightningMarket({ markets }: { markets: Market[] }) {
+export default function LightningMarket({
+  markets,
+  moreText,
+}: {
+  markets: Market[];
+  moreText: string;
+}) {
   const [selectedMarket, setSelectedMarket] = useState<Market | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -27,6 +33,7 @@ export default function LightningMarket({ markets }: { markets: Market[] }) {
             market={market}
             index={index}
             onClick={() => handleMarketClick(market)}
+            moreText={moreText}
           />
         ))}
       </div>
@@ -44,10 +51,12 @@ function MarketCard({
   market,
   index,
   onClick,
+  moreText,
 }: {
   market: Market;
   index: number;
   onClick: () => void;
+  moreText: string;
 }) {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -86,8 +95,7 @@ function MarketCard({
         {/* Click to view more */}
         <div className="mt-auto">
           <div className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors duration-300 text-xs md:text-sm font-medium">
-            <span className="hidden md:inline">Click to view details</span>
-            <span className="md:hidden">Details</span>
+            <span className="">{moreText}</span>
             <svg
               className="ml-1 md:ml-2 w-3 md:w-4 h-3 md:h-4 transform group-hover:translate-x-1 transition-transform duration-300"
               fill="none"

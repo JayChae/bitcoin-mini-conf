@@ -50,7 +50,10 @@ export default async function Home({ params }: Props) {
           <Schedule schedules={schedules[lang]} />
         </Section>
         <Section id="lightningMarket" title={tLightningMarket("title")}>
-          <LightningMarket markets={markets[lang]} />
+          <LightningMarket
+            markets={markets[lang]}
+            moreText={tLightningMarket("moreText")}
+          />
         </Section>
         <Section id="sponsors" title={tSponsor("title")}>
           <Sponsor
