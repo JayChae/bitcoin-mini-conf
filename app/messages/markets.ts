@@ -23,23 +23,25 @@ const markets: Markets = {
   en: [
     {
       name: "Bitkit",
+      logo: "/markets/bitkit/logo.png",
       description:
         "Operating self-custody online stores in Korea and Japan. We provide products for those who truly want to 'own' Bitcoin, such as seed signers, mnemonic safes, hard cases, and more.",
-      website: "https://bitkit.to",
       onlineStore: "https://m.smartstore.naver.com/bitkit",
       products: [
-        { name: "seedSigner", image: "/markets/bitkit/seedsigner.jpg" },
-        { name: "Hard cases", image: "/markets/bitkit/hardcase.jpg" },
-        { name: "Power Supply Unit", image: "/markets/bitkit/psu.jpg" },
+        { name: "seedSigner", image: "/markets/bitkit/seed.png" },
+        { name: "Hard cases", image: "/markets/bitkit/case.png" },
+        { name: "Power Supply Unit", image: "/markets/bitkit/power.png" },
         {
           name: "Mnemonic Metal Plate",
-          image: "/markets/bitkit/mnemonic-plate.jpg",
+          image: "/markets/bitkit/metal.png",
         },
       ],
       contact: "@bitkitBTC",
+      specialEvent: "",
     },
     {
       name: "Promenade",
+      logo: "/markets/promenade/logo.png",
       description:
         "Leading the Lightning Payment Store Merchants' Association with a Bitcoin Citadel space set up in the offline store. Solve your hunger during the event with Lightning!",
       website: "https://promenadecastle.com",
@@ -58,6 +60,7 @@ const markets: Markets = {
     },
     {
       name: "Bitcoin Seoul Center",
+      logo: "/markets/center/logo.jpg",
       description:
         "Specializing in the professional translation and publication of Bitcoin books, making a significant contribution to elevating the intellectual level of domestic Bitcoiners. Fill your mind with nourishment too.",
       website: "https://bitcoincenterseoul.com",
@@ -78,9 +81,11 @@ const markets: Markets = {
         },
       ],
       contact: "@Coconut_BTC",
+      specialEvent: "",
     },
     {
       name: "Bread Shop Lady",
+      logo: "/markets/breadLady/logo.png",
       description:
         "Currently operating a payment store and selling 5 products at the event. Warm up this cold winter with ssanghwatang and fill your hungry stomach!",
       onlineStore: "https://smartstore.naver.com/1000nuri",
@@ -106,20 +111,22 @@ const markets: Markets = {
   ko: [
     {
       name: "비트키트",
+      logo: "/markets/bitkit/logo.png",
       description:
         "한국과 일본에서 비수탁형 온라인 스토어를 운영하고 있습니다. 시드 사이너, 니모닉 금고, 하드 케이스 등 진정으로 비트코인을 '소유'하고자 하는 분들을 위한 제품을 제공합니다.",
-      website: "https://bitkit.to",
       onlineStore: "https://m.smartstore.naver.com/bitkit",
       products: [
-        { name: "시드사이너", image: "/markets/bitkit/seedsigner.jpg" },
-        { name: "하드 케이스", image: "/markets/bitkit/hardcase.jpg" },
-        { name: "니모닉 철판", image: "/markets/bitkit/mnemonic-plate.jpg" },
-        { name: "전원 공급기", image: "/markets/bitkit/psu.jpg" },
+        { name: "시드사이너", image: "/markets/bitkit/seed.png" },
+        { name: "하드 케이스", image: "/markets/bitkit/case.png" },
+        { name: "니모닉 철판", image: "/markets/bitkit/metal.png" },
+        { name: "전원 공급기", image: "/markets/bitkit/power.png" },
       ],
       contact: "@bitkitBTC",
+      specialEvent: "",
     },
     {
       name: "프로메나드",
+      logo: "/markets/promenade/logo.png",
       description:
         "라이트닝 페이먼트 스토어 상인회를 이끌고 있으며, 오프라인 매장에 비트코인 시타델 공간을 설치했습니다. 행사 중 라이트닝으로 배고픔을 해결하세요!",
       website: "https://promenadecastle.com",
@@ -146,6 +153,7 @@ const markets: Markets = {
     },
     {
       name: "비트코인 서울 센터",
+      logo: "/markets/center/logo.jpg",
       description:
         "비트코인 서적의 전문 번역 및 출간을 전문으로 하여 국내 비트코이너들의 지적 수준 향상에 크게 기여하고 있습니다. 마음의 양식도 채워보세요",
       website: "https://bitcoincenterseoul.com",
@@ -166,9 +174,11 @@ const markets: Markets = {
         },
       ],
       contact: "@Coconut_BTC",
+      specialEvent: "",
     },
     {
       name: "빵집 아줌마",
+      logo: "/markets/breadLady/logo.jpg",
       description:
         "현재 페이먼트 스토어를 운영하며 행사에서 5개 상품을 판매합니다. 쌍화탕으로 추운 겨울을 따뜻하게, 배고픈 배를 채워보세요!",
       onlineStore: "https://smartstore.naver.com/1000nuri",

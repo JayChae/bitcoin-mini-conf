@@ -80,15 +80,34 @@ export default function MarketModal({ market, isOpen, onClose }: Props) {
 
             {/* Header */}
             <div className="mb-8">
-              <h2 className="text-2xl md:text-5xl font-bold text-white mb-4 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
-                {market.name}
-              </h2>
-              <div className="h-1 w-20 bg-gradient-to-r from-purple-500 to-purple-700 rounded-full" />
+              <div className="flex items-center gap-6 mb-6">
+                {/* Logo */}
+                {market.logo && (
+                  <div className="relative size-20 md:size-24 flex-shrink-0 overflow-hidden rounded-full">
+                    <div className="h-full w-full bg-white rounded-full overflow-hidden">
+                      <Image
+                        src={market.logo}
+                        alt={`${market.name} logo`}
+                        fill
+                        className="object-contain rounded-full"
+                      />
+                    </div>
+                  </div>
+                )}
+
+                {/* Title */}
+                <div className="flex-1">
+                  <h2 className="text-xl md:text-4xl font-bold text-white mb-2 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
+                    {market.name}
+                  </h2>
+                  <div className="h-1 w-1/3 bg-gradient-to-r from-purple-500 to-purple-700 rounded-full" />
+                </div>
+              </div>
             </div>
 
             {/* Description */}
             <div className="mb-8">
-              <h3 className="text-lg md:text-xl font-semibold text-purple-200 mb-4">
+              <h3 className="text-lg md:text-xl font-semibold text-purple-200 mb-2">
                 {t("about")}
               </h3>
               <p className="text-gray-300 text-sm md:text-lg leading-relaxed">
@@ -96,9 +115,9 @@ export default function MarketModal({ market, isOpen, onClose }: Props) {
               </p>
             </div>
 
-            {/* Features section */}
+            {/* products section */}
             <div className="mb-8">
-              <h3 className="text-lg md:text-xl font-semibold text-purple-200 mb-4">
+              <h3 className="text-lg md:text-xl font-semibold text-purple-200 mb-2">
                 {t("products")}
               </h3>
               <div className="grid grid-cols-2 gap-6">
@@ -158,7 +177,7 @@ export default function MarketModal({ market, isOpen, onClose }: Props) {
             {/* Special Event section */}
             {market.specialEvent && (
               <div className="mb-8">
-                <h3 className="text-lg md:text-xl font-semibold text-purple-200 mb-4">
+                <h3 className="text-lg md:text-xl font-semibold text-purple-200 mb-2">
                   {t("specialEvent")}
                 </h3>
                 <div className="p-4 rounded-xl bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30">
@@ -231,7 +250,7 @@ export default function MarketModal({ market, isOpen, onClose }: Props) {
               </div>
 
               {market.contact && (
-                <div className="flex items-center gap-3 text-gray-300 mt-6">
+                <div className="flex items-center gap-3 text-gray-300">
                   <svg
                     className="w-5 h-5 text-purple-400"
                     fill="none"
