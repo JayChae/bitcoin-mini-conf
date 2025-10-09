@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { type Market } from "../messages/markets";
+import { useTranslations } from "next-intl";
 
 type Props = {
   market: Market | null;
@@ -10,6 +11,7 @@ type Props = {
 };
 
 export default function MarketModal({ market, isOpen, onClose }: Props) {
+  const t = useTranslations("LightningMarket");
   // Close modal on escape key
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
@@ -84,7 +86,7 @@ export default function MarketModal({ market, isOpen, onClose }: Props) {
           {/* Description */}
           <div className="mb-8">
             <h3 className="text-xl font-semibold text-purple-200 mb-4">
-              About
+              {t("about")}
             </h3>
             <p className="text-gray-300 text-lg leading-relaxed">
               {market.description}
@@ -94,53 +96,102 @@ export default function MarketModal({ market, isOpen, onClose }: Props) {
           {/* Features section */}
           <div className="mb-8">
             <h3 className="text-xl font-semibold text-purple-200 mb-4">
-              Features
+              {t("products")}
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {market.features?.map((feature, index) => (
+              {market.products?.map((product, index) => (
                 <div
                   key={index}
                   className="flex items-start gap-3 p-4 rounded-xl bg-purple-500/10 border border-purple-500/20"
                 >
                   <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0" />
-                  <span className="text-gray-300">{feature}</span>
+                  <span className="text-gray-300">{product}</span>
                 </div>
               )) || (
                 <div className="col-span-2 text-gray-400 italic">
-                  Features information coming soon...
+                  {t("productsInformationComingSoon")}
                 </div>
               )}
             </div>
           </div>
 
+          {/* Special Event section */}
+          {market.specialEvent && (
+            <div className="mb-8">
+              <h3 className="text-xl font-semibold text-purple-200 mb-4">
+                {t("specialEvent")}
+              </h3>
+              <div className="p-4 rounded-xl bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30">
+                <div className="flex items-start gap-3">
+                  <svg
+                    className="w-6 h-6 text-yellow-400 mt-1 flex-shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                  <span className="text-yellow-100 font-medium">
+                    {market.specialEvent}
+                  </span>
+                </div>
+              </div>
+            </div>
+          )}
+
           {/* Contact/Links section */}
           <div className="space-y-4">
-            {market.website && (
-              <a
-                href={market.website}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-500 hover:to-purple-600 text-white font-medium rounded-xl transition-all duration-300 transform hover:scale-105"
-              >
-                <svg
-                  className="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+            <div className="flex flex-wrap gap-4">
+              {market.website && (
+                <a
+                  href={market.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-500 hover:to-purple-600 text-white font-medium rounded-xl transition-all duration-300 transform hover:scale-105"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                  />
-                </svg>
-                Visit Website
-              </a>
-            )}
+                  <svg
+                    className="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                    />
+                  </svg>
+                  {t("website")}
+                </a>
+              )}
+
+              {market.onlineStore && (
+                <a
+                  href={market.onlineStore}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-500 hover:to-green-600 text-white font-medium rounded-xl transition-all duration-300 transform hover:scale-105"
+                >
+                  <svg
+                    className="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
+                    />
+                  </svg>
+                  {t("onlineStore")}
+                </a>
+              )}
+            </div>
 
             {market.contact && (
-              <div className="flex items-center gap-3 text-gray-300">
+              <div className="flex items-center gap-3 text-gray-300 mt-6">
                 <svg
                   className="w-5 h-5 text-purple-400"
                   fill="none"
@@ -151,10 +202,10 @@ export default function MarketModal({ market, isOpen, onClose }: Props) {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth={2}
-                    d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
                   />
                 </svg>
-                <span>{market.contact}</span>
+                <span className="font-medium">Contact: {market.contact}</span>
               </div>
             )}
           </div>

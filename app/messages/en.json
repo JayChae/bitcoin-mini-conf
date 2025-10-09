@@ -14,7 +14,15 @@
     "title": "Schedule"
   },
   "LightningMarket": {
-    "title": "Lightning Market"
+    "title": "Lightning Market",
+    "about": "About",
+    "products": "Products",
+    "specialEvent": "Special Event",
+    "productsInformationComingSoon": "Products information coming soon...",
+    "clickToViewDetails": "Click to view details",
+    "details": "Details",
+    "onlineStore": "Online Store",
+    "website": "Website"
   },
   "Sponsor": {
     "title": "Sponsors",

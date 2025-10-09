@@ -20,7 +20,7 @@ export default function LightningMarket({ markets }: { markets: Market[] }) {
 
   return (
     <div className="w-full">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+      <div className="grid grid-cols-2 md:grid-cols-2 gap-3 md:gap-8">
         {markets.map((market, index) => (
           <MarketCard
             key={market.name}
@@ -67,28 +67,29 @@ function MarketCard({
       </div>
 
       {/* Content */}
-      <div className="relative p-8 h-full flex flex-col justify-between min-h-[200px]">
+      <div className="relative p-4 md:p-8 h-full flex flex-col justify-between min-h-[180px] md:min-h-[200px]">
         {/* Market Name */}
-        <div className="mb-4">
-          <h3 className="text-2xl md:text-3xl font-bold text-white mb-2 group-hover:text-purple-200 transition-colors duration-300">
+        <div className="mb-3 md:mb-4">
+          <h3 className="text-lg md:text-3xl font-bold text-white mb-2 group-hover:text-purple-200 transition-colors duration-300 leading-tight">
             {market.name}
           </h3>
 
           {/* Animated underline */}
-          <div className="h-1 bg-gradient-to-r from-purple-500 to-purple-700 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+          <div className="h-0.5 md:h-1 bg-gradient-to-r from-purple-500 to-purple-700 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
         </div>
 
         {/* Description */}
-        <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-6 group-hover:text-gray-100 transition-colors duration-300 line-clamp-3">
+        <p className="text-gray-300 text-sm md:text-lg leading-relaxed mb-4 md:mb-6 group-hover:text-gray-100 transition-colors duration-300 line-clamp-3 md:line-clamp-3">
           {market.description}
         </p>
 
         {/* Click to view more */}
         <div className="mt-auto">
-          <div className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors duration-300 text-sm font-medium">
-            Click to view details
+          <div className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors duration-300 text-xs md:text-sm font-medium">
+            <span className="hidden md:inline">Click to view details</span>
+            <span className="md:hidden">Details</span>
             <svg
-              className="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300"
+              className="ml-1 md:ml-2 w-3 md:w-4 h-3 md:h-4 transform group-hover:translate-x-1 transition-transform duration-300"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
