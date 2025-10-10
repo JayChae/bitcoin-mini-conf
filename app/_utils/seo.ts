@@ -52,7 +52,6 @@ export function generateSEOMetadata({
       shortcut: "/logo-v2.png",
       apple: "/logo-v2.png",
     },
-    manifest: "/manifest.json",
     openGraph: {
       type: "website",
       locale: lang === "ko" ? "ko_KR" : "en_US",
