@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import ChromaGrid from "@/components/ChromaGrid";
 import ShinyText from "@/components/ShinyText";
 import { type Speaker } from "../messages/speakers";
-import { isMobileRef } from "../_utils/mobile";
+// import { isMobileRef } from "../_utils/mobile";
 
 type Props = {
   speakers: Speaker[];
@@ -16,6 +16,21 @@ export default function Speakers({ speakers, moreText, closeText }: Props) {
   const [showAll, setShowAll] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 768px)");
+
+    const handleMediaQueryChange = (e: MediaQueryListEvent) => {
+      setIsMobile(!e.matches);
+    };
+
+    // 미디어 쿼리 변경 시 이벤트 등록
+    mediaQuery.addEventListener("change", handleMediaQueryChange);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleMediaQueryChange);
+    };
+  }, []);
+
   // 모바일에서는 6명만, 데스크톱에서는 모든 스피커 표시
   const displayedSpeakers =
     isMobile && !showAll ? speakers.slice(0, 6) : speakers;
@@ -23,10 +38,7 @@ export default function Speakers({ speakers, moreText, closeText }: Props) {
   const hasMoreSpeakers = isMobile && speakers.length > 6;
 
   return (
-    <div
-      className="flex flex-col items-center justify-center gap-16 md:gap-6"
-      ref={() => isMobileRef(setIsMobile)}
-    >
+    <div className="flex flex-col items-center justify-center gap-16 md:gap-6">
       <ChromaGrid
         items={displayedSpeakers}
         radius={300}

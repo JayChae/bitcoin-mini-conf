@@ -250,14 +250,13 @@ function ProductImageCard({
   return (
     <div className="group flex flex-col items-center space-y-3">
       {/* Image Container */}
-      <div className="relative size-36 overflow-hidden rounded-xl bg-gray-900/50 transition-transform duration-300 group-hover:scale-110">
+      <div className="relative size-24 md:size-36 overflow-hidden rounded-xl bg-gray-900/50 transition-transform duration-300 group-hover:scale-110">
         {product.image ? (
           <Image
             src={product.image}
             alt={product.name}
             fill
             className="object-contain"
-            sizes="(max-width: 768px) 144px, 144px"
             priority={index < 2} // Prioritize first 2 images
             onError={(e) => {
               // Fallback to placeholder if image fails to load
