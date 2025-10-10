@@ -10,6 +10,7 @@ import { setRequestLocale } from "next-intl/server";
 import navItems from "../messages/nav";
 import localFont from "next/font/local";
 import { generateSEOMetadata, generateStructuredData } from "../_utils/seo";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const pretendardFont = localFont({
   src: "../../public/fonts/PretendardVariable.woff2",
@@ -54,6 +55,7 @@ export default async function RootLayout({ children, params }: Props) {
         </NextIntlClientProvider>
         <DarkVeil speed={0.8} />
       </body>
+      <GoogleAnalytics gaId="G-9R5RSRB96E" />
     </html>
   );
 }
