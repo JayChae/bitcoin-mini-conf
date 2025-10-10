@@ -16,19 +16,16 @@ export default function Speakers({ speakers, moreText, closeText }: Props) {
   const [showAll, setShowAll] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
+  // 모바일 화면 크기 감지
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(min-width: 768px)");
-
-    const handleMediaQueryChange = (e: MediaQueryListEvent) => {
-      setIsMobile(!e.matches);
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
     };
 
-    // 미디어 쿼리 변경 시 이벤트 등록
-    mediaQuery.addEventListener("change", handleMediaQueryChange);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
 
-    return () => {
-      mediaQuery.removeEventListener("change", handleMediaQueryChange);
-    };
+    return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
   // 모바일에서는 6명만, 데스크톱에서는 모든 스피커 표시

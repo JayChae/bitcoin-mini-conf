@@ -376,7 +376,7 @@ const koItems: Speaker[] = [
   {
     image: "/avatars/win.png",
     title: "Win Ko Ko Aung",
-    subtitle: "Global Bitcoin Adoption | Human Rights Foundation",
+    subtitle: "Global Bitcoin Adoption | 미국 인권 재단",
     links: [
       {
         type: "website",
