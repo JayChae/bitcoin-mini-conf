@@ -9,43 +9,22 @@ import { routing } from "@/i18n/routing";
 import { setRequestLocale } from "next-intl/server";
 import navItems from "../messages/nav";
 import localFont from "next/font/local";
+import { generateSEOMetadata, generateStructuredData } from "../_utils/seo";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const pretendardFont = localFont({
   src: "../../public/fonts/PretendardVariable.woff2",
 });
 
-export const metadata: Metadata = {
-  title: "Bitcoin Mini Conference",
-  description: "Bitcoin Mini Conference",
-  icons: {
-    icon: "/logo-v2.png",
-  },
-  openGraph: {
-    title: "Bitcoin Mini Conference",
-    siteName: "Bitcoin Mini Conference",
-    images: [
-      {
-        url: "https://bitcoin-mini-conf.vercel.app/logo-dark.png",
-        width: 200,
-        height: 200,
-        alt: "Bitcoin Mini Conference",
-      },
-    ],
-    locale: "ko_KR",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Bitcoin Mini Conference",
-    description: "Bitcoin Mini Conference",
-    images: ["https://bitcoin-mini-conf.vercel.app/logo-dark.png"],
-  },
-};
-
 type Props = {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  return generateSEOMetadata({ locale });
+}
 
 export default async function RootLayout({ children, params }: Props) {
   const { locale } = await params;
@@ -54,8 +33,18 @@ export default async function RootLayout({ children, params }: Props) {
   if (!hasLocale(routing.locales, locale)) notFound();
   setRequestLocale(locale);
 
+  const structuredData = generateStructuredData(locale);
+
   return (
     <html lang={locale} className={`size-full ${pretendardFont.className}`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData),
+          }}
+        />
+      </head>
       <body
         className={`antialiased size-full relative overflow-y-auto bg-black`}
       >
@@ -66,6 +55,7 @@ export default async function RootLayout({ children, params }: Props) {
         </NextIntlClientProvider>
         <DarkVeil speed={0.8} />
       </body>
+      <GoogleAnalytics gaId="G-9R5RSRB96E" />
     </html>
   );
 }
