@@ -11,7 +11,8 @@
     "closeText": "접기"
   },
   "Schedule": {
-    "title": "일정"
+    "title": "일정",
+    "triggerText": "자세히 보기"
   },
   "LightningMarket": {
     "title": "라이트닝 마켓",

@@ -20,6 +20,10 @@ body {
   font-family: Pretendard;
 }
 
+button {
+  cursor: pointer;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {

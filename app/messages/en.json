@@ -11,7 +11,8 @@
     "closeText": "Close"
   },
   "Schedule": {
-    "title": "Schedule"
+    "title": "Schedule",
+    "triggerText": "View details"
   },
   "LightningMarket": {
     "title": "Lightning Market",
