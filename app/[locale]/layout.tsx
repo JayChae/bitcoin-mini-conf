@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function RootLayout({ children, params }: Props) {
   const { locale } = await params;
-  const lang = locale === "ko" ? "ko" : "en";
+  const lang = locale === "en" ? "en" : "ko";
 
   if (!hasLocale(routing.locales, locale)) notFound();
   setRequestLocale(locale);

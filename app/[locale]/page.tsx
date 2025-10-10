@@ -18,7 +18,7 @@ type Props = {
 
 export default async function Home({ params }: Props) {
   const { locale } = await params;
-  const lang = locale === "ko" ? "ko" : "en";
+  const lang = locale === "en" ? "en" : "ko";
   const tHero = await getTranslations("Hero");
   const tSpeakers = await getTranslations("Speakers");
   const tSchedule = await getTranslations("Schedule");
