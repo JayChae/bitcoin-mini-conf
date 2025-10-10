@@ -1,13 +1,15 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-import { type Schedule } from "../messages/schedules";
+import { type Schedule } from "../../messages/schedules";
 import { MapPin } from "lucide-react";
+import BrochureModalTrigger from "./BrochureModal";
 
 type Props = {
   schedules: Schedule[];
+  triggerText: string;
 };
 
-export default function Schedule({ schedules }: Props) {
+export default function Schedule({ schedules, triggerText }: Props) {
   return (
     <div className="w-full space-y-12 md:space-y-16">
       {schedules.map((schedule, index) => (
@@ -35,6 +37,10 @@ export default function Schedule({ schedules }: Props) {
               <time className="text-gray-400 text-sm font-medium">
                 {schedule.date}
               </time>
+              <span className="text-gray-400 text-sm">|</span>
+              <time className="text-gray-400 text-sm font-medium">
+                {schedule.time}
+              </time>
             </div>
             {schedule.description && (
               <p className="text-gray-300 text-sm md:text-base leading-relaxed">
@@ -45,10 +51,10 @@ export default function Schedule({ schedules }: Props) {
               {schedule.content}
             </p>
             <div className="space-y-1">
-              <div className="space-y-2">
+              <div className="space-y-3">
                 {schedule.locations.map((location, locationIndex) => (
                   <div key={locationIndex} className="text-gray-300">
-                    <div className="flex flex-col lg:flex-row items-center gap-2 text-sm font-medium text-orange-400/80">
+                    <div className="flex flex-col lg:flex-row items-center lg:gap-2 text-sm font-medium text-orange-400/80">
                       <MapPin className="w-4 h-4 text-orange-400/80" />{" "}
                       {location}
                     </div>
@@ -66,6 +72,11 @@ export default function Schedule({ schedules }: Props) {
           </div>
         </div>
       ))}
+
+      {/* 자세히 보기 버튼 */}
+      <div className="flex justify-center mt-12">
+        <BrochureModalTrigger triggerText={triggerText} />
+      </div>
     </div>
   );
 }

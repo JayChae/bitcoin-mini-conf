@@ -11,7 +11,19 @@
     "closeText": "접기"
   },
   "Schedule": {
-    "title": "일정"
+    "title": "일정",
+    "triggerText": "자세히 보기"
+  },
+  "LightningMarket": {
+    "title": "라이트닝 마켓",
+    "moreText": "상세 보기",
+    "about": "소개",
+    "products": "상품",
+    "specialEvent": "특별 이벤트",
+    "productsInformationComingSoon": "상품 정보 준비 중...",
+    "details": "상세",
+    "onlineStore": "온라인 스토어",
+    "website": "웹사이트"
   },
   "Sponsor": {
     "title": "후원자",

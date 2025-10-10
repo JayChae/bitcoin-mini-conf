@@ -11,7 +11,20 @@
     "closeText": "Close"
   },
   "Schedule": {
-    "title": "Schedule"
+    "title": "Schedule",
+    "triggerText": "View details"
+  },
+  "LightningMarket": {
+    "title": "Lightning Market",
+    "moreText": "Details",
+    "about": "About",
+    "products": "Products",
+    "specialEvent": "Special Event",
+    "productsInformationComingSoon": "Products information coming soon...",
+    "clickToViewDetails": "Click to view details",
+    "details": "Details",
+    "onlineStore": "Online Store",
+    "website": "Website"
   },
   "Sponsor": {
     "title": "Sponsors",

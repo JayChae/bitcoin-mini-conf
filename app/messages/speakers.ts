@@ -246,7 +246,7 @@ const enItems: Speaker[] = [
   {
     image: "/avatars/win.png",
     title: "Win Ko Ko Aung",
-    subtitle: "Global Bitcoin Adoption | HRF",
+    subtitle: "Global Bitcoin Adoption | Human Rights Foundation",
     links: [
       {
         type: "website",
@@ -376,7 +376,7 @@ const koItems: Speaker[] = [
   {
     image: "/avatars/win.png",
     title: "Win Ko Ko Aung",
-    subtitle: "Global Bitcoin Adoption | HRF",
+    subtitle: "Global Bitcoin Adoption | Human Rights Foundation",
     links: [
       {
         type: "website",
