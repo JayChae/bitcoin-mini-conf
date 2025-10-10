@@ -1,10 +1,10 @@
 "use client";
 
-import { useEffect } from "react";
 import Image from "next/image";
 import { type Market, type Product } from "../../messages/markets";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
+import { handleModalRef } from "@/app/_utils/modal";
 
 type Props = {
   market: Market | null;
@@ -14,31 +14,14 @@ type Props = {
 
 export default function MarketModal({ market, isOpen, onClose }: Props) {
   const t = useTranslations("LightningMarket");
-  // Close modal on escape key
-  useEffect(() => {
-    const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === "Escape") {
-        onClose();
-      }
-    };
-
-    if (isOpen) {
-      document.addEventListener("keydown", handleEscape);
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-    }
-
-    return () => {
-      document.removeEventListener("keydown", handleEscape);
-      document.body.style.overflow = "unset";
-    };
-  }, [isOpen, onClose]);
 
   if (!isOpen || !market) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center p-4"
+      ref={() => handleModalRef(onClose)}
+    >
       {/* Backdrop */}
       <div
         className="absolute inset-0 bg-black/80 backdrop-blur-sm animate-in fade-in duration-300"

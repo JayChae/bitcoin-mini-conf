@@ -1,40 +1,18 @@
 "use client";
 
 import Image from "next/image";
-import { X, ArrowRight } from "lucide-react";
-import { useEffect, useState } from "react";
+import { ArrowRight } from "lucide-react";
+import { useState } from "react";
+import { handleModalRef } from "@/app/_utils/modal";
 
 // 모달 컴포넌트
 function Modal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
-  const handleModal = () => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-    }
-
-    const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === "Escape") {
-        onClose();
-      }
-    };
-
-    if (isOpen) {
-      document.addEventListener("keydown", handleEscape);
-    }
-
-    return () => {
-      document.body.style.overflow = "unset";
-      document.removeEventListener("keydown", handleEscape);
-    };
-  };
-
   if (!isOpen) return null;
 
   return (
     <div
       className="fixed inset-0 z-50 flex items-center justify-center"
-      ref={handleModal}
+      ref={() => handleModalRef(onClose)}
     >
       {/* Backdrop */}
       <div className="absolute inset-0 bg-black/80" onClick={onClose} />
