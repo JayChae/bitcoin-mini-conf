@@ -43,14 +43,14 @@ const markets: Markets = {
       name: "Promenade",
       logo: "/markets/promenade/logo.png",
       description:
-        "Leading the Lightning Payment Store Merchants' Association with a Bitcoin Citadel space set up in the offline store. Solve your hunger during the event with Lightning!",
+        "🏰 Haengjusanseong Fortress pet-friendly Bitcoin café, ⚡️ organizing a merchants' association to build a decentralized financial infrastructure, and ⛏️ building a sovereign Bitcoin citadel for an off-grid mining business.",
       website: "https://promenadecastle.com",
       products: [
         { name: "Choco-₿it", image: "/markets/promenade/chocobit.jpeg" },
         { name: "Cookie-₿it", image: "/markets/promenade/cookiebit.jpeg" },
         { name: "Ice Americano", image: "/markets/promenade/americano.jpg" },
         {
-          name: "Long Candle Financier",
+          name: "Omega Candle Financier",
           image: "/markets/promenade/longcandle.jpeg",
         },
       ],
@@ -128,11 +128,11 @@ const markets: Markets = {
       name: "프로메나드",
       logo: "/markets/promenade/logo.png",
       description:
-        "라이트닝 페이먼트 스토어 상인회를 이끌고 있으며, 오프라인 매장에 비트코인 시타델 공간을 설치했습니다. 행사 중 라이트닝으로 배고픔을 해결하세요!",
+        "🏰 행주산성 펫프렌들리 비트코인 카페, ⚡️ 결제 매장 상인회를 조직하여 금융 탈중앙화 인프라를 형성하고 있으며 ⛏️ 오프그리드 채굴 사업 개발로 소버린 비트코인 시타델을 건설 중입니다.",
       website: "https://promenadecastle.com",
       products: [
         {
-          name: "장대양봉 피낭시에",
+          name: "오메가캔들 휘낭시에",
           image: "/markets/promenade/longcandle.jpeg",
         },
         {
