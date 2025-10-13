@@ -63,21 +63,21 @@ const enItems: Speaker[] = [
       },
     ],
   },
-  {
-    image: "/avatars/keypleb.png",
-    title: "Keypleb",
-    subtitle: "Founder | Code Orange",
-    links: [
-      {
-        type: "website",
-        url: "https://codeorange.dev",
-      },
-      {
-        type: "x",
-        url: "https://x.com/keypleb",
-      },
-    ],
-  },
+  // {
+  //   image: "/avatars/keypleb.png",
+  //   title: "Keypleb",
+  //   subtitle: "Founder | Code Orange",
+  //   links: [
+  //     {
+  //       type: "website",
+  //       url: "https://codeorange.dev",
+  //     },
+  //     {
+  //       type: "x",
+  //       url: "https://x.com/keypleb",
+  //     },
+  //   ],
+  // },
   {
     image: "/avatars/Loaec.png",
     title: "Kevin Loaec",
@@ -283,21 +283,21 @@ const koItems: Speaker[] = [
       },
     ],
   },
-  {
-    image: "/avatars/keypleb.png",
-    title: "Keypleb",
-    subtitle: "Founder | Code Orange",
-    links: [
-      {
-        type: "website",
-        url: "https://codeorange.dev",
-      },
-      {
-        type: "x",
-        url: "https://x.com/keypleb",
-      },
-    ],
-  },
+  // {
+  //   image: "/avatars/keypleb.png",
+  //   title: "Keypleb",
+  //   subtitle: "Founder | Code Orange",
+  //   links: [
+  //     {
+  //       type: "website",
+  //       url: "https://codeorange.dev",
+  //     },
+  //     {
+  //       type: "x",
+  //       url: "https://x.com/keypleb",
+  //     },
+  //   ],
+  // },
   {
     image: "/avatars/Loaec.png",
     title: "Kevin Loaec",
