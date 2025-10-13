@@ -1,13 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
+import BtcPayDonateButton from "./BtcPayDonateButton";
 
 export default async function Footer() {
   const t = await getTranslations("Footer");
   return (
     <footer className="bg-black/40 backdrop-blur-sm border-t border-white/10 py-12 mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Contact Section */}
           <div className="space-y-4">
             <h3 className="text-white font-semibold text-lg mb-4">
@@ -47,6 +48,19 @@ export default async function Footer() {
                   <p className="text-white/60 text-sm">{t("address3")}</p>
                 </div>
               </div>
+            </div>
+          </div>
+
+          {/* Donate Section */}
+          <div className="space-y-4">
+            <h3 className="text-white font-semibold text-lg mb-4">
+              {t("support")}
+            </h3>
+            <div className="space-y-4">
+              <BtcPayDonateButton />
+              <p className="text-white/60 !text-xs leading-relaxed">
+                {t("supportMessage")}
+              </p>
             </div>
           </div>
         </div>
