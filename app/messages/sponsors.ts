@@ -43,6 +43,12 @@ const sponsors: {
       image: "/sponsors/nonce.png",
       alt: "NonceLab",
     },
+    {
+      name:"Blockstream",
+      url: "https://blockstream.com",
+      image: "/sponsors/blockstream.png",
+      alt: "Blockstream",
+    }
   ],
   individual: [],
 } as const;
