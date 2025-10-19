@@ -184,6 +184,17 @@ const enItems: Speaker[] = [
     ],
   },
   {
+    image: "/avatars/rob.png",
+    title: "Rob",
+    subtitle: "Head of Operations | OpenSats",
+    links: [
+      {
+        type: "nostr",
+        url: "https://nostr.com/npub1n3w4uts2r4srq3adqu9trp953dflcnw7ppn72tad4htkpsckwcmqjef6um",
+      },
+    ],
+  },
+  {
     image: "/avatars/seedSigner.png",
     title: "SeedSigner",
     subtitle: "Developer | SeedSigner",
@@ -340,6 +351,17 @@ const koItems: Speaker[] = [
       {
         type: "x",
         url: "https://x.com/asheswook",
+      },
+    ],
+  },
+  {
+    image: "/avatars/rob.png",
+    title: "Rob",
+    subtitle: "운영 총괄 | OpenSats",
+    links: [
+      {
+        type: "nostr",
+        url: "https://nostr.com/npub1n3w4uts2r4srq3adqu9trp953dflcnw7ppn72tad4htkpsckwcmqjef6um",
       },
     ],
   },
