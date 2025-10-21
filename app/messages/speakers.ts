@@ -137,7 +137,7 @@ const enItems: Speaker[] = [
   {
     image: "/avatars/pororo.png",
     title: "Pororo",
-    subtitle: "Generalist | Developer",
+    subtitle: "Developer | Corngang",
     links: [
       {
         type: "website",
@@ -188,6 +188,10 @@ const enItems: Speaker[] = [
     title: "Rob",
     subtitle: "Head of Operations | OpenSats",
     links: [
+      {
+        type: "website",
+        url: "https://opensats.org",
+      },
       {
         type: "nostr",
         url: "https://nostr.com/npub1n3w4uts2r4srq3adqu9trp953dflcnw7ppn72tad4htkpsckwcmqjef6um",
@@ -241,7 +245,7 @@ const enItems: Speaker[] = [
   },
   {
     image: "/avatars/wos.png",
-    title: "Wallet of Satoshi",
+    title: "WoS",
     subtitle: "CEO | Wallet of Satoshi",
     links: [
       {
@@ -342,7 +346,7 @@ const koItems: Speaker[] = [
   {
     image: "/avatars/pororo.png",
     title: "Pororo",
-    subtitle: "제너럴리스트 | 개발자",
+    subtitle: "개발자 | Corngang",
     links: [
       {
         type: "website",
@@ -359,6 +363,10 @@ const koItems: Speaker[] = [
     title: "Rob",
     subtitle: "운영 총괄 | OpenSats",
     links: [
+      {
+        type: "website",
+        url: "https://opensats.org",
+      },
       {
         type: "nostr",
         url: "https://nostr.com/npub1n3w4uts2r4srq3adqu9trp953dflcnw7ppn72tad4htkpsckwcmqjef6um",
@@ -382,8 +390,8 @@ const koItems: Speaker[] = [
   },
   {
     image: "/avatars/wos.png",
-    title: "Wallet of Satoshi",
-    subtitle: "CEO | 월렛 오브 사토시",
+    title: "WoS",
+    subtitle: "CEO | Wallet of Satoshi",
     links: [
       {
         type: "website",
