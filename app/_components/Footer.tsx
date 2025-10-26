@@ -13,13 +13,15 @@ export default async function Footer() {
             <h3 className="text-white font-semibold text-lg mb-4">
               {t("contact")}
             </h3>
-            <div className="space-y-2">
-              <p className="text-white/80 text-sm font-medium">{t("email")}</p>
+            <div className="flex gap-2">
+              <p className="text-white/80 text-sm font-medium">
+                {t("donation")}
+              </p>
               <Link
                 href="mailto:bitcoinspecter@gmail.com"
                 className="text-white/60 hover:text-white text-sm transition-colors duration-200"
               >
-                bitcoinspecter@gmail.com
+                lovebtc@blink.sv
               </Link>
             </div>
           </div>

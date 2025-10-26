@@ -5,8 +5,8 @@ export type TicketButton = {
 };
 
 const urlList = {
-  btc: "https://store.btcmap.kr/meetup/Bitcoin_Mini_Conference/11/",
-  krw: "https://smartstore.naver.com/promenadecastle/products/12055415750",
+  btc: "https://store.btcmap.kr/meetup/Bitcoin_Mini_Conference/22/",
+  krw: "https://smartstore.naver.com/promenadecastle/products/12591151124",
 };
 
 const koTickets: TicketButton[] = [

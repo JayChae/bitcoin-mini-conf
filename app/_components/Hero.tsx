@@ -65,6 +65,7 @@ export default async function Hero({
             key={ticket.url}
             href={ticket.url}
             className="w-full hover:scale-105 transition-all duration-300"
+            target="_blank"
           >
             <StarBorder
               as="button"
