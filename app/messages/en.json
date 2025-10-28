@@ -14,6 +14,10 @@
     "title": "Schedule",
     "triggerText": "View details"
   },
+  "Video": {
+    "title": "Conference Highlights",
+    "description": "Watch the teaser video of our conference"
+  },
   "LightningMarket": {
     "title": "Lightning Market",
     "moreText": "Details",

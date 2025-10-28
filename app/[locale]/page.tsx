@@ -12,6 +12,7 @@ import markets from "../messages/markets";
 import Section from "../_components/Section";
 import Attendees from "../_components/Attendees";
 import LightningMarket from "../_components/LightningMarket";
+import Video from "../_components/Video";
 type Props = {
   params: Promise<{ locale: string }>;
 };
@@ -24,6 +25,7 @@ export default async function Home({ params }: Props) {
   const tSchedule = await getTranslations("Schedule");
   const tSponsor = await getTranslations("Sponsor");
   const tLightningMarket = await getTranslations("LightningMarket");
+  const tVideo = await getTranslations("Video");
 
   return (
     <main className="w-full px-4 md:px-6 pb-10 z-10">
@@ -39,6 +41,9 @@ export default async function Home({ params }: Props) {
         </section>
         <Divider />
         <Attendees items={attendees[lang]} />
+        <Section id="video" title={""}>
+          <Video videoId="C15x14YWSQs" description={tVideo("description")} />
+        </Section>
         <Section id="speakers" title={tSpeakers("title")}>
           <Speakers
             speakers={speakers[lang]}
