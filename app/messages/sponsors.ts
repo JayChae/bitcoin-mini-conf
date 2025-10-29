@@ -44,11 +44,19 @@ const sponsors: {
       alt: "NonceLab",
     },
     {
-      name:"Blockstream",
+      name: "Blockstream",
       url: "https://blockstream.com",
       image: "/sponsors/blockstream.png",
       alt: "Blockstream",
-    }
+    },
+    {
+      name: "Satoshi.fit",
+      image: "/sponsors/satoshi.jpg",
+      alt: "Satoshi.fit",
+      url: "https://www.satoshi.fit",
+      customImageClass:
+        "max-w-[110px] sm:max-w-[140px] md:max-w-[180px] lg:max-w-[220px] xl:max-w-[260px] max-h-[100px] sm:max-h-[120px] md:max-h-[150px] lg:max-h-[180px] xl:max-h-[200px]",
+    },
   ],
   individual: [],
 } as const;
