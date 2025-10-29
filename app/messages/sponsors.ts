@@ -51,7 +51,7 @@ const sponsors: {
     },
     {
       name: "Satoshi.fit",
-      image: "/sponsors/satoshi.jpg",
+      image: "/sponsors/satoshi.png",
       alt: "Satoshi.fit",
       url: "https://www.satoshi.fit",
       customImageClass:
