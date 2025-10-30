@@ -7,23 +7,42 @@ export default async function Footer() {
   return (
     <footer className="bg-black/40 backdrop-blur-sm border-t border-white/10 py-12 mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Contact Section */}
           <div className="space-y-4">
             <h3 className="text-white font-semibold text-lg mb-4">
               {t("contact")}
             </h3>
-            <div className="flex gap-2">
-              <p className="text-white/80 text-sm font-medium">
-                {t("donation")}
-              </p>
+            <div className="flex items-center gap-2">
+              <Image
+                src="/sns/x.svg"
+                alt="X (Twitter)"
+                width={18}
+                height={18}
+                className="opacity-100"
+              />
               <Link
-                href="mailto:bitcoinspecter@gmail.com"
+                href="https://x.com/Bitcoinminiconf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-white/60 hover:text-white text-sm transition-colors duration-200"
               >
-                lovebtc@blink.sv
+                @Bitcoinminiconf
               </Link>
             </div>
+          </div>
+
+          {/* Donation Section */}
+          <div className="space-y-4">
+            <h3 className="text-white font-semibold text-lg mb-4">
+              {t("donation")}
+            </h3>
+            <Link
+              href="mailto:bitcoinspecter@gmail.com"
+              className="text-white/60 hover:text-white text-sm transition-colors duration-200 block"
+            >
+              lovebtc@blink.sv
+            </Link>
           </div>
 
           {/* Location Section */}
@@ -55,22 +74,8 @@ export default async function Footer() {
 
         {/* Bottom Section */}
         <div className="border-t border-white/10 pt-6">
-          <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
-            <Link
-              href="https://x.com/Bitcoinminiconf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white/60 hover:text-white transition-colors duration-200 sm:order-2"
-            >
-              <Image
-                src="/sns/x.svg"
-                alt="X (Twitter)"
-                width={24}
-                height={24}
-                className="opacity-60 hover:opacity-100 transition-opacity duration-200"
-              />
-            </Link>
-            <p className="text-white/60 text-sm sm:order-1">
+          <div className="flex justify-center">
+            <p className="text-white/60 text-sm">
               © 2025 Bitcoin Mini Conference. All rights reserved.
             </p>
           </div>
