@@ -61,6 +61,8 @@ export default async function Home({ params }: Props) {
           <LightningMarket
             markets={markets[lang]}
             moreText={tLightningMarket("moreText")}
+            showMoreText={tLightningMarket("showMoreText")}
+            showCloseText={tLightningMarket("showCloseText")}
           />
         </Section>
         <Section id="sponsors" title={tSponsor("title")}>

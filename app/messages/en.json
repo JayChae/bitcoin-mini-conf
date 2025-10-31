@@ -28,7 +28,9 @@
     "clickToViewDetails": "Click to view details",
     "details": "Details",
     "onlineStore": "Online Store",
-    "website": "Website"
+    "website": "Website",
+    "showMoreText": "More",
+    "showCloseText": "Close"
   },
   "Sponsor": {
     "title": "Sponsors",

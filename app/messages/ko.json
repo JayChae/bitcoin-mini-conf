@@ -27,7 +27,9 @@
     "productsInformationComingSoon": "상품 정보 준비 중...",
     "details": "상세",
     "onlineStore": "온라인 스토어",
-    "website": "웹사이트"
+    "website": "웹사이트",
+    "showMoreText": "더보기",
+    "showCloseText": "접기"
   },
   "Sponsor": {
     "title": "후원자",

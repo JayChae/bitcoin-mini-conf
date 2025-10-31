@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import ChromaGrid from "@/components/ChromaGrid";
 import ShinyText from "@/components/ShinyText";
+import ShowMoreButton, { useShowMore } from "./ShowMoreButton";
 import { type Speaker } from "../messages/speakers";
 // import { isMobileRef } from "../_utils/mobile";
 
@@ -13,8 +14,8 @@ type Props = {
 };
 
 export default function Speakers({ speakers, moreText, closeText }: Props) {
-  const [showAll, setShowAll] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const { isExpanded, toggle } = useShowMore(speakers.length, 6);
 
   // 모바일 화면 크기 감지
   useEffect(() => {
@@ -28,11 +29,9 @@ export default function Speakers({ speakers, moreText, closeText }: Props) {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
-  // 모바일에서는 6명만, 데스크톱에서는 모든 스피커 표시
+  // 모바일에서는 제한된 수만, 데스크톱에서는 모든 스피커 표시
   const displayedSpeakers =
-    isMobile && !showAll ? speakers.slice(0, 6) : speakers;
-
-  const hasMoreSpeakers = isMobile && speakers.length > 6;
+    isMobile && !isExpanded ? speakers.slice(0, 6) : speakers;
 
   return (
     <div className="flex flex-col items-center justify-center gap-16 md:gap-6">
@@ -46,15 +45,15 @@ export default function Speakers({ speakers, moreText, closeText }: Props) {
       />
 
       {/* 모바일에서만 더보기 버튼 표시 */}
-      {hasMoreSpeakers && (
-        <button
-          onClick={() => setShowAll(!showAll)}
-          className="px-6 py-3 bg-gradient-to-r from-accent/20 to-accent/30 hover:from-accent/30 hover:to-accent/40 
-                     border border-accent/40 rounded-full text-accent font-semibold transition-all duration-300
-                     hover:scale-105 backdrop-blur-sm cursor-pointer"
-        >
-          {showAll ? closeText : `${moreText} (+${speakers.length - 6})`}
-        </button>
+      {isMobile && speakers.length > 6 && (
+        <ShowMoreButton
+          totalCount={speakers.length}
+          initialCount={6}
+          moreText={moreText}
+          closeText={closeText}
+          isExpanded={isExpanded}
+          onToggle={toggle}
+        />
       )}
 
       <ShinyText

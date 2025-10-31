@@ -107,6 +107,34 @@ const markets: Markets = {
       contact: "@yunyoungjnag",
       specialEvent: "Free gift for purchases over 20,000 sats",
     },
+    {
+      name: "TINSB",
+      logo: "/markets/tinsb/logo.jpg",
+      description:
+        "Providing high-quality Bitcoin hardware security products including titanium mnemonic plates, seed signer kits, and accessories for secure Bitcoin storage and management.",
+      onlineStore:
+        "https://smartstore.naver.com/tinsb?nl-ts-pid=jdLYJsqo15VsscpFjDdsssssslK-199434&tr=slsmn",
+      products: [
+        {
+          name: "Titanium Mnemonic Plate",
+          image: "/markets/tinsb/1.jpg",
+        },
+        {
+          name: "Titanium Mnemonic Hexaba Mini (12/24 words)",
+          image: "/markets/tinsb/2.jpg",
+        },
+        {
+          name: "SeedSigner Case DIY Kit",
+          image: "/markets/tinsb/3.jpg",
+        },
+        {
+          name: "SeedSigner Red Dot Joystick",
+          image: "/markets/tinsb/4.jpg",
+        },
+      ],
+      contact: "@TINSB",
+      specialEvent: "",
+    },
   ],
   ko: [
     {
@@ -190,6 +218,34 @@ const markets: Markets = {
       ],
       contact: "@yunyoungjnag",
       specialEvent: "20,000 sats 이상 구매 시 사은품 증정",
+    },
+    {
+      name: "TINSB",
+      logo: "/markets/tinsb/logo.jpg",
+      description:
+        "티타늄 니모닉 플레이트, 시드사이너 키트 및 액세서리 등 안전한 비트코인 보관 및 관리를 위한 고품질 비트코인 하드웨어 보안 제품을 제공합니다.",
+      onlineStore:
+        "https://smartstore.naver.com/tinsb?nl-ts-pid=jdLYJsqo15VsscpFjDdsssssslK-199434&tr=slsmn",
+      products: [
+        {
+          name: "티타늄 니모닉 플레이트",
+          image: "/markets/tinsb/1.jpg",
+        },
+        {
+          name: "티타늄 니모닉 헥사바 미니(12단어 / 24단어)",
+          image: "/markets/tinsb/2.jpg",
+        },
+        {
+          name: "시드사이너 Case DIY 키트",
+          image: "/markets/tinsb/3.jpg",
+        },
+        {
+          name: "시드사이너 레드닷 조이스틱",
+          image: "/markets/tinsb/4.jpg",
+        },
+      ],
+      contact: "@TINSB",
+      specialEvent: "",
     },
   ],
 };
