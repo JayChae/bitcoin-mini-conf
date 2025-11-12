@@ -138,17 +138,22 @@ const markets: Markets = {
     {
       name: "Zeronimo",
       logo: "/markets/zeronimo/logo.jpg",
-      description: "",
+      description:
+        "We are creating a free future on the Bitcoin network. The first step is a full node that anyone can run without complexity.",
       onlineStore: "",
       products: [
-        { name: "", image: "/markets/zeronimo/p1.jpg" },
+        { name: "Full Node Node", image: "/markets/zeronimo/p1.jpg" },
         {
-          name: "",
+          name: "Full Node Node",
           image: "/markets/zeronimo/p2.jpg",
         },
         {
-          name: "",
-          image: "/markets/zeronimo/p3.jpg",
+          name: "Standard Version",
+          image: "/markets/zeronimo/original.jpg  ",
+        },
+        {
+          name: "Extended Version",
+          image: "/markets/zeronimo/advanced.jpg",
         },
       ],
       contact: "",
@@ -184,7 +189,12 @@ const markets: Markets = {
       description:
         "For those who want to start studying Bitcoin, a small size of Bitcoin study channel.",
       onlineStore: "https://onebitebitcoin.com",
-      products: [{ name: "juice", image: "/markets/onebite/juice.jpg" }],
+      products: [
+        {
+          name: "Lemon and Grapefruit Juice",
+          image: "/markets/onebite/juice.jpg",
+        },
+      ],
       contact: "https://www.youtube.com/@onebitebitcoin",
       specialEvent: "",
     },
@@ -303,12 +313,14 @@ const markets: Markets = {
     {
       name: "Zeronimo",
       logo: "/markets/zeronimo/logo.jpg",
-      description: "",
+      description:
+        "우리는 비트코인 네트워크 위에서 자유로운 미래를 만듭니다.그 첫걸음은, 복잡함 없이 누구나 돌릴 수 있는 풀노드입니다.",
       onlineStore: "",
       products: [
-        { name: "", image: "/markets/zeronimo/p1.jpg" },
-        { name: "", image: "/markets/zeronimo/p2.jpg" },
-        { name: "", image: "/markets/zeronimo/p3.jpg" },
+        { name: "플노드 노딘", image: "/markets/zeronimo/p1.jpg" },
+        { name: "플노드 노딘", image: "/markets/zeronimo/p2.jpg" },
+        { name: "기본 버전", image: "/markets/zeronimo/original.jpg" },
+        { name: "확장 버전", image: "/markets/zeronimo/advanced.jpg" },
       ],
       contact: "",
       specialEvent: "",
@@ -333,8 +345,13 @@ const markets: Markets = {
       logo: "/markets/onebite/logo.jpg",
       description:
         "비트코인 공부를 시작하고 싶은 분들을 위한 딱 한입 크기의 비트코인 공부 채널.",
-      onlineStore: "https://onebitebitcoin.com",
-      products: [{ name: "주스", image: "/markets/onebite/juice.jpg" }],
+      onlineStore: "",
+      products: [
+        {
+          name: "한입이의 레몬과 두입이의 자몽",
+          image: "/markets/onebite/juice.jpg",
+        },
+      ],
       contact: "https://www.youtube.com/@onebitebitcoin",
       specialEvent: "",
     },
