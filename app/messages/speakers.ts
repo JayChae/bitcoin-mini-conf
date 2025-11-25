@@ -214,6 +214,12 @@ const enItems: Speaker[] = [
     ],
   },
   {
+    image: "/avatars/sherry.png",
+    title: "Sherry",
+    subtitle: "Produce | Prev Dev",
+    links: [],
+  },
+  {
     image: "/avatars/specter.png",
     title: "Specter",
     subtitle: "Host | Mini Conference",
@@ -454,6 +460,12 @@ const koItems: Speaker[] = [
         url: "https://x.com/nldd21",
       },
     ],
+  },
+  {
+    image: "/avatars/sherry.png",
+    title: "쉐리",
+    subtitle: "Produce | Prev Dev",
+    links: [],
   },
   {
     image: "/avatars/specter.png",

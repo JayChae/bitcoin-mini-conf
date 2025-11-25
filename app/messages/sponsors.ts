@@ -57,6 +57,22 @@ const sponsors: {
       customImageClass:
         "max-w-[110px] sm:max-w-[140px] md:max-w-[180px] lg:max-w-[220px] xl:max-w-[260px] max-h-[100px] sm:max-h-[120px] md:max-h-[150px] lg:max-h-[180px] xl:max-h-[200px]",
     },
+    {
+      name: "Umbrel",
+      url: "https://umbrel.com",
+      image: "/sponsors/umbrel.jpg",
+      alt: "Umbrel",
+      customImageClass:
+        "max-w-[60px] sm:max-w-[75px] md:max-w-[95px] lg:max-w-[115px] xl:max-w-[135px] max-h-[55px] sm:max-h-[65px] md:max-h-[80px] lg:max-h-[95px] xl:max-h-[110px]",
+    },
+    {
+      name: "Saturday Block",
+      url: "https://x.com/SaturdayBlock",
+      image: "/sponsors/saturdayblock.png",
+      alt: "Saturday Block",
+      customImageClass:
+        "max-w-[85px] sm:max-w-[105px] md:max-w-[135px] lg:max-w-[165px] xl:max-w-[195px] max-h-[75px] sm:max-h-[90px] md:max-h-[115px] lg:max-h-[135px] xl:max-h-[150px]",
+    },
   ],
   individual: [],
 } as const;
