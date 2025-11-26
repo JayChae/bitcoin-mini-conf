@@ -2,12 +2,14 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { type Schedule } from "../../messages/schedules";
 import { MapPin } from "lucide-react";
-// import BrochureModalTrigger from "./BrochureModal";
+import BrochureModalTrigger from "./BrochureModal";
 
 type Props = {
   schedules: Schedule[];
   triggerText: string;
 };
+
+const scheduleImages = ["/schedules/day1.jpg", "/schedules/day2.jpg"];
 
 export default function Schedule({ schedules, triggerText }: Props) {
   return (
@@ -68,15 +70,17 @@ export default function Schedule({ schedules, triggerText }: Props) {
                   </span>
                 )}
               </div>
+              {/* 자세히 보기 버튼 */}
+              <div className="flex justify-center my-4">
+                <BrochureModalTrigger
+                  triggerText={triggerText}
+                  image={scheduleImages[index]}
+                />
+              </div>
             </div>
           </div>
         </div>
       ))}
-
-      {/* 자세히 보기 버튼 */}
-      {/* <div className="flex justify-center mt-12">
-        <BrochureModalTrigger triggerText={triggerText} />
-      </div> */}
     </div>
   );
 }

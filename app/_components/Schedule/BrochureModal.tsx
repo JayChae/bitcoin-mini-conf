@@ -6,25 +6,33 @@ import { useState } from "react";
 import { handleModalRef } from "@/app/_utils/modal";
 
 // 모달 컴포넌트
-function Modal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
+function Modal({
+  isOpen,
+  onClose,
+  image,
+}: {
+  isOpen: boolean;
+  onClose: () => void;
+  image: string;
+}) {
   if (!isOpen) return null;
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4"
       ref={() => handleModalRef(onClose)}
     >
       {/* Backdrop */}
       <div className="absolute inset-0 bg-black/80" onClick={onClose} />
 
-      {/* Image */}
-      <div className="relative max-w-[90vw] max-h-[90vh]">
+      {/* Scrollable Image Container */}
+      <div className="relative max-w-[90vw] max-h-[90vh] overflow-auto bg-white/5 rounded-lg">
         <Image
-          src="/schedules/brochure.jpg"
+          src={image}
           alt="행사 브로셔"
           width={1200}
           height={800}
-          className="object-contain max-w-full max-h-full"
+          className="w-auto h-auto"
           priority
         />
       </div>
@@ -34,9 +42,12 @@ function Modal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
 
 type Props = {
   triggerText: string;
+  image: string;
 };
 
-export default function BrochureModalTrigger({ triggerText }: Props) {
+export default function BrochureModalTrigger({ triggerText, image }: Props) {
+  if (!image) return null;
+
   const [isOpen, setIsOpen] = useState(false);
 
   const openModal = () => setIsOpen(true);
@@ -46,15 +57,11 @@ export default function BrochureModalTrigger({ triggerText }: Props) {
     <>
       <button
         onClick={openModal}
-        className="group relative inline-flex items-center justify-center gap-3 px-10 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:from-orange-600 hover:to-orange-700 transform hover:scale-105 transition-all duration-200 ease-out cursor-pointer"
+        className="group relative inline-flex items-center justify-center gap-3 px-10 py-3 bg-orange-500/80 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 ease-out cursor-pointer"
       >
-        <span className="relative z-10">{triggerText}</span>
-        <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200 relative z-10" />
-
-        {/* Subtle shine effect */}
-        <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        {triggerText}
       </button>
-      <Modal isOpen={isOpen} onClose={closeModal} />
+      <Modal isOpen={isOpen} onClose={closeModal} image={image} />
     </>
   );
 }
