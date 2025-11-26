@@ -203,6 +203,7 @@ const markets: Markets = {
     {
       name: "Saturday Block",
       logo: "/markets/saturdayblock/logo.jpg",
+      website: "https://www.saturdayblock.com",
       description:
         "비트코인을 쉽고 제대로 만나도록 돕는 굿즈·교육·밋업 기반의 비트코인 경험 플랫폼입니다.",
       onlineStore: "https://store.btcmap.kr/stores/saturdayblock/",

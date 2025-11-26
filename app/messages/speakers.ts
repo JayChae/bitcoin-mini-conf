@@ -217,7 +217,12 @@ const enItems: Speaker[] = [
     image: "/avatars/sherry.png",
     title: "Sherry",
     subtitle: "Produce | Prev Dev",
-    links: [],
+    links: [
+      {
+        type: "x",
+        url: "https://x.com/shaibearary",
+      },
+    ],
   },
   {
     image: "/avatars/specter.png",
@@ -465,7 +470,12 @@ const koItems: Speaker[] = [
     image: "/avatars/sherry.png",
     title: "쉐리",
     subtitle: "Produce | Prev Dev",
-    links: [],
+    links: [
+      {
+        type: "x",
+        url: "https://x.com/shaibearary",
+      },
+    ],
   },
   {
     image: "/avatars/specter.png",

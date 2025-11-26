@@ -67,7 +67,7 @@ const sponsors: {
     },
     {
       name: "Saturday Block",
-      url: "https://x.com/SaturdayBlock",
+      url: "https://www.saturdayblock.com",
       image: "/sponsors/saturdayblock.png",
       alt: "Saturday Block",
       customImageClass:
