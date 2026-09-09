@@ -29,7 +29,7 @@ const items: SideEventSource[] = [
     slug: "bitcoin-plus-plus-seoul",
     image: "/2026/side-events/bitcoin-plus-plus-seoul.webp",
     cardImage: "/2026/side-events/bitcoin-plus-plus-seoul-card.webp",
-    links: [{ type: "website", url: "https://btcplusplus.dev/seoul" }],
+    links: [{ type: "website", url: "https://btcpp.dev/seoul" }],
     i18n: {
       en: {
         title: "bitcoin++ Seoul — Privacy Edition",
