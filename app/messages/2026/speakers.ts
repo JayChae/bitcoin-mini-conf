@@ -155,14 +155,14 @@ const items: SpeakerSource[] = [
         subtitle: ["Bitcoin YouTuber"],
         bio: "Respect is a YouTuber who runs the channel 'Respect Investment Plan.' From the perspective of a working professional pursuing financial independence and freedom of time, he focuses on understanding the essence and volatility of Bitcoin and interpreting it through a long-term lens — delivering the big-picture market flow and asset allocation strategies through in-depth interviews with a wide range of experts. What sets him apart is his ability to translate the complexity of Bitcoin into everyday language, and he has built lasting influence in Korea's Bitcoin content ecosystem on that strength. At this conference, he will speak on the structural value of Bitcoin and strategies for navigating market cycles.",
         lectureTitle: "A Bitcoin Mindset Unshaken by Price",
-        session: "Keynote",
+        session: "Debate",
       },
       ko: {
         title: "리스펙",
         subtitle: ["비트코인 유튜버"],
         bio: "리스펙(Respect)은 유튜브 채널 '리스펙 투자플랜'을 운영하는 유튜버이다. 직장인의 시선에서 경제적 자립과 시간의 자유를 추구하며 비트코인의 본질과 변동성을 이해하고, 이를 장기적 관점으로 풀어내며 다양한 전문가들과의 심층 인터뷰를 통해 시장의 큰 흐름과 자산 배분 전략을 전달해 왔다. 그의 특별함은 어려운 비트코인을 일반인들의 언어로 풀어내는 능력으로 한국 비트코인 콘텐츠 생태계에서 꾸준한 영향력을 쌓아 오고 있다. 이번 컨퍼런스에서는 비트코인의 구조적 가치와 사이클 대응 전략에 대해 이야기할 예정이다.",
         lectureTitle: "가격에 흔들리지 않는 비트코인 마인드셋",
-        session: "키노트",
+        session: "디베이트",
       },
     },
   },
@@ -243,15 +243,16 @@ const items: SpeakerSource[] = [
       en: {
         title: "Kang Jae-nam",
         subtitle: ["Co-CEO, MADE Tax & Accounting"],
-        bio: "Kang Jae-nam is a licensed tax accountant and the representative of MADE, a tax and accounting firm specializing in crypto assets. She currently provides in-depth tax and accounting management for businesses that accept Bitcoin as payment, P2P (peer-to-peer) traders, and individuals dealing with crypto assets. Drawing on years of practical experience, she addresses more realistic and reasonable approaches to the crypto asset taxation set to take effect in Korea from 2027.",
-        lectureTitle: "Bitcoin Inheritance and Taxation",
+        bio: "Kang Jae-nam is a licensed tax accountant and the representative of MADE, a tax and accounting firm specializing in crypto assets. She provides in-depth tax management for businesses that accept Bitcoin as payment, P2P (peer-to-peer) traders, and individual investors. Drawing on years of practical experience, she offers realistic and workable approaches to the crypto asset taxation set to take effect in Korea in 2027.\n\nIn this talk she first walks through the 2026 revisions to Korea's crypto asset tax code and how its taxation framework is structured, then introduces the crypto capital gains tax calculator she built herself. She goes on to cover tax-saving strategies that individuals and business owners who steadily stack sats can actually put to use.\n\nTalk outline\n\nCrypto Asset Taxes in 2026\n· The 2026 revisions to crypto asset tax law\n· Understanding the crypto asset taxation framework\n· Using the crypto capital gains tax calculator\n\nTax-Saving Strategies for Stacking Sats\n· What tax saving actually means\n· Key tax-saving methods for individuals and businesses",
+        lectureTitle:
+          "Crypto Asset Taxes in 2026 / Tax-Saving Strategies for Stacking Sats",
         session: "Keynote",
       },
       ko: {
         title: "강재남",
         subtitle: ["MADE 세무회계 공동 대표"],
-        bio: "가상자산 관련 전문 세무회계 MADE의 대표 세무사로 비트코인으로 결제를 받는 사업체와 P2P거래(개인 대 개인 거래) 그리고 개인들의 가상자산 세금에 대해 심층 높은 관리를 현재 하고 있다. 특히 2027년부터 실행될 가상자산 과세에 대하여 다년간의 실무 경험을 바탕으로 보다 현실적이고 합리적인 방법을 다룬다.",
-        lectureTitle: "비트코인 상속과 과세",
+        bio: "가상자산 전문 세무회계 MADE의 대표 세무사로, 비트코인으로 결제를 받는 사업체, P2P(개인 간) 거래, 그리고 개인 투자자의 가상자산 세금을 심층적으로 관리하고 있다. 특히 2027년 시행을 앞둔 가상자산 과세에 대해, 다년간의 실무 경험을 바탕으로 보다 현실적이고 합리적인 대응 방법을 제시한다.\n\n이번 발표에서는 2026년 개정된 가상자산 세제와 과세 구조를 먼저 짚어보고, 직접 개발한 가상자산 양도세 계산기 활용법을 소개한다. 이어서 비트코인을 꾸준히 모으는(Stack Sats) 개인과 사업자가 실제로 활용할 수 있는 절세 전략을 다룬다.\n\n발표 주제\n\n2026년 가상자산 세금\n· 2026년 개정된 가상자산 세제\n· 가상자산 과세 구조의 이해\n· 가상자산 양도세 계산기 활용법\n\nStack Sats를 위한 절세 전략\n· 절세란 무엇인가\n· 개인과 사업자가 활용할 수 있는 주요 절세 방법",
+        lectureTitle: "2026년 가상자산 세금/Stack Sats를 위한 절세 전략",
         session: "키노트",
       },
     },
@@ -418,29 +419,6 @@ const items: SpeakerSource[] = [
         title: "스펙터",
         subtitle: ["Bitcoin Korea Conference 호스트"],
         bio: "스펙터는 한국 비트코인 커뮤니티를 단단하게 키워내는 일에 몰두해 온 비트코이너입니다. 그는 국내 커뮤니티 빌딩을 위해 오프라인 모임을 꾸준히 열어 왔으며, 비트코인을 처음 접하는 일반인을 위한 교육도 직접 진행하고 있습니다. 국내 최대 규모의 '비트코인 온리' 행사인 (구)비트코인 미니 컨퍼런스를 기획하고 일궈내며 커뮤니티의 힘이 무엇인지를 몸소 증명해 보였습니다. 또한 해외 컨퍼런스에 연사로 참가하여 다양한 해외의 문화를 한국으로 들여오는 한편, 한국의 비트코인 산업을 세계에 알리는 가교 역할을 함께 해 왔습니다. 화려한 담론보다 사람들이 직접 모이고, 배우고, 스스로 자기 자산의 주권을 쥐도록 돕는 '현장의 일'에 꾸준히 천착해 온 인물입니다. 그의 행보는 비트코인의 이상을, 한국이라는 토양 위에서 커뮤니티의 언어로 피워내고 있습니다.",
-        lectureTitle: "",
-      },
-    },
-  },
-  {
-    slug: "pororo",
-    image: "/2026/speakers/pororo.webp",
-    difficulty: "Medium",
-    links: [
-      { type: "website", url: "https://team.oksu.su/" },
-      { type: "github", url: "https://github.com/asheswook" },
-    ],
-    i18n: {
-      en: {
-        title: "Pororo",
-        subtitle: ["Developer, Corn Wallet"],
-        bio: "Starting from Corn Gang, Korea's first Lightning node community, Pororo is building Corn Wallet, an easy and convenient Lightning wallet. Believing that Bitcoin should be simple, Pororo is also active as an educator and lecturer.",
-        lectureTitle: "",
-      },
-      ko: {
-        title: "Pororo",
-        subtitle: ["Developer, Corn Wallet"],
-        bio: "한국 최초의 라이트닝 노드 커뮤니티인 Corn Gang에서부터 출발하여, 쉽고 편리한 라이트닝 월렛 Corn Wallet을 개발하고 있습니다. 비트코인은 쉬워야 한다고 믿는 마음가짐 아래에 교육자와 강의자로서도 활동하고 있습니다.",
         lectureTitle: "",
       },
     },
@@ -670,6 +648,101 @@ const items: SpeakerSource[] = [
         subtitle: ["Human Rights Foundation 비트코인 개발 총괄"],
         bio: "알렉스 리(Alex Li)는 인권재단(Human Rights Foundation)의 비트코인 개발 총괄이다. 그는 비트코인 개발 기금(Bitcoin Development Fund)을 맡아 개발자들과 소통하며 활동가들이 더 쉽고 강력하게 쓸 수 있는 도구를 만드는 일을 돕고, 워크숍을 열며, 오슬로 프리덤 포럼(Oslo Freedom Forum)의 금융 자유 관련 콘텐츠 기획에도 참여하고 있다. 여가 시간에는 스노보드와 오프로드 주행을 즐기며 대자연을 탐험하는 것을 좋아한다.",
         lectureTitle: "CBDC와 비트코인",
+      },
+    },
+  },
+  {
+    slug: "carl-dong",
+    image: "/2026/speakers/Carl_Dong.webp",
+    difficulty: "Medium",
+    links: [
+      { type: "website", url: "https://obscura.com/" },
+      { type: "x", url: "https://x.com/obscuravpn" },
+    ],
+    i18n: {
+      en: {
+        title: "Carl Dong",
+        subtitle: ["CEO, Obscura VPN"],
+        bio: "Carl Dong is the founder and CEO of Obscura, a next-generation VPN service built to defend the open and private internet. Before founding Obscura, he was a Bitcoin Core developer at Chaincode, where he revamped Bitcoin Core's reproducible builds system to make it fully bootstrappable. A lifelong networking and systems engineering nerd, Carl spends his spare time tinkering with his homelab setup.",
+        lectureTitle: "",
+      },
+      ko: {
+        title: "Carl Dong",
+        subtitle: ["Obscura VPN 대표"],
+        bio: "칼 동(Carl Dong)은 열리고 사적인 인터넷을 지키기 위해 만들어진 차세대 VPN 서비스 Obscura의 창립자이자 CEO다. Obscura를 세우기 전에는 체인코드(Chaincode)에서 비트코인 코어 개발자로 일하며, 비트코인 코어의 재현 가능 빌드(reproducible builds) 시스템을 전면 개편해 완전한 부트스트래핑이 가능하도록 만들었다. 오래도록 네트워크와 시스템 엔지니어링에 빠져 살아온 그는 여가 시간에도 홈랩(homelab) 환경을 손보며 시간을 보낸다.",
+        lectureTitle: "",
+      },
+    },
+  },
+  {
+    slug: "piccolo",
+    image: "/2026/speakers/Piccolo.webp",
+    difficulty: "Low",
+    links: [
+      { type: "x", url: "https://x.com/bobspace_bkk" },
+      { type: "website", url: "https://www.bobspaces.net" },
+    ],
+    i18n: {
+      en: {
+        title: "Piccolo",
+        subtitle: ["Founder, BOB Space Bangkok"],
+        bio: "Piccolo is the Founder and Chief Volunteer at BOB (Build On Bitcoin) Space Bangkok. BOB Space, founded in August 2022, is a physical Bitcoin-only builder space that hosts regular meetups and workshops, in addition to sponsoring 4 previous FOSS Residency cohorts. Outside BOB Space, Piccolo runs a fintech firm he founded in 2016, and had an 18-year career in corporate finance prior to that.",
+        lectureTitle: "Energy Transitions and Bitcoin Mining",
+      },
+      ko: {
+        title: "Piccolo",
+        subtitle: ["BOB Space Bangkok 창립자"],
+        bio: "피콜로(Piccolo)는 방콕의 BOB(Build On Bitcoin) 스페이스 창립자이자 최고 자원봉사자(Chief Volunteer)다. 2022년 8월 문을 연 BOB 스페이스는 비트코인 온리 빌더들을 위한 오프라인 공간으로, 정기 밋업과 워크숍을 열고 지금까지 FOSS 레지던시 네 개 기수를 후원해 왔다. BOB 스페이스 밖에서는 2016년 직접 창업한 핀테크 기업을 운영하고 있으며, 그전에는 18년간 기업 금융 분야에서 일했다.",
+        lectureTitle: "에너지 전환과 비트코인 채굴",
+      },
+    },
+  },
+  {
+    slug: "sergej-kotliar",
+    image: "/2026/speakers/Sergej_Kotliar.webp",
+    difficulty: "Low",
+    links: [
+      { type: "x", url: "https://x.com/ziggamon" },
+      { type: "website", url: "https://www.bitrefill.com" },
+    ],
+    i18n: {
+      en: {
+        title: "Sergej Kotliar",
+        subtitle: ["CEO, Bitrefill"],
+        bio: "Sergej Kotliar is the founder and CEO of Bitrefill, a platform that helps people use Bitcoin for everyday purchases. Since 2014, Bitrefill has served more than one million customers across more than 180 countries. Sergej has helped pioneer commercial Lightning payments and Lightning-native services. He speaks about Bitcoin payments, merchant adoption, and building a circular Bitcoin economy.",
+        lectureTitle: "",
+      },
+      ko: {
+        title: "Sergej Kotliar",
+        subtitle: ["Bitrefill 대표"],
+        bio: "세르게이 코틀리아르(Sergej Kotliar)는 사람들이 일상적인 소비에 비트코인을 쓸 수 있도록 돕는 플랫폼 비트리필(Bitrefill)의 창립자이자 CEO다. 2014년 이후 비트리필은 180개국이 넘는 나라에서 100만 명 이상의 고객을 맞이해 왔다. 그는 상용 라이트닝 결제와 라이트닝 네이티브 서비스의 길을 앞장서 열어 온 인물로, 비트코인 결제와 상점의 도입, 그리고 순환하는 비트코인 경제를 만드는 일에 대해 이야기한다.",
+        lectureTitle: "",
+      },
+    },
+  },
+  {
+    slug: "billy-jo",
+    image: "/2026/speakers/Billy_Jo.webp",
+    difficulty: "Low",
+    links: [
+      { type: "x", url: "https://x.com/bjunjo" },
+      { type: "website", url: "https://bjunjo.com" },
+    ],
+    i18n: {
+      en: {
+        title: "Billy Jo",
+        subtitle: ["Bitcoin Treasury Company Investor and Essayist"],
+        bio: "Billy Jo is a tech investor and writer. He writes about Bitcoin and other big ideas at bjunjo.com and on Substack (빌리조의 생각). Previously, he worked in business development in Silicon Valley. After more than a decade in the United States, he returned to Korea, where he mainly writes for Korean investors about US tech and Bitcoin treasury companies.",
+        lectureTitle:
+          "Keys, Companies, and Coldcard: Rethinking Bitcoin Custody",
+        session: "Debate",
+      },
+      ko: {
+        title: "빌리조",
+        subtitle: ["비트코인 트레저리 기업 투자자이자 에세이스트"],
+        bio: "빌리조는 기술 투자자이자 작가입니다. 그는 개인 뉴스레터(빌리조의 생각)에서 비트코인과 기타 혁신적인 아이디어에 대한 글을 쓰고 있습니다. 이전에는 실리콘 밸리에서 사업 개발 담당자로 근무했습니다. 10년 이상 미국에서 생활한 후 한국으로 돌아와 주로 개인 투자자들을 위해 미국 기술 기업과 비트코인 트레저리 회사에 대한 글을 쓰고 있습니다.",
+        lectureTitle: "키, 기업, 그리고 콜드카드: 비트코인 커스터디 다시 보기",
+        session: "디베이트",
       },
     },
   },
